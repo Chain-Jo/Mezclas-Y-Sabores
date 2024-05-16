@@ -1,0 +1,27 @@
+{
+    "theme_color": "#005218",
+    "background_color": "#636363",
+    "icons": [
+        {
+            "purpose": "maskable",
+            "sizes": "512x512",
+            "src": "icon512_maskable.png",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any",
+            "sizes": "512x512",
+            "src": "icon512_rounded.png",
+            "type": "image/png"
+        }
+    ],
+    "orientation": "any",
+    "display": "standalone",
+    "dir": "auto",
+    "lang": "es-419",
+    "description": "Mezclas & Sabores PWA",
+    "name": "Mezclas & Sabores",
+    "short_name": "MyS",
+    "start_url": "/",
+    "scope": "/"
+}
