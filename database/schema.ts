@@ -45,6 +45,24 @@ export const lessonsRelations = relations (lessons, ({ many, one }) => ({
     challenges: many(challenges),
 }));
 
+// recetas
+
+// export const recipes = pgTable("recipes", {
+//     id: serial("id").primaryKey(),
+//     title: text("title").notNull(), // lección 1
+//     unitId: integer("unit_id").references(() => units.id, { onDelete: "cascade" }).notNull(),
+//     order: integer("order").notNull(),
+// });
+
+// export const recipesRelations = relations (recipes, ({ many, one }) => ({
+//     unit: one(units, {
+//         fields: [recipes.unitId],
+//         references: [units.id],
+//     }),
+
+//     challenges: many(challenges),
+// }));
+
 export const challengesEnum = pgEnum("type", ["SELECT", "ASSIST"]);
 
 export const challenges = pgTable("challenges", {

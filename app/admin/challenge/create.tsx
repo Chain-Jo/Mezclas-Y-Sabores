@@ -40,6 +40,7 @@ export const ChallengeCreate = () => {
                     source="order"
                     validate={[required()]}
                     label="Orden"
+                    min='1'
                 />
             </SimpleForm>
         </Create>

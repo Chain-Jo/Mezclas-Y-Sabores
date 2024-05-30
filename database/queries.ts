@@ -8,6 +8,7 @@ import {
     challengeProgress,
     courses, 
     lessons,
+    // recipes,
     units, 
     userProgress,
 } from "@/database/schema";
@@ -179,6 +180,7 @@ export const getLesson = cache(async (id?: number) => {
                 },
             },
         },
+        
     });
 
     if (!data || !data.challenges) {
@@ -197,6 +199,61 @@ export const getLesson = cache(async (id?: number) => {
 
     return { ...data, challenges: normalizedChallenges };
 });
+
+// Recetas
+
+// export const getRecipe = cache(async (id?: number) => {
+//     const { userId } = await auth();
+
+//     if (!userId) {
+//         return null;
+//     }
+
+//     const courseProgress = await getCourseProgress();
+
+//     const recipeId = id || courseProgress?.activeLessonId;
+
+//     if (!recipeId) {
+//         return null;
+//     };
+
+//     const data = await database.query.recipes.findFirst({
+//         where: eq(recipes.id, recipeId),
+//         // with: {
+//         //     challenges: {
+//         //         orderBy: (challenges, { asc }) => [asc(challenges.order)],
+//         //         with: {
+//         //             challengeOptions: true,
+//         //             challengeProgress: {
+//         //                 where: eq(challengeProgress.userId, userId)
+//         //             },
+//         //         },
+//         //     },
+//         // },
+//     });
+
+//     if (!data) {
+//     // if (!data || !data.challenges) {
+//         return null;
+//     }
+
+//     // const normalizedChallenges = data.challenges.map((challenge) => {
+
+//     //     const completed = 
+//     //         challenge.challengeProgress 
+//     //         && challenge.challengeProgress.length > 0
+//     //         && challenge.challengeProgress.every((progress) => progress.completed);
+
+//     //     return { ...challenge, completed }
+//     // });
+
+//     // return { ...data, challenges: normalizedChallenges };
+//     return { ...data };
+// });
+
+
+
+
 
 export const getLessonPercentage = cache(async () => {
     const courseProgress = await getCourseProgress();

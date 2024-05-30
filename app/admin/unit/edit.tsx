@@ -27,6 +27,7 @@ export const UnitEdit = () => {
                     source="order"
                     validate={[required()]}
                     label="Orden"
+                    min='1'
                 />
             </SimpleForm>
         </Edit>

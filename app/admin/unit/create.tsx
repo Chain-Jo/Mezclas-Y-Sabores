@@ -22,6 +22,7 @@ export const UnitCreate = () => {
                     source="order"
                     validate={[required()]}
                     label="Orden"
+                    min='1'
                 />
             </SimpleForm>
         </Create>

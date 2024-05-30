@@ -17,6 +17,7 @@ export const LessonCreate = () => {
                     source="order"
                     validate={[required()]}
                     label="Orden"
+                    min='1'
                 />
             </SimpleForm>
         </Create>
