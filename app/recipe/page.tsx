@@ -1,39 +1,35 @@
 import { redirect } from "next/navigation";
 
-import { getLesson, getUserProgress } from "@/database/queries";
+import { getRecipe, getUserProgress } from "@/database/queries";
 
-import { Quiz } from "./quiz";
+import { Recipe } from "./recipe";
 
-const LessonPage = async() => {
+const RecipePage = async() => {
 
-    const lessonData = getLesson();
+    const recipeData = getRecipe();
     const userProgressData = getUserProgress();
 
     const [
-        lesson,
+        recipe,
         userProgress,
     ] = await Promise.all([
-        lessonData,
+        recipeData,
         userProgressData
     ]);
 
-    if (!lesson || !userProgress) {
+    if (!recipe || !userProgress) {
     // if (!lesson || !userProgress) {
         redirect("/learn")
     }
 
-    const initialPercentage = lesson.challenges
-        .filter((challenge) => challenge.completed)
-        .length / lesson.challenges.length * 100;
-
     return ( 
-        <Quiz
-            initialLessonId={lesson.id}
-            initialLessonChallenges={lesson.challenges}
-            initialHearts={userProgress.hearts}
-            initialPercentage={initialPercentage}
+        <Recipe 
+            id={recipe.id}
+            title={recipe.title}
+            imageSrc={recipe.imageSrc}            
+            description={recipe.description}
         />
      );
 }
  
-export default LessonPage;
+export default RecipePage;

@@ -3,11 +3,12 @@ import { eq } from "drizzle-orm";
 import { auth } from "@clerk/nextjs/server";
 
 import database from "./drizzle";
-// import { challengeProgress, lessons, userProgress, challenges, units } from './schema';
+// import { challengeProgress, lessons, userProgress, challenges, units, recipes } from './schema';
 import { 
     challengeProgress,
     courses, 
     lessons,
+    recipes,
     // recipes,
     units, 
     userProgress,
@@ -42,6 +43,7 @@ export const getUnits = cache(async () => {
         orderBy: (units, { asc }) => [asc(units.order)],
         where: eq(units.courseId, userProgress.activeCourseId),
         with: {
+            recipes: true,
             lessons: {
                 orderBy: (lessons, { asc }) => [asc(lessons.order)],
                 with: {
@@ -58,6 +60,7 @@ export const getUnits = cache(async () => {
                     },
                 },
             },
+
         },
     });
     
@@ -77,7 +80,17 @@ export const getUnits = cache(async () => {
 
             return { ...lesson, completed: allCompletedChallenges };
         });
-        return { ...unit, lessons: lessonsWithCompletedStatus };
+
+        // const noExistRecipe = unit.recipes.map((recipe) => {
+        //     if (!recipes) {
+        //         return { ...recipe};
+        //     }
+
+
+        //     return { ...recipe};
+        // });
+
+        return { ...unit, lessons: lessonsWithCompletedStatus, recipes };
     });
     
     return normalizedData;
@@ -152,6 +165,11 @@ export const getCourseProgress = cache(async () => {
     };
 });
 
+
+
+
+
+
 export const getLesson = cache(async (id?: number) => {
     const { userId } = await auth();
 
@@ -202,54 +220,54 @@ export const getLesson = cache(async (id?: number) => {
 
 // Recetas
 
-// export const getRecipe = cache(async (id?: number) => {
-//     const { userId } = await auth();
+export const getRecipe = cache(async (id?: number) => {
+    const { userId } = await auth();
 
-//     if (!userId) {
-//         return null;
-//     }
+    if (!userId) {
+        return null;
+    }
 
-//     const courseProgress = await getCourseProgress();
+    const courseProgress = await getCourseProgress();
 
-//     const recipeId = id || courseProgress?.activeLessonId;
+    const recipeId = id || courseProgress?.activeLessonId;
 
-//     if (!recipeId) {
-//         return null;
-//     };
+    if (!recipeId) {
+        return null;
+    };
 
-//     const data = await database.query.recipes.findFirst({
-//         where: eq(recipes.id, recipeId),
-//         // with: {
-//         //     challenges: {
-//         //         orderBy: (challenges, { asc }) => [asc(challenges.order)],
-//         //         with: {
-//         //             challengeOptions: true,
-//         //             challengeProgress: {
-//         //                 where: eq(challengeProgress.userId, userId)
-//         //             },
-//         //         },
-//         //     },
-//         // },
-//     });
+    const data = await database.query.recipes.findFirst({
+        // where: eq(recipes.id, recipeId),
+        // with: {
+        //     challenges: {
+        //         orderBy: (challenges, { asc }) => [asc(challenges.order)],
+        //         with: {
+        //             challengeOptions: true,
+        //             challengeProgress: {
+        //                 where: eq(challengeProgress.userId, userId)
+        //             },
+        //         },
+        //     },
+        // },
+    });
 
-//     if (!data) {
-//     // if (!data || !data.challenges) {
-//         return null;
-//     }
+    if (!data) {
+    // if (!data || !data.challenges) {
+        return null;
+    }
 
-//     // const normalizedChallenges = data.challenges.map((challenge) => {
+    // const normalizedChallenges = data.challenges.map((challenge) => {
 
-//     //     const completed = 
-//     //         challenge.challengeProgress 
-//     //         && challenge.challengeProgress.length > 0
-//     //         && challenge.challengeProgress.every((progress) => progress.completed);
+    //     const completed = 
+    //         challenge.challengeProgress 
+    //         && challenge.challengeProgress.length > 0
+    //         && challenge.challengeProgress.every((progress) => progress.completed);
 
-//     //     return { ...challenge, completed }
-//     // });
+    //     return { ...challenge, completed }
+    // });
 
-//     // return { ...data, challenges: normalizedChallenges };
-//     return { ...data };
-// });
+    // return { ...data, challenges: normalizedChallenges };
+    return { ...data };
+});
 
 
 

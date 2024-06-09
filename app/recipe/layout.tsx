@@ -2,7 +2,7 @@ type Props = {
     children: React.ReactNode;
 };
 
-const LessonLayout = ({ children }: Props) => {
+const RecipeLayout = ({ children }: Props) => {
     return ( 
         <div className="flex flex-col h-full">
             <div className="flex flex-col h-full w-full">
@@ -12,4 +12,4 @@ const LessonLayout = ({ children }: Props) => {
      );
 }
  
-export default LessonLayout;
+export default RecipeLayout;

@@ -7,38 +7,31 @@ import { Progress } from "@/components/ui/progress";
 import { useExitModal } from "@/store/use-exit-modal";
 
 type Props = {
-    hearts: number;
-    percentage: number;
+    title: string;
 };
 
 export const Header = ({
-    hearts,
-    percentage,
+    title
 }: Props) => {
 
     const { open } = useExitModal();
 
     return (
-        <header className="lg:pt-[50px] pt-[20px] px-10 flex gap-x-7 items-center justify-between max-w-[1140px] mx-auto w-full">
+        <header className="lg:pt-[50px] pt-[20px] px-10 flex gap-x-7 items-center justify-between max-w-[1140px] mx-auto w-full pb-4 font-bold">
             <X
                 onClick={ open } 
                 className="text-slate-500 hover:opacity-75 transition cursor-pointer"
             />
-
-            <Progress value={percentage}/>
-            <div className="text-rose-500 flex items-center font-bold">
-                <Image 
-                src="/img/corazon.png"
-                height={28}
-                width={28}
-                alt="Heart"
-                className="mr-2"
-                />
-                {1 === 1
-                    ? hearts
-                    : <InfinityIcon className="h-6 w-6 stroke-[3]"/>
-                }
+            <div className="w-full flex flex-col items-center lg: text-4xl">
+                    {title}
+                    
             </div>
+                    <Image
+                        src="/img/receta.png"
+                        alt="Ranking"
+                        height={40}
+                        width={40}
+                    />
         </header>
     )
 }

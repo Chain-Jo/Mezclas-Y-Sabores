@@ -10,6 +10,14 @@ import { Loader } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
+
+import dynamic from "next/dynamic";
+import { redirect } from "next/navigation";
+ 
+import { isAdmin } from "@/lib/admin";
+import Link from "next/link";
+
+
 export const Header = () => {
     return (
         // <header className="h-20 w-full border-b-2 border-slate-200 px-4">
@@ -47,6 +55,16 @@ export const Header = () => {
                         </SignedOut>
 
                     </ClerkLoaded>
+                            <div>
+                            {isAdmin()
+                            ? <Button size="lg" variant="ghost">
+                                <Link href="/admin">
+									Administrar
+								</Link>
+                              </Button>
+                            : null
+                            }
+                            </div>
             </div>
         </header>
     )

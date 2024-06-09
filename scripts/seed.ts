@@ -54,6 +54,17 @@ const main = async () => {
             }
         ]);
 
+        await database.insert(schema.recipes).values([
+            {
+                id: 1,
+                unitId: 1, 
+                title: "Receta del pan",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure quaerat incidunt veritatis iusto reiciendis! Numquam exercitationem a perferendis, sit deserunt et obcaecati est eius. Debitis totam modi harum esse.",
+                imageSrc: "/img/options/corte-vichy.jpg",
+                order:1,
+            },
+        ]);
+
         await database.insert(schema.lessons).values([
             {
                 id: 1,
