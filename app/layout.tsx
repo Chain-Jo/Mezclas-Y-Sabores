@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Nunito } from "next/font/google";
 import { ClerkProvider } from '@clerk/nextjs'
 import {esES} from '@clerk/localizations'
@@ -20,8 +20,11 @@ export const metadata: Metadata = {
     apple: "/favicon.ico",
     // android: "/favicon.ico"
   },
-  themeColor: "#000000"
 };
+
+export const viewport: Viewport = {
+  themeColor: "#000000"
+}
 
 export default function RootLayout({
   children,

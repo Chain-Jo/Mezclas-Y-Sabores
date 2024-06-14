@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
+//@type {import('next').NextConfig} 
+
 const nextConfig = {
     async headers() {
         return [
@@ -24,6 +25,16 @@ const nextConfig = {
                 ],
             },
         ];
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'img.clerk.com',
+                port: '',
+                pathname: '/**',
+            },
+        ],
     },
 };
 

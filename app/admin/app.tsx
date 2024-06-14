@@ -1,95 +1,33 @@
-"use client";
+import TopBox from "@/components/admin/topbox";
+import ChartBox from "@/components/admin/chartbox";
 
-import { Admin, Resource } from "react-admin";
-// import { useMyI18nProvider } from './src/i18nProvider';
-import simpleRestProvider from "ra-data-simple-rest";
+async function fetchApi() {
+  const response = await fetch("http://localhost:3000/api/users", {
+    headers: {
+      method: "GET",
+    },
+  });
 
-import { CourseList } from "./course/list";
-import { CourseCreate } from "./course/create";
-import { CourseEdit } from "./course/edit";
+  return response.json();
+}
 
-import { UnitList } from './unit/list';
-import { UnitCreate } from "./unit/create";
-import { UnitEdit } from "./unit/edit";
+async function App() {
 
-import { LessonList } from "./lesson/list";
-import { LessonCreate } from "./lesson/create";
-import { LessonEdit } from "./lesson/edit";
-
-import { ChallengeList } from "./challenge/list";
-import { ChallengeCreate } from "./challenge/create";
-import { ChallengeEdit } from "./challenge/edit";
-
-import { ChallengeOptionList } from "./challengeOption/list";
-import { ChallengeOptionCreate } from "./challengeOption/create";
-import { ChallengeOptionEdit } from "./challengeOption/edit";
-
-import { RecipeList } from "./recipe/list";
-import { RecipeCreate } from "./recipe/create";
-import { RecipeEdit } from "./recipe/edit";
-
-const dataProvider = simpleRestProvider("/api");
-
-const App = () => {
-
-    // const i18nProvider = useMyI18nProvider();
-    // if (!i18nProvider) return null;
-
-    return (
-        <Admin 
-            dataProvider={dataProvider}
-            // i18nProvider={i18nProvider}
-        >
-            <Resource
-                name="courses"
-                list={CourseList}
-                create={CourseCreate}
-                edit={CourseEdit}
-                recordRepresentation="title"
-                options={{ label: "Cursos" }}
-            />
-            <Resource
-                name="units"
-                list={UnitList}
-                create={UnitCreate}
-                edit={UnitEdit}
-                recordRepresentation="title"
-                options={{ label: "Unidades" }}
-            />
-            <Resource
-                name="lessons"
-                list={LessonList}
-                create={LessonCreate}
-                edit={LessonEdit}
-                recordRepresentation="title"
-                options={{ label: "Lecciones" }}
-            />
-            <Resource
-                name="recipes"
-                list={RecipeList}
-                create={RecipeCreate}
-                edit={RecipeEdit}
-                recordRepresentation="title"
-                options={{ label: "Recetas" }}
-            />
-            <Resource
-                name="challenges"
-                list={ChallengeList}
-                create={ChallengeCreate}
-                edit={ChallengeEdit}
-                recordRepresentation="question"
-                options={{ label: "Preguntas" }}
-            />
-            <Resource
-                name="challengeOptions"
-                list={ChallengeOptionList}
-                create={ChallengeOptionCreate}
-                edit={ChallengeOptionEdit}
-                recordRepresentation="text"
-                options={{ label: "Respuestas" }}
-            />
-        </Admin>
-    );
-};
+  const users = await fetchApi();
+  return (
+    <div className="home">
+      <div className="box box1">
+        <TopBox props={users}/>
+      </div>
+      <div className="box box2"><ChartBox/></div>
+      <div className="box box3"><ChartBox/></div>
+      <div className="box box4"><ChartBox/></div>
+      <div className="box box5"><ChartBox/></div>
+      <div className="box box6">Box6</div>
+      <div className="box box7">Box7</div>
+      <div className="box box8">Box8</div>
+    </div>
+  );
+}
 
 export default App;

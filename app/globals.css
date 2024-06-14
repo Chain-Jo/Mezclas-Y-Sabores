@@ -1,80 +1,253 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-html, body, :root {
-  @apply h-full
+html,
+body,
+:root {
+  @apply h-full;
 }
 
-  @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 222.2 84% 4.9%;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-      --card: 0 0% 100%;
-      --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-      --primary: 222.2 47.4% 11.2%;
-      --primary-foreground: 210 40% 98%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-      --secondary: 210 40% 96.1%;
-      --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-      --muted: 210 40% 96.1%;
-      --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-      --accent: 210 40% 96.1%;
-      --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-      --border: 214.3 31.8% 91.4%;
-      --input: 214.3 31.8% 91.4%;
-      --ring: 222.2 84% 4.9%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
 
-      --radius: 0.5rem;
-    }
+    --radius: 0.5rem;
 
-    .dark {
-      --background: 222.2 84% 4.9%;
-      --foreground: 210 40% 98%;
+    /* Admin Colors*/
 
-      --card: 222.2 84% 4.9%;
-      --card-foreground: 210 40% 98%;
-
-      --popover: 222.2 84% 4.9%;
-      --popover-foreground: 210 40% 98%;
-
-      --primary: 210 40% 98%;
-      --primary-foreground: 222.2 47.4% 11.2%;
-
-      --secondary: 217.2 32.6% 17.5%;
-      --secondary-foreground: 210 40% 98%;
-
-      --muted: 217.2 32.6% 17.5%;
-      --muted-foreground: 215 20.2% 65.1%;
-
-      --accent: 217.2 32.6% 17.5%;
-      --accent-foreground: 210 40% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 210 40% 98%;
-
-      --border: 217.2 32.6% 17.5%;
-      --input: 217.2 32.6% 17.5%;
-      --ring: 212.7 26.8% 83.9%;
-    }
+    --main-bg: #2a3447;
+    --soft-bg: #384256;
+    --dark-bg: #222b3c;
+    --main-color: white;
+    --soft-color: #ddd;
+    --dark-color: #2a3447;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Admin */
+
+.admin {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  a {
+    @apply no-underline text-inherit;
+  }
+
+  .main {
+    @apply bg-[--main-bg] text-[--main-color];
+  }
+}
+
+.adminContainer {
+  @apply flex;
+}
+
+.menuContainer {
+  @apply w-[250px] px-[5px] py-5 border-r-2 border-solid border-[--soft-bg];
+}
+
+.contentContainer {
+  @apply px-[5px] py-5 w-[100%];
+}
+
+.navbar {
+  @apply w-[100%] p-5 flex items-center justify-between;
+
+  .logo {
+    @apply flex items-center font-bold gap-[10px];
+  }
+
+  .icons {
+    @apply flex gap-5;
+    .user {
+      @apply flex gap-2;
+      img {
+        @apply w-[26px] h-[26px] rounded-[50%] object-cover;
+      }
     }
   }
+}
+
+.footer {
+  @apply flex items-center justify-between p-[30px];
+
+  span {
+    &:first-child {
+      @apply font-bold;
+    }
+
+    &:last-child {
+      @apply text-sm;
+    }
+  }
+}
+
+.menu {
+  
+  .item {
+    @apply flex flex-col gap-[10px] mb-5 ml-5;
+  }
+
+  .title {
+    @apply text-sm font-extralight text-[--soft-color] uppercase;
+  }
+
+  .listItem {
+    @apply flex items-center gap-[10px] p-[10px] rounded-[5px];
+
+    &:hover {
+      @apply bg-[--soft-bg];
+    }
+  }
+}
+
+.home {
+
+  @apply ml-2 grid gap-5 grid-cols-4 auto-rows-[minmax(180px,auto)]; 
+  .box {
+    @apply p-5 rounded-[10px] border border-solid border-[--soft-bg];
+  }
+
+  .box1 {
+    @apply col-span-1 row-span-3;
+  }
+
+  .box4 {
+    @apply col-span-1 row-span-3;
+  }
+
+  .box7 {
+    @apply col-span-2 row-span-2;
+  }
+}
+
+.topBox {
+  h1 {
+    @apply mb-5 text-2xl font-bold;
+  }
+  .list {
+    .listItem {
+      @apply flex items-center justify-between mb-[30px];
+      .user {
+        @apply flex gap-5;
+        img {
+          @apply w-10 h-10 rounded-[50%] object-cover;
+        }
+        .userTexts {
+          @apply flex flex-col gap-[5px];
+          .username {
+            @apply text-sm font-medium;
+          }
+          .email {
+            @apply text-xs;
+          }
+        }
+        .amount {
+          @apply font-medium;
+        }
+      }
+    }
+  }
+}
+
+.chartBox {
+  @apply flex h-full;
+
+  .boxInfo {
+    @apply flex-[3] flex flex-col justify-between;
+
+    .title {
+      @apply flex items-center gap-2;
+    }
+
+    h1 {
+      @apply text-2xl font-bold;
+    }
+    
+  }
+
+  .chartInfo {
+    @apply flex-[2] flex flex-col justify-between;
+
+    .chart {
+      @apply w-24 h-16;
+    }
+
+    .texts {
+      @apply flex flex-col text-center pt-10;
+
+      .percentage {
+        @apply font-bold text-xl;
+      }
+    }
+  }
+  
+}

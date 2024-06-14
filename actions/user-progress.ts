@@ -49,6 +49,7 @@ export const upsertUserProgress = async (courseId: number) => {
         userId,
         activeCourseId: courseId,
         userName: user.firstName || "User",
+        email: user.emailAddresses,
         userImageSrc: user.imageUrl || "/img/sombrero-cocinero.png",
     });
 
