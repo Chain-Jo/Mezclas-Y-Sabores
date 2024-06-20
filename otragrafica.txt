@@ -1,0 +1,68 @@
+/*import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  controllers,
+} from "chart.js";
+import { Line } from "react-chartjs-2";
+import faker from "@faker-js/faker";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top' as const,
+    },
+    title: {
+      display: true,
+      text: "Usuarios Totales",
+    },
+  },
+};
+
+const labels = [
+  "Enero",
+  "Febrero",
+  "Marzo",
+  "Abril",
+  "Mayo",
+  "Junio",
+  "Julio",
+  "Agosto",
+  "Septiembre",
+  "Octubre",
+  "Noviembre",
+  "Diciembre",
+];
+/*const data = {
+  labels,
+  datasets: [
+    {
+      label: "Dataset 1",
+      data: [1, 2, 3, 4, 5, 6, 7, 9,10,11,2.5,5,6],
+      borderColor: "rgb(255, 99, 132)",
+      backgroundColor: "rgba(255, 99, 132, 0.5)",
+    },
+  ],
+};*/
+
+/**
+ * 
+      <Line options={options} data={data} />;
+ * 
+ */

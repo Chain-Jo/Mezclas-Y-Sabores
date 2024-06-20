@@ -42,7 +42,7 @@ body,
 
     /* Admin Colors*/
 
-    --main-bg: #2a3447;
+    --main-bg: #121212;
     --soft-bg: #384256;
     --dark-bg: #222b3c;
     --main-color: white;
@@ -171,7 +171,7 @@ body,
 
 .home {
 
-  @apply ml-2 grid gap-5 grid-cols-4 auto-rows-[minmax(180px,auto)]; 
+  @apply ml-72 grid gap-5 grid-cols-4 auto-rows-[minmax(180px,auto)]; 
   .box {
     @apply p-5 rounded-[10px] border border-solid border-[--soft-bg];
   }
@@ -180,12 +180,12 @@ body,
     @apply col-span-1 row-span-3;
   }
 
-  .box4 {
+  .box2 {
     @apply col-span-1 row-span-3;
   }
 
-  .box7 {
-    @apply col-span-2 row-span-2;
+  .box3 {
+    @apply col-span-1 row-span-3;
   }
 }
 
@@ -211,7 +211,7 @@ body,
           }
         }
         .amount {
-          @apply font-medium;
+          @apply text-sm font-medium;
         }
       }
     }
@@ -219,7 +219,7 @@ body,
 }
 
 .chartBox {
-  @apply flex h-full;
+  @apply flex flex-col h-full;
 
   .boxInfo {
     @apply flex-[3] flex flex-col justify-between;
@@ -228,9 +228,7 @@ body,
       @apply flex items-center gap-2;
     }
 
-    h1 {
-      @apply text-2xl font-bold;
-    }
+    
     
   }
 
@@ -238,7 +236,7 @@ body,
     @apply flex-[2] flex flex-col justify-between;
 
     .chart {
-      @apply w-24 h-16;
+      @apply w-[100%] h-[100%];
     }
 
     .texts {
@@ -250,4 +248,13 @@ body,
     }
   }
   
+  h1 {
+    @apply text-2xl font-bold;
+  }
+
+  h2 {
+    @apply text-xl font-bold;
+  }
+
+
 }

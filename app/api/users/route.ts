@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { currentUser } from "@clerk/nextjs/server";
+import { EmailAddress, currentUser } from "@clerk/nextjs/server";
 import database from "@/database/drizzle";
 import { userProgress } from "@/database/schema";
 import { isAdmin } from "@/lib/admin";
@@ -21,10 +21,12 @@ export const GET = async () => {
     newData[i] = {
       id: data[i].userId,
       userName: data[i].userName,
+      emailAddress: data[i].email.split("{")[2].split(`\"`)[7].split("\\")[0],
       userImageSrc: data[i].userImageSrc,
       activeCourseId: data[i].activeCourseId,
       hearts: data[i].hearts,
       points: data[i].points,
+      createdAt: new Date(Number(data[i].createdAt)),
     };
   }
 

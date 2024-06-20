@@ -11,126 +11,133 @@ import { POINTS_TO_REFILL } from "@/constants";
 import { getCourseById, getUserProgress } from "@/database/queries";
 import { challengeProgress, challenges, userProgress } from "@/database/schema";
 
-
 export const upsertUserProgress = async (courseId: number) => {
-    const { userId } = await auth();
+  const { userId } = await auth();
 
-    const user = await currentUser();
+  const user = await currentUser();
 
-    if (!userId || !user) {
-        throw new Error ("Sin autorización");
-    }
+  if (!userId || !user) {
+    throw new Error("Sin autorización");
+  }
 
-    const course = await getCourseById(courseId);
+  const course = await getCourseById(courseId);
 
-    if (!course) {
-        throw new Error ("Curso no encontrado");
-    }
+  if (!course) {
+    throw new Error("Curso no encontrado");
+  }
 
-    if (!course.units.length || !course.units[0].lessons.length) {
-        throw new Error ("El curso está vacío");
-    }
+  if (!course.units.length || !course.units[0].lessons.length) {
+    throw new Error("El curso está vacío");
+  }
 
-    const existingUserProgress = await getUserProgress();
+  const existingUserProgress = await getUserProgress();
 
-    if (existingUserProgress) {
-        await database.update(userProgress).set({
-            activeCourseId: courseId,
-            userName: user.firstName || "User",
-            userImageSrc: user.imageUrl || "/img/sombrero-cocinero.png",
-        });
-
-        revalidatePath("/learn");
-        revalidatePath("/courses");
-        redirect("/learn");
-    }
-
-    await database.insert(userProgress).values({
-        userId,
-        activeCourseId: courseId,
-        userName: user.firstName || "User",
-        email: user.emailAddresses,
-        userImageSrc: user.imageUrl || "/img/sombrero-cocinero.png",
+  if (existingUserProgress) {
+    await database.update(userProgress).set({
+      activeCourseId: courseId,
+      userName: user.firstName || "User",
+      userImageSrc: user.imageUrl || "/img/sombrero-cocinero.png",
     });
 
     revalidatePath("/learn");
     revalidatePath("/courses");
     redirect("/learn");
+  }
+
+  await database.insert(userProgress).values({
+    userId,
+    activeCourseId: courseId,
+    userName: user.firstName || "User",
+    email: user.emailAddresses,
+    userImageSrc: user.imageUrl || "/img/sombrero-cocinero.png",
+    createdAt: user.createdAt,
+  });
+
+  revalidatePath("/learn");
+  revalidatePath("/courses");
+  redirect("/learn");
 };
 
 export const reduceHearts = async (challengeId: number) => {
-    const { userId } = await auth();
+  const { userId } = await auth();
 
-    if (!userId) {
-        throw new Error("Sin autorización");
-    }
+  if (!userId) {
+    throw new Error("Sin autorización");
+  }
 
-    const currentUserProgress = await getUserProgress();
+  const currentUserProgress = await getUserProgress();
 
-    const challenge = await database.query.challenges.findFirst({
-        where: eq(challenges.id, challengeId),
+  const challenge = await database.query.challenges.findFirst({
+    where: eq(challenges.id, challengeId),
+  });
+
+  if (!challenge) {
+    throw new Error("No se encontró la pregunta");
+  }
+
+  const lessonId = challenge.lessonId;
+
+  const existitingChallengeProgress =
+    await database.query.challengeProgress.findFirst({
+      where: and(
+        eq(challengeProgress.userId, userId),
+        eq(challengeProgress.challengeId, challengeId)
+      ),
     });
 
-    if (!challenge) {
-        throw new Error("No se encontró la pregunta");
-    }
-    
-    const lessonId = challenge.lessonId;
+  const isPractice = !!existitingChallengeProgress;
 
-    const existitingChallengeProgress = await database.query.challengeProgress.findFirst({
-        where: and(
-            eq(challengeProgress.userId, userId),
-            eq(challengeProgress.challengeId, challengeId),
-        ),
-    });
+  if (isPractice) {
+    return { error: "práctica" };
+  }
 
-    const isPractice = !!existitingChallengeProgress;
+  if (!currentUserProgress) {
+    throw new Error("No se encontró progreso de usuario");
+  }
 
-    if (isPractice) {
-        return { error: "práctica" };
-    }
+  if (currentUserProgress.hearts === 0) {
+    return { error: "corazones" };
+  }
 
-    if (!currentUserProgress) {
-        throw new Error("No se encontró progreso de usuario");
-    }
+  await database
+    .update(userProgress)
+    .set({
+      hearts: Math.max(currentUserProgress.hearts - 1, 0),
+    })
+    .where(eq(userProgress.userId, userId));
 
-    if (currentUserProgress.hearts === 0) {
-        return { error: "corazones" };
-    }
-
-    await database.update(userProgress).set({
-        hearts: Math.max(currentUserProgress.hearts - 1, 0),
-    }).where(eq(userProgress.userId, userId));
-
-    revalidatePath("/shop");
-    revalidatePath("/learn");
-    revalidatePath("/quest");
-    revalidatePath("/leaderboard");
-    revalidatePath(`/lesson/${lessonId}`);
+  revalidatePath("/shop");
+  revalidatePath("/learn");
+  revalidatePath("/quest");
+  revalidatePath("/leaderboard");
+  revalidatePath(`/lesson/${lessonId}`);
 };
 
 export const refillHearts = async () => {
-    const currentUserProgress = await getUserProgress();
+  const currentUserProgress = await getUserProgress();
 
-    if (!currentUserProgress) {
-        throw new Error("No se encontró progreso de usuario");
-    }
+  if (!currentUserProgress) {
+    throw new Error("No se encontró progreso de usuario");
+  }
 
-    if (currentUserProgress.hearts === 5) {
-        throw new Error("Los intentos están full");
-    }
+  if (currentUserProgress.hearts === 5) {
+    throw new Error("Los intentos están full");
+  }
 
-    if (currentUserProgress.points < POINTS_TO_REFILL) {
-        throw new Error("Sin puntos suficientes");
-    }
+  if (currentUserProgress.points < POINTS_TO_REFILL) {
+    throw new Error("Sin puntos suficientes");
+  }
 
-    await database.update(userProgress).set({
-        hearts: 5,
-        points: currentUserProgress.points - POINTS_TO_REFILL,
-    }).where(eq(userProgress.userId, currentUserProgress.userId));
+  await database
+    .update(userProgress)
+    .set({
+      hearts: 5,
+      points: currentUserProgress.points - POINTS_TO_REFILL,
+    })
+    .where(eq(userProgress.userId, currentUserProgress.userId));
 
-    revalidatePath("/shop");
-    revalidatePath("/learn");
-    revalidatePath("/quest");
-    revalidatePath("/leaderboard");
-}
+  revalidatePath("/shop");
+  revalidatePath("/learn");
+  revalidatePath("/quest");
+  revalidatePath("/leaderboard");
+};

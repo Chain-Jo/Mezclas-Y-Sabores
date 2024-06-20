@@ -11,9 +11,13 @@ const TopBox = async (props: any) => {
             <div className="user">
               <Image src={user.userImageSrc} alt="" width={20} height={20} />
               <div className="userTexts">
-                <span className="username">{user.userName}</span>
+                <div className="flex flex-row gap-4">
+                  <span className="username">{user.userName}</span>
+                  <span className="amount">Puntos: {user.points}</span>
+                </div>
+                <span className="email">{user.emailAddress}</span>
               </div>
-              <span className="amount">Puntos: {user.points}</span>
+              
             </div>
           </div>
         ))}

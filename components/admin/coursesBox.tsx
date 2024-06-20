@@ -2,36 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+import { LineChart, Line, Tooltip, ResponsiveContainer } from "recharts";
+
 interface DataObject {
-  date: string; // Assuming date is in string format
+  title: string;
   value: number;
-  group?: string;
-}
-
-function organizeByMonthAndDay(data: DataObject[]): DataObject[] {
-  return data.map((item) => {
-    // Parse the date
-    const date = new Date(item.date);
-    const month = date.getMonth() + 1; // Months are zero-based in JavaScript
-    const year = date.getFullYear();
-    const day = date.getDate();
-    const monthDayYear = `${year}-${month < 10 ? "0" + month : month}-${
-      day < 10 ? "0" + day : day
-    }`;
-
-    // Return a new object with the group property
-    return { ...item, group: monthDayYear };
-  });
 }
 
 const newData = [
@@ -43,14 +18,14 @@ const newData = [
 ];
 
 const label = "value";
-const ChartBox = () => {
-  /*const [data, setData] = useState([]);
+const CoursesBox = () => {
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/users");
+        const response = await fetch("http://localhost:3000/api/courses");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -68,10 +43,9 @@ const ChartBox = () => {
 
   const newData: DataObject[] = [];
   for (let i = 0; i < data.length; i++) {
-    newData.push({ value: i + 1, date: data[i].createdAt });
-  }*/
+    newData.push({ value: data[i].id, title: data[i].title });
+  }
 
-  const organizedData: DataObject[] = organizeByMonthAndDay(newData);
   return (
     <div className="chartBox">
       <div className="boxInfo">
@@ -82,28 +56,26 @@ const ChartBox = () => {
             width={30}
             height={30}
           />
-          <h2>Cantidad de Usuarios</h2>
+          <h2>Cantidad de Cursos</h2>
         </div>
-        <h2>{organizedData.length}</h2>
+        <h2>{newData.length}</h2>
       </div>
       <div className="chartInfo">
         <div className="chart">
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart width={300} height={100} data={organizedData}>
+            <LineChart width={300} height={100} data={newData}>
               <Line type="monotone" dataKey="value" dot={false} />
               <Tooltip
                 contentStyle={{ background: "transparent", border: "none" }}
-                labelStyle={{ display: "none"}}
+                labelStyle={{ display: "none" }}
                 position={{ x: 140, y: 150 }}
-                
               />
             </LineChart>
           </ResponsiveContainer>
         </div>
       </div>
-     
     </div>
   );
 };
 
-export default ChartBox;
+export default CoursesBox;

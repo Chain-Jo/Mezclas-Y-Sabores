@@ -1,31 +1,45 @@
+"use client";
+
+import React, { useEffect, useState } from "react";
+
 import TopBox from "@/components/admin/topbox";
 import ChartBox from "@/components/admin/chartbox";
+import CoursesBox from "@/components/admin/coursesBox";
 
-async function fetchApi() {
-  const response = await fetch("http://localhost:3000/api/users", {
-    headers: {
-      method: "GET",
-    },
-  });
+function App() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/users");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
-  return response.json();
-}
-
-async function App() {
-
-  const users = await fetchApi();
+  const users = data;
   return (
     <div className="home">
       <div className="box box1">
-        <TopBox props={users}/>
+        <TopBox props={users} />
       </div>
-      <div className="box box2"><ChartBox/></div>
-      <div className="box box3"><ChartBox/></div>
-      <div className="box box4"><ChartBox/></div>
-      <div className="box box5"><ChartBox/></div>
-      <div className="box box6">Box6</div>
-      <div className="box box7">Box7</div>
-      <div className="box box8">Box8</div>
+      <div className="box box2">
+        <ChartBox />
+      </div>
+      <div className="box box3">
+        <CoursesBox />
+      </div>
     </div>
   );
 }
