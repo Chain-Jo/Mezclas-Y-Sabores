@@ -18,17 +18,17 @@ export const upsertUserProgress = async (courseId: number) => {
     const user = await currentUser();
 
     if (!userId || !user) {
-        throw new Error ("Sin autorización");
+        throw new Error("Sin autorización");
     }
 
     const course = await getCourseById(courseId);
 
     if (!course) {
-        throw new Error ("Curso no encontrado");
+        throw new Error("Curso no encontrado");
     }
 
     if (!course.units.length || !course.units[0].lessons.length) {
-        throw new Error ("El curso está vacío");
+        throw new Error("El curso está vacío");
     }
 
     const existingUserProgress = await getUserProgress();
@@ -49,7 +49,9 @@ export const upsertUserProgress = async (courseId: number) => {
         userId,
         activeCourseId: courseId,
         userName: user.firstName || "User",
+        email: user.emailAddresses,
         userImageSrc: user.imageUrl || "/img/sombrero-cocinero.png",
+        createdAt: user.createdAt,
     });
 
     revalidatePath("/learn");
@@ -73,7 +75,7 @@ export const reduceHearts = async (challengeId: number) => {
     if (!challenge) {
         throw new Error("No se encontró la pregunta");
     }
-    
+
     const lessonId = challenge.lessonId;
 
     const existitingChallengeProgress = await database.query.challengeProgress.findFirst({

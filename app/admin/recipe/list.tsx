@@ -1,4 +1,4 @@
-import { Datagrid, List, NumberField, ReferenceField, TextField, BooleanField } from "react-admin";
+import { Datagrid, List, NumberField, ReferenceField, TextField } from "react-admin";
 
 export const RecipeList = () => {
     return (
@@ -6,9 +6,9 @@ export const RecipeList = () => {
             <Datagrid rowClick="edit">
                 <TextField source="id"/>
                 <TextField source="title"/>
-                <TextField source="link"/>
-                <BooleanField source="activo"/>
+                <TextField source="description"/>
                 <ReferenceField source="unitId" reference="units"/>
+                <TextField source="imageSrc" />
                 <NumberField source="order"/>
             </Datagrid>
         </List>

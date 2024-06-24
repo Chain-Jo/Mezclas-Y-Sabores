@@ -1,4 +1,4 @@
-import { Edit, TextInput, SimpleForm, required, ReferenceInput, NumberInput, BooleanInput } from "react-admin";
+import { Edit, TextInput, SimpleForm, required, ReferenceInput, NumberInput } from "react-admin";
 
 export const LessonEdit = () => {
     return (
@@ -8,14 +8,6 @@ export const LessonEdit = () => {
                     source="title" 
                     validate={[required()]} 
                     label="Título" 
-                />
-                <BooleanInput 
-                    source="activo"
-                    label="Activo"
-                />
-                <BooleanInput 
-                    source="prueba"
-                    label="Prueba"
                 />
                 <ReferenceInput 
                     source="unitId"

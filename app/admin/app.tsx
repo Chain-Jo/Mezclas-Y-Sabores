@@ -1,95 +1,47 @@
 "use client";
 
-import { Admin, Resource } from "react-admin";
-// import { useMyI18nProvider } from './src/i18nProvider';
-import simpleRestProvider from "ra-data-simple-rest";
+import React, { useEffect, useState } from "react";
 
-import { CourseList } from "./course/list";
-import { CourseCreate } from "./course/create";
-import { CourseEdit } from "./course/edit";
+import TopBox from "@/components/admin/topbox";
+import ChartBox from "@/components/admin/chartbox";
+import CoursesBox from "@/components/admin/coursesBox";
 
-import { UnitList } from './unit/list';
-import { UnitCreate } from "./unit/create";
-import { UnitEdit } from "./unit/edit";
+function App() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/users");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
-import { LessonList } from "./lesson/list";
-import { LessonCreate } from "./lesson/create";
-import { LessonEdit } from "./lesson/edit";
-
-import { ChallengeList } from "./challenge/list";
-import { ChallengeCreate } from "./challenge/create";
-import { ChallengeEdit } from "./challenge/edit";
-
-import { ChallengeOptionList } from "./challengeOption/list";
-import { ChallengeOptionCreate } from "./challengeOption/create";
-import { ChallengeOptionEdit } from "./challengeOption/edit";
-
-import { RecipeList } from "./recipe/list";
-import { RecipeCreate } from "./recipe/create";
-import { RecipeEdit } from "./recipe/edit";
-
-const dataProvider = simpleRestProvider("/api");
-
-const App = () => {
-
-    // const i18nProvider = useMyI18nProvider();
-    // if (!i18nProvider) return null;
-
-    return (
-        <Admin 
-            dataProvider={dataProvider}
-            // i18nProvider={i18nProvider}
-        >
-            <Resource
-                name="courses"
-                list={CourseList}
-                create={CourseCreate}
-                edit={CourseEdit}
-                recordRepresentation="title"
-                options={{ label: "Cursos" }}
-            />
-            <Resource
-                name="units"
-                list={UnitList}
-                create={UnitCreate}
-                edit={UnitEdit}
-                recordRepresentation="title"
-                options={{ label: "Unidades" }}
-            />
-            <Resource
-                name="lessons"
-                list={LessonList}
-                create={LessonCreate}
-                edit={LessonEdit}
-                recordRepresentation="title"
-                options={{ label: "Lecciones" }}
-            />
-            <Resource
-                name="recipes"
-                list={RecipeList}
-                create={RecipeCreate}
-                edit={RecipeEdit}
-                recordRepresentation="title"
-                options={{ label: "Recetas" }}
-            />
-            <Resource
-                name="challenges"
-                list={ChallengeList}
-                create={ChallengeCreate}
-                edit={ChallengeEdit}
-                recordRepresentation="question"
-                options={{ label: "Preguntas" }}
-            />
-            <Resource
-                name="challengeOptions"
-                list={ChallengeOptionList}
-                create={ChallengeOptionCreate}
-                edit={ChallengeOptionEdit}
-                recordRepresentation="text"
-                options={{ label: "Respuestas" }}
-            />
-        </Admin>
-    );
-};
+  const users = data;
+  return (
+    <div className="home">
+      <div className="box box1">
+        <TopBox props={users} />
+      </div>
+      <div className="box box2">
+        <ChartBox />
+      </div>
+      <div className="box box3">
+        <CoursesBox />
+      </div>
+    </div>
+  );
+}
 
 export default App;

@@ -1,4 +1,4 @@
-import { Datagrid, List, TextField, BooleanField } from "react-admin";
+import { Datagrid, List, TextField } from "react-admin";
 
 export const CourseList = () => {
     return (
@@ -7,7 +7,6 @@ export const CourseList = () => {
                 <TextField source="id"/>
                 <TextField source="title"/>
                 <TextField source="imageSrc"/>
-                <BooleanField source="activo"/>
             </Datagrid>
         </List>
     );
