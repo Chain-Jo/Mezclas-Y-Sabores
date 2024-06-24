@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 import database from "@/database/drizzle"
-import { recipes } from "@/database/schema";
+import { recipesX } from "@/database/schema";
 import { isAdmin } from "@/lib/admin";
 
 export const GET = async () => {
@@ -10,7 +10,7 @@ export const GET = async () => {
         return new NextResponse("Sin autorización", { status: 401 });
     }
 
-    const data = await database.query.recipes.findMany();
+    const data = await database.query.recipesX.findMany();
 
     return NextResponse.json(data);
 ;}
@@ -24,7 +24,7 @@ export const POST = async (req: Request) => {
     
     const body = await req.json();
 
-    const data = await database.insert(recipes).values({
+    const data = await database.insert(recipesX).values({
         ...body,
     }).returning();
 

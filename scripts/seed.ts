@@ -25,22 +25,26 @@ const main = async () => {
             {
                 id:1,
                 title: "Panadería",
-                imageSrc: "/img/un-pan.png"
+                imageSrc: "/img/un-pan.png",
+                activo: true
             },
             {
                 id:2,
                 title: "Carnes",
-                imageSrc: "/img/filete.png"
+                imageSrc: "/img/filete.png",
+                activo: true,
             },
             {
                 id:3,
                 title: "Repostería",
-                imageSrc: "/img/pastel-de-cumpleanos.png"
+                imageSrc: "/img/pastel-de-cumpleanos.png",
+                activo: true
             },
             {
                 id:4,
                 title: "Cocteles",
-                imageSrc: "/img/coctel.png"
+                imageSrc: "/img/coctel.png",
+                activo: true
             }
         ]);
 
@@ -51,17 +55,53 @@ const main = async () => {
                 title: "Unidad 1",
                 description: "Aprende los fundamentos de la panadería",
                 order:1,
+                activo: true
             }
         ]);
 
-        await database.insert(schema.recipes).values([
+        await database.insert(schema.units).values([
+            {
+                id: 2,
+                courseId: 1, // Panadería
+                title: "Unidad 2",
+                description: "Aprende algo más",
+                order:2,
+                activo: true
+            }
+        ]);
+
+        // await database.insert(schema.recipes).values([
+        //     {
+        //         id: 1,
+        //         unitId: 1, 
+        //         title: "Receta del pan",
+        //         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure quaerat incidunt veritatis iusto reiciendis! Numquam exercitationem a perferendis, sit deserunt et obcaecati est eius. Debitis totam modi harum esse.",
+        //         imageSrc: "/img/options/corte-vichy.jpg",
+        //         order:1,
+        //         activo: true
+        //     },
+        // ]);
+
+
+        await database.insert(schema.recipesX).values([
             {
                 id: 1,
-                unitId: 1, 
-                title: "Receta del pan",
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure quaerat incidunt veritatis iusto reiciendis! Numquam exercitationem a perferendis, sit deserunt et obcaecati est eius. Debitis totam modi harum esse.",
-                imageSrc: "/img/options/corte-vichy.jpg",
+                unitId: 2, 
+                title: "Receta Arepa",
+                link: "https://drive.google.com/file/d/1c25MhgpDjvFfVhngWTb8yCH2ewRtUZED/view?usp=drive_link",
                 order:1,
+                activo: true
+            },
+        ]);
+
+        await database.insert(schema.recipesX).values([
+            {
+                id: 2,
+                unitId: 1, 
+                title: "Receta Hallaca Venezolana",
+                link: "https://drive.google.com/file/d/15vEm-HcTQV4RAA0xShNMUx7Hr-cyjtx4/view?usp=drive_link",
+                order:2,
+                activo: true
             },
         ]);
 
@@ -71,24 +111,32 @@ const main = async () => {
                 unitId: 1, // Unidad 1 (aprende los fundamentos)
                 order: 1,
                 title: "Teoría I",
+                activo: true,
+                prueba: false
             },
             {
                 id: 2,
                 unitId: 1, // Unidad 1 (aprende los fundamentos)
                 order: 2,
                 title: "Teoría II",
+                activo: true,
+                prueba: true
             },
             {
                 id: 3,
                 unitId: 1, // Unidad 1 (aprende los fundamentos)
                 order: 3,
                 title: "Teoría III",
+                activo: true,
+                prueba: false
             },
             {
                 id: 4,
                 unitId: 1, // Unidad 1 (aprende los fundamentos)
                 order: 4,
                 title: "Teoría IV",
+                activo: true,
+                prueba: false
             },
         ]);
         
@@ -99,6 +147,7 @@ const main = async () => {
                 type: "SELECT",
                 order: 1,
                 question: '¿Cuál de éstos es un "Pan de molde"?',
+                activo: true
             },
             {
                 id: 2,
@@ -106,6 +155,7 @@ const main = async () => {
                 type: "ASSIST",
                 order: 2,
                 question: '¿Para preparar una arepa se necesita harina de maíz, agua, sal y ____?',
+                activo: true
             },
             {
                 id: 3,
@@ -113,6 +163,7 @@ const main = async () => {
                 type: "SELECT",
                 order: 3,
                 question: '¿Cuál de los siguientes cortes de frutas y verduras se conoce como "Brunoise"',
+                activo: true
             },
             {
                 id: 4,
@@ -120,6 +171,7 @@ const main = async () => {
                 type: "ASSIST",
                 order: 4,
                 question: '¿Por cuanto tiempo se debe hervir un huevo para que quede completamente cocido?',
+                activo: true
             },
         ]);
 
@@ -131,6 +183,7 @@ const main = async () => {
                 imageSrc: "/img/options/pan-molde.jpg",
                 correct: true,
                 text: "Pan de sándwich",
+                activo: true
             },
             {
                 id: 2,
@@ -138,6 +191,7 @@ const main = async () => {
                 imageSrc: "/img/options/pan-campesino.jpg",
                 correct: false,
                 text: "Pan redondo",
+                activo: true
             },
             {
                 id: 3,
@@ -145,6 +199,7 @@ const main = async () => {
                 imageSrc: "/img/options/bagel.jpg",
                 correct: false,
                 text: "Pan en forma de dona",
+                activo: true
             },
             {
                 id: 4,
@@ -152,6 +207,7 @@ const main = async () => {
                 imageSrc: "/img/options/cruasan.jpg",
                 correct: false,
                 text: "Cruasán",
+                activo: true
             },
         ]);
 
@@ -162,24 +218,28 @@ const main = async () => {
                 challengeId: 2, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: true,
                 text: "Aceite",
+                activo: true
             },
             {
                 id: 6,
                 challengeId: 2, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: false,
                 text: "Harina de trigo",
+                activo: true
             },
             {
                 id: 7,
                 challengeId: 2, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: false,
                 text: "Polvo para hornear",
+                activo: true
             },
             {
                 id: 8,
                 challengeId: 2, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: false,
                 text: "Miel",
+                activo: true
             },
         ]);
         
@@ -191,6 +251,7 @@ const main = async () => {
                 imageSrc: "/img/options/corte-vichy.jpg",
                 correct: false,
                 text: "Rodajas de unos 2mm de espesor",
+                activo: true
             },
             {
                 id: 10,
@@ -198,6 +259,7 @@ const main = async () => {
                 imageSrc: "/img/options/corte-brunoise.jpg",
                 correct: true,
                 text: "Cubos de 1 a 2 mm",
+                activo: true
             },
             {
                 id: 11,
@@ -205,6 +267,7 @@ const main = async () => {
                 imageSrc: "/img/options/corte-macedonia.jpg",
                 correct: false,
                 text: "Cubos de 4mm",
+                activo: true
             },
             {
                 id: 12,
@@ -212,6 +275,7 @@ const main = async () => {
                 imageSrc: "/img/options/corte-jardinera.jpg",
                 correct: false,
                 text: "Tiras de unos 4 cm de largo, 4 mm de ancho y 4 mm de espesor",
+                activo: true
             },
         ]);
 
@@ -222,24 +286,28 @@ const main = async () => {
                 challengeId: 4, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: false,
                 text: "5 minutos",
+                activo: true
             },
             {
                 id: 14,
                 challengeId: 4, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: false,
                 text: "10 minutos",
+                activo: true
             },
             {
                 id: 15,
                 challengeId: 4, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: true,
                 text: "15 minutos",
+                activo: true
             },
             {
                 id: 16,
                 challengeId: 4, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: false,
                 text: "20 minutos",
+                activo: true
             },
         ]);
 
@@ -252,6 +320,7 @@ const main = async () => {
                 type: "SELECT",
                 order: 5,
                 question: '¿Cuál de éstos es un "Pan de molde"?',
+                activo: true
             },
             {
                 id: 6,
@@ -259,6 +328,7 @@ const main = async () => {
                 type: "ASSIST",
                 order: 6,
                 question: '¿Cúal de las siguientes opciones no es un fruto seco?',
+                activo: true
             },
             // {
             //     id: 7,
@@ -285,6 +355,7 @@ const main = async () => {
                 imageSrc: "/img/options/pan-molde.jpg",
                 correct: true,
                 text: "Pan de sándwich",
+                activo: true
             },
             {
                 id: 18,
@@ -292,6 +363,7 @@ const main = async () => {
                 imageSrc: "/img/options/pan-campesino.jpg",
                 correct: false,
                 text: "Pan redondo",
+                activo: true
             },
             {
                 id: 19,
@@ -299,6 +371,7 @@ const main = async () => {
                 imageSrc: "/img/options/bagel.jpg",
                 correct: false,
                 text: "Pan en forma de dona",
+                activo: true
             },
             {
                 id: 20,
@@ -306,6 +379,7 @@ const main = async () => {
                 imageSrc: "/img/options/cruasan.jpg",
                 correct: false,
                 text: "Cruasán",
+                activo: true
             },
         ]);
 
@@ -316,24 +390,28 @@ const main = async () => {
                 challengeId: 6, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: false,
                 text: "Merey",
+                activo: true
             },
             {
                 id: 22,
                 challengeId: 6, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: false,
                 text: "Almendra",
+                activo: true
             },
             {
                 id: 23,
                 challengeId: 6, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: false,
                 text: "Pistacho",
+                activo: true
             },
             {
                 id: 24,
                 challengeId: 6, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: true,
                 text: "Maní",
+                activo: true
             },
         ]);
 

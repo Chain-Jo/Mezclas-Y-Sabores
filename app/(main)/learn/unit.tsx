@@ -9,6 +9,7 @@ type Props = {
     order: number;
     title: string;
     description: string;
+    activo: boolean
     lessons: (typeof lessons.$inferSelect & {
         completed: boolean;
     })[];
@@ -16,6 +17,9 @@ type Props = {
         unit: typeof units.$inferSelect;
     } | undefined;
     activeLessonPercentage: number;
+    // params: {
+    //     lessonId: number;
+    // };
 };
 
 export const Unit = ({
@@ -23,9 +27,11 @@ export const Unit = ({
     order,
     title,
     description,
+    activo,
     lessons,
     activeLesson,
     activeLessonPercentage,
+    // params
 }: Props) => {
     return (
         <>
@@ -46,6 +52,7 @@ export const Unit = ({
                                 current={isCurrent} // TODO: remove hardcoded true
                                 locked={isLocked}
                                 percentage={activeLessonPercentage}
+                                activo = {lesson.activo}
                             />
                             
                         </div>

@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 
 import { 
     getCourseProgress, 
+    getLesson, 
     getLessonPercentage, 
     getUnits, 
     getUserProgress 
@@ -17,21 +18,25 @@ import { lessons, units as unitsSchema } from '@/database/schema';
 import { Header } from "./header";
 import { Unit } from "./unit";
 
+
 const LearnPage = async () => {
 
     const userProgressData = getUserProgress();
     const coursePorgressData = getCourseProgress();
     const lessonPercentageData = getLessonPercentage(); 
     const unitsData = getUnits();
+    const lessonData = getLesson();
 
     const [
         userProgress,
         units,
+        lesson,
         courseProgress,
         lessonParcentage
     ] = await Promise.all([
         userProgressData,
         unitsData,
+        lessonData,
         coursePorgressData,
         lessonPercentageData,
     ]);
@@ -62,21 +67,30 @@ const LearnPage = async () => {
             <FeedWrapper>
                 <Header title={userProgress.activeCourse.title}/>
                 {units.map((unit) => (
-                    <div key={unit.id} className="mb-10">
-                        <Unit
-                            id={unit.id}
-                            order={unit.order}
-                            description={unit.description}
-                            title={unit.title}
-                            lessons={unit.lessons}
-                            activeLesson={courseProgress?.activeLesson as typeof lessons
-                                .$inferSelect & {
-                                    unit: typeof unitsSchema.$inferSelect;
-                            } | undefined}
-                            activeLessonPercentage={lessonParcentage}
-                        />
-                        {/* {JSON.stringify(unit)} */}
-                    </div>
+                    <>
+                    {unit.activo === true
+                        ?
+                        <div key={unit.id} className="mb-10">
+                            <Unit
+                                id={unit.id}
+                                order={unit.order}
+                                description={unit.description}
+                                title={unit.title}
+                                lessons={unit.lessons}
+                                activo={unit.activo}
+                                activeLesson={courseProgress?.activeLesson as typeof lessons
+                                    .$inferSelect & {
+                                        unit: typeof unitsSchema.$inferSelect;
+                                } | undefined}
+                                activeLessonPercentage={lessonParcentage}
+                                // params= {lesson}
+                            />
+                            {/* {JSON.stringify(unit)} */}
+                        </div>
+                        : null
+                    }
+                    
+                    </>
                 ))}
             </FeedWrapper>
         </div>

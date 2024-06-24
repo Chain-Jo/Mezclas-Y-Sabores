@@ -26,14 +26,45 @@ const LessonPage = async() => {
         .filter((challenge) => challenge.completed)
         .length / lesson.challenges.length * 100;
 
-    return ( 
-        <Quiz
-            initialLessonId={lesson.id}
-            initialLessonChallenges={lesson.challenges}
-            initialHearts={userProgress.hearts}
-            initialPercentage={initialPercentage}
-        />
-     );
+
+    if (lesson.prueba === false) {
+        return (
+            <>
+            {lesson.activo === true 
+                ?
+                    <Quiz
+                        initialLessonId={lesson.id}
+                        isTest={lesson.prueba}
+                        initialLessonChallenges={lesson.challenges}
+                        initialHearts={userProgress.hearts}
+                        initialPercentage={initialPercentage}
+                    />
+                    
+                : null
+            }
+            </>
+         );
+        
+         
+        } else {
+            return (
+                <>
+                {lesson.activo === true 
+                    ?
+                        <Quiz
+                            initialLessonId={lesson.id}
+                            isTest={lesson.prueba}
+                            initialLessonChallenges={lesson.challenges}
+                            initialHearts={1}
+                            initialPercentage={initialPercentage}
+                        />
+                        
+                    : null
+                }
+                </>
+            );
+
+    }
 }
  
 export default LessonPage;

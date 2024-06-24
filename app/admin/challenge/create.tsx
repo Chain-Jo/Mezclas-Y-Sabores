@@ -5,7 +5,8 @@ import {
     required, 
     ReferenceInput, 
     NumberInput, 
-    SelectInput 
+    SelectInput,
+    BooleanInput
 } from "react-admin";
 
 export const ChallengeCreate = () => {
@@ -31,6 +32,10 @@ export const ChallengeCreate = () => {
                     ]}
                     validate={[required()]} 
 
+                />
+                <BooleanInput 
+                    source="activo"
+                    label="Activo"
                 />
                 <ReferenceInput 
                     source="lessonId"

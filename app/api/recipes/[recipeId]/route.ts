@@ -2,7 +2,7 @@ import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 
 import database from "@/database/drizzle";
-import { recipes } from "@/database/schema";
+import { recipesX } from "@/database/schema";
 import { isAdmin } from "@/lib/admin";
 
 export const GET = async ( 
@@ -14,8 +14,8 @@ export const GET = async (
         return new NextResponse("Sin autorización", { status: 401 });
     }
 
-    const data = await database.query.recipes.findFirst({
-        where: eq(recipes.id, params.recipeId),
+    const data = await database.query.recipesX.findFirst({
+        where: eq(recipesX.id, params.recipeId),
     });
 
     return NextResponse.json(data);
@@ -33,9 +33,9 @@ export const PUT = async (
 
     const body = await req.json();
 
-    const data = await database.update(recipes).set({
+    const data = await database.update(recipesX).set({
         ...body,
-    }).where(eq(recipes.id, params.recipeId)).returning();
+    }).where(eq(recipesX.id, params.recipeId)).returning();
 
     return NextResponse.json(data[0]);
 };
@@ -50,8 +50,8 @@ export const DELETE = async (
         return new NextResponse("Sin autorización", { status: 401 });
     }
 
-    const data = await database.delete(recipes)
-        .where(eq(recipes.id, params.recipeId)).returning();
+    const data = await database.delete(recipesX)
+        .where(eq(recipesX.id, params.recipeId)).returning();
 
     return NextResponse.json(data[0]);
 };

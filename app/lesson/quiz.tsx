@@ -18,9 +18,11 @@ import { Footer } from "./footer";
 import { Challenge } from "./challenge";
 import { ResultCard } from "./result-card";
 import { QuestionBubble } from "./cuestion-bubble";
+import { useTestModal } from "@/store/use-test-modal";
 
 type Props = {
     initialPercentage: number;
+    isTest: boolean;
     initialHearts: number;
     initialLessonId: number;
     initialLessonChallenges: (typeof challenges.$inferSelect & {
@@ -31,6 +33,7 @@ type Props = {
 
 export const Quiz = ({
     initialPercentage,
+    isTest,
     initialHearts,
     initialLessonId,
     initialLessonChallenges,
@@ -40,9 +43,17 @@ export const Quiz = ({
 
     const { open: openPracticeModal } = usePracticeModal();
 
+    const { open: openTestModal } = useTestModal();
+
     useMount(() => {
         if (initialPercentage === 100) {
             openPracticeModal();
+        }
+    });
+
+    useMount(() => {
+        if (isTest === true) {
+            openTestModal();
         }
     });
     
@@ -116,7 +127,7 @@ export const Quiz = ({
             startTransition(() => {
                 upsertChallengeProgress(currentChallenge.id)
                     .then((response) => {
-                        if (response?.error === "hearts") {
+                        if (response?.error === "corazones") {
                             openHeartsModal();
                             return;
                         }
@@ -136,7 +147,7 @@ export const Quiz = ({
             startTransition(() => {
                 reduceHearts(currentChallenge.id)
                     .then((response) => {
-                        if (response?.error === "hearts") {
+                        if (response?.error === "corazones") {
                             openHeartsModal();
                             return;
                         }
@@ -215,6 +226,7 @@ export const Quiz = ({
             <Header
                 hearts={hearts}
                 percentage={percentage}
+                test={isTest}
             />
             <div className="flex-1">
                 <div className="h-full flex items-center justify-center">
@@ -228,14 +240,20 @@ export const Quiz = ({
                             {currentChallenge.type === "ASSIST" && (
                                 <QuestionBubble question={currentChallenge.question}/>
                             )}
-                            <Challenge
-                                options={options}
-                                onSelect={onSelect}
-                                status={status}
-                                selectedOption={selectedOption}
-                                disabled={pending}
-                                type={currentChallenge.type}
-                            />
+                            {currentChallenge.activo === true
+                                ?
+                                <Challenge
+                                    options={options}
+                                    onSelect={onSelect}
+                                    status={status}
+                                    selectedOption={selectedOption}
+                                    disabled={pending}
+                                    type={currentChallenge.type}
+                                    activo={currentChallenge.activo}
+                                />
+                                
+                                : null
+                            }
                         </div>
                     </div>
                 </div>

@@ -20,6 +20,10 @@ export const ChallengeOptionCreate = () => {
                     source="correct"
                     label="Opción correcta"
                 />
+                <BooleanInput 
+                    source="activo"
+                    label="Activo"
+                />
                 <ReferenceInput 
                     source="challengeId"
                     reference="challenges"

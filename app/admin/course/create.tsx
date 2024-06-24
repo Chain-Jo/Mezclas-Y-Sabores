@@ -1,4 +1,4 @@
-import { Create, TextInput, SimpleForm, required } from "react-admin";
+import { Create, TextInput, SimpleForm, required, BooleanInput } from "react-admin";
 
 export const CourseCreate = () => {
     return (
@@ -6,6 +6,10 @@ export const CourseCreate = () => {
             <SimpleForm>
                 <TextInput source="title" validate={[required()]} label="Título" />
                 <TextInput source="imageSrc" validate={[required()]} label="Imagen" />
+                <BooleanInput 
+                    source="activo"
+                    label="Activo"
+                />
             </SimpleForm>
         </Create>
     );

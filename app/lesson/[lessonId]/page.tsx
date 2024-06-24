@@ -36,12 +36,20 @@ const LessonIdPage = async({
         .length / lesson.challenges.length * 100;
 
     return ( 
-        <Quiz
-            initialLessonId={lesson.id}
-            initialLessonChallenges={lesson.challenges}
-            initialHearts={userProgress.hearts}
-            initialPercentage={initialPercentage}
-        />
+        <>
+        {lesson.activo === true 
+            ?
+                <Quiz
+                    initialLessonId={lesson.id}
+                    isTest={lesson.prueba}
+                    initialLessonChallenges={lesson.challenges}
+                    initialHearts={userProgress.hearts}
+                    initialPercentage={initialPercentage}
+                />
+                
+            : null
+        }
+        </>
      );
 }
  

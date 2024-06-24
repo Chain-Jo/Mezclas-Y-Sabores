@@ -46,6 +46,7 @@ export const List = ( {
                     onClick = {onClick}
                     disabled = {pending}
                     active = {course.id === activeCourseId}
+                    activo = {course.activo}
                 />
             )) }
         </div>

@@ -1,33 +1,26 @@
-import { Create, TextInput, SimpleForm, required, ReferenceInput, NumberInput } from "react-admin";
+import { Create, TextInput, SimpleForm, required, ReferenceInput, NumberInput, BooleanInput } from "react-admin";
 
 export const RecipeCreate = () => {
     return (
         <Create>
             <SimpleForm>
-            <TextInput 
+                <TextInput 
                     source="title" 
                     validate={[required()]} 
                     label="Título" 
                 />
                 <TextInput 
-                    source="description" 
+                    source="link" 
                     validate={[required()]} 
-                    label="Descripción" 
+                    label="Link" 
+                />
+                <BooleanInput 
+                    source="activo"
+                    label="Activo"
                 />
                 <ReferenceInput 
                     source="unitId"
                     reference="units"
-                />
-                <TextInput 
-                    source="imageSrc"
-                    validate={[required()]}
-                    label="URL de la Imagen"
-                />
-                <NumberInput 
-                    source="order"
-                    validate={[required()]}
-                    label="Orden"
-                    min='1'
                 />
             </SimpleForm>
         </Create>

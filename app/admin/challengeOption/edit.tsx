@@ -20,6 +20,10 @@ export const ChallengeOptionEdit = () => {
                     source="correct"
                     label="Opción Correcta"
                 />
+                <BooleanInput 
+                    source="activo"
+                    label="Activo"
+                />
                 <ReferenceInput 
                     source="challengeId"
                     reference="challenges"

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { 
@@ -13,20 +12,15 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { useHeartsModal } from "@/store/use-hearts-modal";
+import { useTestModal } from "@/store/use-test-modal";
 
 
-export const HeartsModal = () => {
-    const router = useRouter();
+export const TestModal = () => {
     const [isClient, setIsClient] = useState(false);
-    const { isOpen, close } = useHeartsModal();
+    const { isOpen, close } = useTestModal();
 
     useEffect(() => setIsClient(true), []);
 
-    const onClick = () => {
-        close();
-        router.push("/shop");
-    }
 
     if (!isClient) {
         return null;
@@ -38,17 +32,20 @@ export const HeartsModal = () => {
                 <DialogHeader>
                     <div className="flex items-center w-full justify-center mb-5">
                         <Image
-                            src="/img/skull.png"
-                            alt="Bad"
-                            height={80}
-                            width={80}
+                            src="/img/prueba.png"
+                            alt="Heart"
+                            height={100}
+                            width={100}
                         />
                     </div>
                     <DialogTitle className="text-center font-bold text-2xl">
-                        ¡Te quedaste sin intentos!
+                        {/* TODO: arreglar las traducciones */}
+                        {/* Wait, don&apos;t go */}
+                        Prueba.
                     </DialogTitle>
                     <DialogDescription className="text-center text-base">
-                        Canjea puntos para tener más intentos
+                        {/* You&apos;re about to leave the lesson. Are you sure? */}
+                        Esta es una prueba, no contarás con intentos, si fallas tendrás que repasar las lecciones anteriores para poder intentar de nuevo.
                     </DialogDescription>
                 </DialogHeader>
                 <DialogFooter className="mb-4">
@@ -57,20 +54,11 @@ export const HeartsModal = () => {
                             variant="primary"
                             className="w-full"
                             size="lg"
-                            onClick={onClick}
+                            onClick={close}
+                            // onClick={close}
                         >
-                            Sigue aprendiendo?
-                        </Button>
-                        <Button
-                            variant="primaryOutline"
-                            className="w-full"
-                            size="lg"
-                            onClick={() => {
-                                close();
-                                router.push("/learn");
-                            }}
-                        >
-                            Tomarse un descanso
+                            {/* End session */}
+                            Entiendo
                         </Button>
                     </div>
                 </DialogFooter>

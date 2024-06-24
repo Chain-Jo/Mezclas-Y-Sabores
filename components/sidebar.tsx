@@ -56,11 +56,11 @@ export const SideBar = ({
                     href="/shop"
                     iconSrc="/img/tienda.png"
                 />
-                {/* <SidebarItem 
+                <SidebarItem 
                     label="Recetas"
                     href="/recipes"
                     iconSrc="/img/receta.png"
-                /> */}
+                />
             </div>
                 <div className="p-4">
                     <ClerkLoading>

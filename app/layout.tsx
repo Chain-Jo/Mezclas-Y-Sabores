@@ -9,6 +9,7 @@ import { PracticeModal } from "@/components/modals/practice-modal";
 
 // import { Inter } from "next/font/google";
 import "./globals.css";
+import { TestModal } from "@/components/modals/test-modal";
 
 const font = Nunito({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
           <ExitModal />
           <HeartsModal/>
           <PracticeModal/>
+          <TestModal/>
           {children}
         </body>
       </html>

@@ -9,11 +9,13 @@ import { useExitModal } from "@/store/use-exit-modal";
 type Props = {
     hearts: number;
     percentage: number;
+    test: boolean;
 };
 
 export const Header = ({
     hearts,
     percentage,
+    test,
 }: Props) => {
 
     const { open } = useExitModal();
@@ -27,17 +29,29 @@ export const Header = ({
 
             <Progress value={percentage}/>
             <div className="text-rose-500 flex items-center font-bold">
-                <Image 
-                src="/img/corazon.png"
-                height={28}
-                width={28}
-                alt="Heart"
-                className="mr-2"
-                />
-                {1 === 1
-                    ? hearts
-                    : <InfinityIcon className="h-6 w-6 stroke-[3]"/>
-                }
+                { test === true 
+                    ? <Image 
+                        src="/img/prueba.png"
+                        height={28}
+                        width={28}
+                        alt="Heart"
+                        className="mr-2"
+                        />
+                    :
+                        <Image 
+                        src="/img/corazon.png"
+                        height={28}
+                        width={28}
+                        alt="Heart"
+                        className="mr-2"
+                        />
+                        
+                    }
+                    {test === false
+                        ? hearts
+                        : null
+                        // <InfinityIcon className="h-6 w-6 stroke-[3]"/>
+                    }
             </div>
         </header>
     )
