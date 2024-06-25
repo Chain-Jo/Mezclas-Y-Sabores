@@ -13,6 +13,7 @@ export const ChallengeOptionList = () => {
             <Datagrid rowClick="edit">
                 <NumberField source="id"/>
                 <TextField source="text"/>
+                <BooleanField source="activo"/>
                 <BooleanField source="correct"/>
                 <ReferenceField source="challengeId" reference="challenges"/>
                 <TextField source="imageSrc" />

@@ -5,7 +5,8 @@ import {
     required, 
     ReferenceInput, 
     NumberInput, 
-    SelectInput 
+    SelectInput, 
+    BooleanInput
 } from "react-admin";
 
 export const ChallengeEdit = () => {
@@ -16,6 +17,10 @@ export const ChallengeEdit = () => {
                     source="question" 
                     validate={[required()]} 
                     label="Pregunta" 
+                />
+                <BooleanInput 
+                    source="activo"
+                    label="Activo"
                 />
                 <SelectInput 
                     source="type"

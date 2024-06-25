@@ -17,6 +17,10 @@ export const ChallengeOptionCreate = () => {
                     label="Texto" 
                 />
                 <BooleanInput 
+                    source="activo"
+                    label="Activo"
+                />
+                <BooleanInput 
                     source="correct"
                     label="Opción correcta"
                 />

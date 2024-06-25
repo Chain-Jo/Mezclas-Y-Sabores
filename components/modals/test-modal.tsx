@@ -45,7 +45,7 @@ export const TestModal = () => {
                     </DialogTitle>
                     <DialogDescription className="text-center text-base">
                         {/* You&apos;re about to leave the lesson. Are you sure? */}
-                        Esta es una prueba, no contarás con intentos, si fallas tendrás que repasar las lecciones anteriores para poder intentar de nuevo.
+                        Esta es una prueba, repasa las lecciones anteriores.
                     </DialogDescription>
                 </DialogHeader>
                 <DialogFooter className="mb-4">
