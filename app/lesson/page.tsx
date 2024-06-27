@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { getLesson, getUserProgress } from "@/database/queries";
 
 import { Quiz } from "./quiz";
+import { Test } from "./test";
 
 const LessonPage = async() => {
 
@@ -51,7 +52,7 @@ const LessonPage = async() => {
                 <>
                 {lesson.activo === true 
                     ?
-                        <Quiz
+                        <Test
                             initialLessonId={lesson.id}
                             isTest={lesson.prueba}
                             initialLessonChallenges={lesson.challenges}

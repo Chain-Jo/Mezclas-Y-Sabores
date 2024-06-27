@@ -110,6 +110,57 @@ export const reduceHearts = async (challengeId: number) => {
     revalidatePath(`/lesson/${lessonId}`);
 };
 
+export const reduceHeartsTest = async (challengeId: number) => {
+    const { userId } = await auth();
+
+    if (!userId) {
+        throw new Error("Sin autorización");
+    }
+
+    const currentUserProgress = await getUserProgress();
+
+    const challenge = await database.query.challenges.findFirst({
+        where: eq(challenges.id, challengeId),
+    });
+
+    if (!challenge) {
+        throw new Error("No se encontró la pregunta");
+    }
+
+    const lessonId = challenge.lessonId;
+
+    const existitingChallengeProgress = await database.query.challengeProgress.findFirst({
+        where: and(
+            eq(challengeProgress.userId, userId),
+            eq(challengeProgress.challengeId, challengeId),
+        ),
+    });
+
+    const isPractice = !!existitingChallengeProgress;
+
+    if (isPractice) {
+        return { error: "práctica" };
+    }
+
+    if (!currentUserProgress) {
+        throw new Error("No se encontró progreso de usuario");
+    }
+
+    if (currentUserProgress.hearts === 0) {
+        return { error: "corazones" };
+    }
+
+    await database.update(userProgress).set({
+        hearts: Math.max(currentUserProgress.hearts - 6, 0),
+    }).where(eq(userProgress.userId, userId));
+
+    revalidatePath("/shop");
+    revalidatePath("/learn");
+    revalidatePath("/quest");
+    revalidatePath("/leaderboard");
+    revalidatePath(`/lesson/${lessonId}`);
+};
+
 export const refillHearts = async () => {
     const currentUserProgress = await getUserProgress();
 
