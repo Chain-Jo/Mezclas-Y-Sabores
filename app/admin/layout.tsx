@@ -35,6 +35,8 @@ import { RecipeList } from "./recipe/list";
 import { RecipeCreate } from "./recipe/create";
 import { RecipeEdit } from "./recipe/edit";
 
+import TableLog from "@/components/admin/tablelog";
+
 const dataProvider = simpleRestProvider("/api");
 
 const theme = createTheme({
@@ -108,6 +110,7 @@ export default function AdminLayout({
             options={{ label: "Respuestas" }}
           />
         </Admin>
+        <TableLog/>
         <div className="adminContainer">
           <div className="contentContainer">{children}</div>
         </div>

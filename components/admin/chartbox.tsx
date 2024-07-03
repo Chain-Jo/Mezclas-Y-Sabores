@@ -34,17 +34,11 @@ function organizeByMonthAndDay(data: DataObject[]): DataObject[] {
   });
 }
 
-const newData = [
-  { value: 1, date: "2024-05-10" },
-  { value: 2, date: "2024-05-11" },
-  { value: 3, date: "2024-05-12" },
-  { value: 4, date: "2024-06-15" },
-  { value: 5, date: "2024-08-10" },
-];
+
 
 const label = "value";
 const ChartBox = () => {
-  /*const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
@@ -69,7 +63,7 @@ const ChartBox = () => {
   const newData: DataObject[] = [];
   for (let i = 0; i < data.length; i++) {
     newData.push({ value: i + 1, date: data[i].createdAt });
-  }*/
+  }
 
   const organizedData: DataObject[] = organizeByMonthAndDay(newData);
   return (

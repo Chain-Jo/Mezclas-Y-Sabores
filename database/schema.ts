@@ -153,3 +153,10 @@ export const userPorgressRelations = relations(userProgress, ({ one }) => ({
         references: [courses.id],
     }),
 }));
+
+export const userActions = pgTable("user_actions", {
+    actionId: text("action_id").primaryKey(),
+    userName: text("user_name").notNull(),
+    actionName: text("action_name").notNull(),
+    createdAt: text('created_at').notNull(),
+});

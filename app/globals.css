@@ -257,5 +257,13 @@ body,
     @apply text-xl font-bold;
   }
 
+}
+
+.tableLog {
+  @apply border border-2;
+
+  tr, th, td {
+    @apply border border-2
+  }
 
 }
