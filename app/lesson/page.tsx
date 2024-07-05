@@ -5,7 +5,7 @@ import { getLesson, getUserProgress } from "@/database/queries";
 import { Quiz } from "./quiz";
 import { Test } from "./test";
 
-const LessonPage = async() => {
+const LessonPage = async () => {
 
     const lessonData = getLesson();
     const userProgressData = getUserProgress();
@@ -19,7 +19,7 @@ const LessonPage = async() => {
     ]);
 
     if (!lesson || !userProgress) {
-    // if (!lesson || !userProgress) {
+        // if (!lesson || !userProgress) {
         redirect("/learn")
     }
 
@@ -31,8 +31,8 @@ const LessonPage = async() => {
     if (lesson.prueba === false) {
         return (
             <>
-            {lesson.activo === true 
-                ?
+                {lesson.activo === true
+                    ?
                     <Quiz
                         initialLessonId={lesson.id}
                         isTest={lesson.prueba}
@@ -40,32 +40,32 @@ const LessonPage = async() => {
                         initialHearts={userProgress.hearts}
                         initialPercentage={initialPercentage}
                     />
-                    
-                : null
-            }
-            </>
-         );
-        
-         
-        } else {
-            return (
-                <>
-                {lesson.activo === true 
-                    ?
-                        <Test
-                            initialLessonId={lesson.id}
-                            isTest={lesson.prueba}
-                            initialLessonChallenges={lesson.challenges}
-                            initialHearts={1}
-                            initialPercentage={initialPercentage}
-                        />
-                        
+
                     : null
                 }
-                </>
-            );
+            </>
+        );
+
+
+    } else {
+        return (
+            <>
+                {lesson.activo === true
+                    ?
+                    <Test
+                        initialLessonId={lesson.id}
+                        isTest={lesson.prueba}
+                        initialLessonChallenges={lesson.challenges}
+                        initialHearts={1}
+                        initialPercentage={initialPercentage}
+                    />
+
+                    : null
+                }
+            </>
+        );
 
     }
 }
- 
+
 export default LessonPage;

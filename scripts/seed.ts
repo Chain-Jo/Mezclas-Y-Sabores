@@ -138,6 +138,15 @@ const main = async () => {
                 activo: true,
                 prueba: false
             },
+            {
+                id: 5,
+                unitId: 2, // Unidad 2 
+                order: 5,
+                title: "Teoría V",
+                activo: true,
+                prueba: false
+            },
+
         ]);
         
         await database.insert(schema.challenges).values([
@@ -311,7 +320,6 @@ const main = async () => {
             },
         ]);
 
-
         // lesson 2
         await database.insert(schema.challenges).values([
             {
@@ -345,7 +353,6 @@ const main = async () => {
             //     question: '¿Por cuanto tiempo se debe hervir un huevo para que quede completamente cocido?',
             // },
         ]);
-
 
         // Challenges lesson 2
         await database.insert(schema.challengeOptions).values([
@@ -409,6 +416,57 @@ const main = async () => {
             {
                 id: 24,
                 challengeId: 6, // ¿Cuál de éstos es un "Pan de molde"?
+                correct: true,
+                text: "Maní",
+                activo: true
+            },
+        ]);
+
+        // lesson 5
+        await database.insert(schema.challenges).values([
+             {
+                 id: 7,
+                 lessonId: 5, // Teoría I
+                 type: "SELECT",
+                 order: 7,
+                 question: '¿Cuál de los siguientes cortes de frutas y verduras se conoce como "Brunoise"',
+                 activo: true,
+             },
+             {
+                 id: 8,
+                 lessonId: 5, // Teoría I
+                 type: "ASSIST",
+                 order: 8,
+                 question: '¿Por cuanto tiempo se debe hervir un huevo para que quede completamente cocido?',
+                 activo: true
+             },
+        ]);
+
+        await database.insert(schema.challengeOptions).values([
+            {
+                id: 25,
+                challengeId: 7, // ¿Cuál de éstos es un "Pan de molde"?
+                correct: false,
+                text: "Merey",
+                activo: true
+            },
+            {
+                id: 26,
+                challengeId: 7, // ¿Cuál de éstos es un "Pan de molde"?
+                correct: true,
+                text: "Almendra",
+                activo: true
+            },
+            {
+                id: 27,
+                challengeId: 8, // ¿Cuál de éstos es un "Pan de molde"?
+                correct: false,
+                text: "Pistacho",
+                activo: true
+            },
+            {
+                id: 28,
+                challengeId: 8, // ¿Cuál de éstos es un "Pan de molde"?
                 correct: true,
                 text: "Maní",
                 activo: true

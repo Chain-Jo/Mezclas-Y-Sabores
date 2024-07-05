@@ -56,7 +56,7 @@ export const Quiz = ({
             openTestModal();
         }
     });
-    
+
     const { width, height } = useWindowSize();
 
     const router = useRouter();
@@ -76,7 +76,7 @@ export const Quiz = ({
 
     const [lessonId, setLessonId] = useState(initialLessonId);
     const [hearts, setHearts] = useState(initialHearts);
-    const [percentage, setPercentage] = useState(()=> {
+    const [percentage, setPercentage] = useState(() => {
         return initialPercentage === 100 ? 0 : initialPercentage;
     });
     const [challenges] = useState(initialLessonChallenges);
@@ -151,7 +151,7 @@ export const Quiz = ({
                             openHeartsModal();
                             return;
                         }
-                        
+
                         incorrectControls.play();
                         setStatus("wrong");
                         if (!response?.error) {
@@ -167,15 +167,15 @@ export const Quiz = ({
     if (!currentChallenge) {
         return (
             <>
-            {finishAudio}
-            <Confetti
-                width={width}
-                height={height}
-                recycle={false}
-                numberOfPieces={500}
-                tweenDuration={10000}
-            />
-            {/* añadido algunos estilos como el gap y el w-[] */}
+                {finishAudio}
+                <Confetti
+                    width={width}
+                    height={height}
+                    recycle={false}
+                    numberOfPieces={500}
+                    tweenDuration={10000}
+                />
+                {/* añadido algunos estilos como el gap y el w-[] */}
                 <div className="flex flex-col gap-y-4 lg:gap-y-8 mx-auto text-center items-center justify-center h-full w-[500px]">
                     <Image
                         src="/img/finish.png"
@@ -215,9 +215,9 @@ export const Quiz = ({
         );
     }
 
-    const title = currentChallenge.type === "ASSIST" 
-    ? "Selecciona el correcto" 
-    : currentChallenge.question
+    const title = currentChallenge.type === "ASSIST"
+        ? "Selecciona el correcto"
+        : currentChallenge.question
 
     return (
         <>
@@ -238,7 +238,7 @@ export const Quiz = ({
                         <div>
 
                             {currentChallenge.type === "ASSIST" && (
-                                <QuestionBubble question={currentChallenge.question}/>
+                                <QuestionBubble question={currentChallenge.question} />
                             )}
                             {currentChallenge.activo === true
                                 ?
@@ -251,7 +251,7 @@ export const Quiz = ({
                                     type={currentChallenge.type}
                                     activo={currentChallenge.activo}
                                 />
-                                
+
                                 : null
                             }
                         </div>
