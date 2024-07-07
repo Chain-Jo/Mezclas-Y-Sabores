@@ -29,21 +29,23 @@ const TableLog = () => {
       }, []);
 
     return (
+      <div className="flex flex-col items-center justify-between pl-2">
+
         <div className="table">
             <table className="tableLog">
                 <thead>
                     <tr>
-                        <th>Usuarios</th>
-                        <th>Acciones</th>
-                        <th>Fecha y Hora</th>
+                        <th><p>  Usuarios  </p></th>
+                        <th><p> Acciones </p></th>
+                        <th>  Fecha y Hora  </th>
                     </tr>
                 </thead>
                 <tbody>
                     {data.map((action: any) =>
                         <tr key={action.actionId}>
-                            <td>{action.userName}</td>
-                            <td>{action.actionName}</td>
-                            <td>{action.createdAt}</td>
+                            <td>  {action.userName} </td>
+                            <td>  {action.actionName} </td>
+                            <td>  {action.createdAt}  </td>
                         </tr>
                     )}
 
@@ -51,6 +53,7 @@ const TableLog = () => {
             </table>
 
         </div>
+      </div>
     );
 };
 
