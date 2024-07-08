@@ -22,7 +22,12 @@ export const RecipeCreate = () => {
                     source="unitId"
                     reference="units"
                 />
-
+                <NumberInput 
+                    source="order"
+                    validate={[required()]}
+                    label="Orden"
+                    min='1'
+                />
             </SimpleForm>
         </Create>
     );
