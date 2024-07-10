@@ -312,8 +312,8 @@ export const getTopRecipesX = cache(async () => {
     }
 
     const data = await database.query.recipesX.findMany({
-        orderBy: (id, { desc }) => [desc(id.id)],
-        limit: 20,
+        orderBy: (id, { asc }) => [asc(id.id)],
+        limit: 60,
         columns: {
             id: true,
             title: true,
