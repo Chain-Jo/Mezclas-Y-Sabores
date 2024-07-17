@@ -74,6 +74,7 @@ export const recipesX = pgTable("recipesX", {
     title: text("title").notNull(),
     link: text("link").notNull(),
     unitId: integer("unit_id").references(() => units.id, { onDelete: "cascade" }).notNull(),
+    unidad_referenciada: integer("unidad_referenciada").notNull(),
     order: integer("order").notNull(),
     activo: boolean("activo").notNull(),
 });

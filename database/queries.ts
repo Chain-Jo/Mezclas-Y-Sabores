@@ -320,6 +320,7 @@ export const getTopRecipesX = cache(async () => {
             link: true,
             unitId: true,
             activo: true,
+            unidad_referenciada: true,
         },
     });
 

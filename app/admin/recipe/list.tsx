@@ -10,6 +10,10 @@ export const RecipeList = () => {
                 <BooleanField source="activo"/>
                 <ReferenceField source="unitId" reference="units"/>
                 <NumberField source="order"/>
+               {/**
+                
+                <NumberField source="unidad_referenciada"/>
+                */} 
             </Datagrid>
         </List>
     );

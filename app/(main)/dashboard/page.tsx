@@ -6,7 +6,7 @@ import { FeedWrapper } from "@/components/feed-wrapper";
 import { UserProgress } from "@/components/user-progress";
 import { StickyWrapper } from "@/components/sticky-wrapper";
 
-import { RecipeX } from "./recipeX";
+import { Dashboard } from "./dashboard";
 import { Promo } from "@/components/promo";
 import { Quests } from "@/components/quests";
 
@@ -14,7 +14,7 @@ import { getRecipeX, getTopRecipesX, getUnits, getUserProgress } from "@/databas
 import { Separator } from "@/components/ui/separator";
 
 
-const RecipePage = async () => {
+const DashboardPage = async () => {
 
 
 
@@ -59,16 +59,16 @@ const RecipePage = async () => {
             <FeedWrapper>
                 <div className="w-full flex flex-col items-center">
                     <Image
-                        src="/img/receta.png"
-                        alt="Shop"
+                        src="/img/estadisticas.png"
+                        alt="Administrar"
                         height={100}
                         width={100}
                     />
                     <h1 className="text-center font-bold text-neutral-800 text-2xl my-6">
-                        Recetas
+                        Administrar
                     </h1>
                     <p className="text-muted-foreground text-center text-lg mb-6">
-                        Desrcarga y lee las recetas del curso.
+                        Accede a las funcionalidades del administrador, ve y modifica los datos de la aplicación.
                     </p>
 
 
@@ -76,23 +76,22 @@ const RecipePage = async () => {
 
 
                     <Separator className="mb-4 h-0.5 rounded-full"/>
-                    {listRecipeX.map((recipeX, index) => (
+
+                        {/**
+                         * 
+                         <div 
+                         className="flex items-center w-full p-2 px-4 rounded-xl hover:bg-gray-200/50"
+                     >
+                         * 
+                         */}
                         <div 
-                        key={recipeX.id}
-                        className="flex items-center w-full p-2 px-4 rounded-xl hover:bg-gray-200/50"
+                        className="flex items-center w-full p-2 px-4 rounded-xl"
                     >
 
-                        <RecipeX
-                            id={recipeX.id}
-                            title={recipeX.title}
-                            link={recipeX.link}
-                            unitId={recipeX.unitId}
-                            activo= {recipeX.activo}
-                            unidad_referenciada={recipeX.unidad_referenciada}
+                        <Dashboard
+                            
                         />
                     </div>
-
-                    ))}
 
 
 
@@ -102,4 +101,4 @@ const RecipePage = async () => {
     );
 };
 
-export default RecipePage;
+export default DashboardPage;

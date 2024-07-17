@@ -7,6 +7,8 @@ const TableLog = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const admin = "(admin)";
+
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -29,31 +31,45 @@ const TableLog = () => {
       }, []);
 
     return (
-      <div className="flex flex-col items-center justify-between pl-2">
+      <>
+      {
 
-        <div className="table">
-            <table className="tableLog">
-                <thead>
-                    <tr>
-                        <th><p>  Usuarios  </p></th>
-                        <th><p> Acciones </p></th>
-                        <th>  Fecha y Hora  </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((action: any) =>
-                        <tr key={action.actionId}>
-                            <td>  {action.userName} </td>
-                            <td>  {action.actionName} </td>
-                            <td>  {action.createdAt}  </td>
-                        </tr>
-                    )}
+      }
+      
+        <div className="flex flex-col items-center justify-between">
 
-                </tbody>
-            </table>
+          <div className="table">
+              <table className="tableLog">
+                  <thead>
+                      <tr>
+                          <th><p>  Usuarios  </p></th>
+                          <th><p> Acciones </p></th>
+                          <th>  Fecha y Hora  </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {data.map((action: any) =>
+                          <tr key={action.actionId}>
+                            {!action.userName.includes(admin)
+                            ?
+                            null
+                            : 
+                            <>
+                              <td>  {action.userName} </td>
+                              <td>  {action.actionName} </td>
+                              <td>  {action.createdAt}  </td>
+                            </>
+                            
+                            }
+                          </tr>
+                      )}
 
+                  </tbody>
+              </table>
+
+          </div>
         </div>
-      </div>
+      </>
     );
 };
 

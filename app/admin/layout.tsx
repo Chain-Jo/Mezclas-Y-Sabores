@@ -110,7 +110,7 @@ export default function AdminLayout({
             options={{ label: "Respuestas" }}
           />
         </Admin>
-        <TableLog/>
+        {/* <TableLog/> */}
         <div className="adminContainer">
           <div className="contentContainer">{children}</div>
         </div>

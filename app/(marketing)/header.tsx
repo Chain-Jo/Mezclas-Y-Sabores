@@ -18,7 +18,13 @@ import { isAdmin } from "@/lib/admin";
 import Link from "next/link";
 
 
-export const Header = () => {
+type Props = {
+    // adminIds: string,
+};
+
+export const Header = ({
+    // adminIds
+}: Props) => {
     return (
         // <header className="h-20 w-full border-b-2 border-slate-200 px-4">
         <header className="h-20 w-full border-b-2 border-linea px-4">
@@ -40,6 +46,16 @@ export const Header = () => {
                             <UserButton
                                 afterSignOutUrl="/"
                             />
+                            {/* <div>
+                            {isAdmin()
+                            ? <Button size="lg" variant="ghost">
+                                <Link href="/admin">
+                                    Administrar
+                                </Link>
+                              </Button>
+                            : null
+                            }
+                            </div> */}
                         </SignedIn>
 
                         <SignedOut>
@@ -55,16 +71,6 @@ export const Header = () => {
                         </SignedOut>
 
                     </ClerkLoaded>
-                            <div>
-                            {isAdmin()
-                            ? <Button size="lg" variant="ghost">
-                                <Link href="/admin">
-									Administrar
-								</Link>
-                              </Button>
-                            : null
-                            }
-                            </div>
             </div>
         </header>
     )

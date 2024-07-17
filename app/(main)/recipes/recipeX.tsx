@@ -17,6 +17,7 @@ type Props = {
     link: string;
     unitId: number;
     activo: boolean;
+    unidad_referenciada: number
     // unitA: boolean;
 };
 
@@ -26,6 +27,7 @@ export const RecipeX = ({
     link,
     unitId,
     activo,
+    unidad_referenciada
     // unitA,
 }: Props) => {
     return (
@@ -37,7 +39,7 @@ export const RecipeX = ({
                 
                         <div className="space-y-2.5">
                             <h3 className="text-2xl font-bold">
-                                Unidad {unitId}
+                                Unidad {unidad_referenciada}
                             </h3>
                             <p className="text-lg">
                                 {title}

@@ -86,22 +86,24 @@ const main = async () => {
         await database.insert(schema.recipesX).values([
             {
                 id: 1,
-                unitId: 2, 
+                unitId: 1, 
                 title: "Receta Arepa",
                 link: "https://drive.google.com/file/d/1c25MhgpDjvFfVhngWTb8yCH2ewRtUZED/view?usp=drive_link",
                 order:1,
-                activo: true
+                activo: true,
+                unidad_referenciada:1
             },
         ]);
 
         await database.insert(schema.recipesX).values([
             {
                 id: 2,
-                unitId: 1, 
+                unitId: 2, 
                 title: "Receta Hallaca Venezolana",
                 link: "https://drive.google.com/file/d/15vEm-HcTQV4RAA0xShNMUx7Hr-cyjtx4/view?usp=drive_link",
                 order:2,
-                activo: true
+                activo: true,
+                unidad_referenciada: 2,
             },
         ]);
 
