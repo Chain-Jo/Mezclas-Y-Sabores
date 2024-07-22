@@ -5,9 +5,9 @@ export const CourseList = () => {
         <List>
             <Datagrid rowClick="edit">
                 <TextField source="id"/>
-                <TextField source="title"/>
+                <TextField source="titulo"/>
                 <BooleanField source="activo"/>
-                <TextField source="imageSrc"/>
+                <TextField source="enlace_imagen"/>
             </Datagrid>
         </List>
     );

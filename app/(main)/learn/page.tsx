@@ -55,7 +55,7 @@ const LearnPage = async () => {
             {/* <div className="flex flex-row-reverse gap-[48px] px-6 text-letrasBlancas"> */}
             <StickyWrapper>
                 <UserProgress
-                    // activeCourse={{ title: "Panadería", imageSrc: "/img/un-pan.png" }}
+                    // activeCourse={{ titulo: "Panadería", enlace_imagen: "/img/un-pan.png" }}
                     activeCourse={userProgress.activeCourse}
                     hearts={userProgress.hearts}
                     points={userProgress.points}
@@ -65,7 +65,7 @@ const LearnPage = async () => {
                 <Quests points={userProgress.points} />
             </StickyWrapper>
             <FeedWrapper>
-                <Header title={userProgress.activeCourse.title} />
+                <Header titulo={userProgress.activeCourse.titulo} />
                 {units.map((unit) => (
                     <>
                         {unit.activo === true
@@ -73,9 +73,9 @@ const LearnPage = async () => {
                             <div key={unit.id} className="mb-10">
                                 <Unit
                                     id={unit.id}
-                                    order={unit.order}
-                                    description={unit.description}
-                                    title={unit.title}
+                                    orden={unit.orden}
+                                    descripcion={unit.descripcion}
+                                    titulo={unit.titulo}
                                     lessons={unit.lessons}
                                     activo={unit.activo}
                                     activeLesson={courseProgress?.activeLesson as typeof lessons

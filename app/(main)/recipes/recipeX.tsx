@@ -13,7 +13,7 @@ import { NotebookText } from "lucide-react";
 
 type Props = {
     id: number;
-    title: string;
+    titulo: string;
     link: string;
     unitId: number;
     activo: boolean;
@@ -23,7 +23,7 @@ type Props = {
 
 export const RecipeX = ({
     id,
-    title,
+    titulo,
     link,
     unitId,
     activo,
@@ -42,7 +42,7 @@ export const RecipeX = ({
                                 Unidad {unidad_referenciada}
                             </h3>
                             <p className="text-lg">
-                                {title}
+                                {titulo}
                             </p>
                         </div>
                         <Link href={link} target="_blank">

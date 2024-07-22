@@ -40,15 +40,15 @@ export const getUnits = cache(async () => {
     }
     // Listo: 9:34
     const data = await database.query.units.findMany({
-        orderBy: (units, { asc }) => [asc(units.order)],
+        orderBy: (units, { asc }) => [asc(units.orden)],
         where: eq(units.courseId, userProgress.activeCourseId),
         with: {
             recipesX: true,
             lessons: {
-                orderBy: (lessons, { asc }) => [asc(lessons.order)],
+                orderBy: (lessons, { asc }) => [asc(lessons.orden)],
                 with: {
                     challenges: {
-                        orderBy: (challenges, { asc }) => [asc(challenges.order)],
+                        orderBy: (challenges, { asc }) => [asc(challenges.orden)],
                         with: {
                             challengeProgress: {
                                 where: eq(
@@ -72,10 +72,10 @@ export const getUnits = cache(async () => {
                 return { ...lesson, completed: false };
             }
 
-            const allCompletedChallenges = lesson.challenges.every((challenge) => {
-                return challenge.challengeProgress 
-                    && challenge.challengeProgress.length > 0
-                    && challenge.challengeProgress.every((progress) => progress.completed);
+            const allCompletedChallenges = lesson.challenges.every((reto) => {
+                return reto.challengeProgress 
+                    && reto.challengeProgress.length > 0
+                    && reto.challengeProgress.every((progress) => progress.completed);
             });
 
             return { ...lesson, completed: allCompletedChallenges };
@@ -108,10 +108,10 @@ export const getCourseById = cache( async ( courseId: number ) => {
         where: eq(courses.id, courseId),
         with: {
             units: {
-                orderBy: (units, { asc }) => [asc(units.order)],
+                orderBy: (units, { asc }) => [asc(units.orden)],
                 with: {
                     lessons: {
-                        orderBy: (lessons, { asc }) => [asc(lessons.order)],
+                        orderBy: (lessons, { asc }) => [asc(lessons.orden)],
                     }
                 }
             }
@@ -130,11 +130,11 @@ export const getCourseProgress = cache(async () => {
     }
 
     const unitsInActiveCourse = await database.query.units.findMany({
-        orderBy: (units, { asc }) => [asc(units.order)],
+        orderBy: (units, { asc }) => [asc(units.orden)],
         where: eq(units.courseId, userProgress.activeCourseId),
         with: {
             lessons: {
-                orderBy: (lessons, { asc }) => [asc(lessons.order)],
+                orderBy: (lessons, { asc }) => [asc(lessons.orden)],
                 with: {
                     unit: true,
                     challenges: {
@@ -153,10 +153,10 @@ export const getCourseProgress = cache(async () => {
     const firstUncompletedLesson = unitsInActiveCourse
         .flatMap((unit) => unit.lessons)
         .find((lesson) => {
-            return lesson.challenges.some((challenge) => {
-                return !challenge.challengeProgress 
-                    || challenge.challengeProgress.length === 0 
-                    || challenge.challengeProgress.some((progress) => progress.completed === false);
+            return lesson.challenges.some((reto) => {
+                return !reto.challengeProgress 
+                    || reto.challengeProgress.length === 0 
+                    || reto.challengeProgress.some((progress) => progress.completed === false);
             });
         });
 
@@ -190,7 +190,7 @@ export const getLesson = cache(async (id?: number) => {
         where: eq(lessons.id, lessonId),
         with: {
             challenges: {
-                orderBy: (challenges, { asc }) => [asc(challenges.order)],
+                orderBy: (challenges, { asc }) => [asc(challenges.orden)],
                 with: {
                     challengeOptions: true,
                     challengeProgress: {
@@ -206,14 +206,14 @@ export const getLesson = cache(async (id?: number) => {
         return null;
     }
 
-    const normalizedChallenges = data.challenges.map((challenge) => {
+    const normalizedChallenges = data.challenges.map((reto) => {
 
         const completed = 
-            challenge.challengeProgress 
-            && challenge.challengeProgress.length > 0
-            && challenge.challengeProgress.every((progress) => progress.completed);
+            reto.challengeProgress 
+            && reto.challengeProgress.length > 0
+            && reto.challengeProgress.every((progress) => progress.completed);
 
-        return { ...challenge, completed }
+        return { ...reto, completed }
     });
 
     return { ...data, challenges: normalizedChallenges };
@@ -248,7 +248,7 @@ export const getLesson = cache(async (id?: number) => {
 //         // where: eq(recipes.id, recipeId),
 //         // with: {
 //         //     challenges: {
-//         //         orderBy: (challenges, { asc }) => [asc(challenges.order)],
+//         //         orderBy: (challenges, { asc }) => [asc(challenges.orden)],
 //         //         with: {
 //         //             challengeOptions: true,
 //         //             challengeProgress: {
@@ -264,14 +264,14 @@ export const getLesson = cache(async (id?: number) => {
 //         return null;
 //     }
 
-//     // const normalizedChallenges = data.challenges.map((challenge) => {
+//     // const normalizedChallenges = data.challenges.map((reto) => {
 
 //     //     const completed = 
-//     //         challenge.challengeProgress 
-//     //         && challenge.challengeProgress.length > 0
-//     //         && challenge.challengeProgress.every((progress) => progress.completed);
+//     //         reto.challengeProgress 
+//     //         && reto.challengeProgress.length > 0
+//     //         && reto.challengeProgress.every((progress) => progress.completed);
 
-//     //     return { ...challenge, completed }
+//     //     return { ...reto, completed }
 //     // });
 
 //     // return { ...data, challenges: normalizedChallenges };
@@ -316,7 +316,7 @@ export const getTopRecipesX = cache(async () => {
         limit: 60,
         columns: {
             id: true,
-            title: true,
+            titulo: true,
             link: true,
             unitId: true,
             activo: true,
@@ -357,7 +357,7 @@ export const getLessonPercentage = cache(async () => {
     }
 
     const completedChallenges = lesson.challenges
-        .filter((challenge) => challenge.completed);
+        .filter((reto) => reto.completed);
     const percentage = Math.round(
         (completedChallenges.length / lesson.challenges.length) * 100,
     );

@@ -37,16 +37,16 @@ export const List = ( {
 
     return (
         <div className = 'pt-6 grid grid-cols-2 lg:grid-cols-[repeat(auto-fill,minmax(210px,1fr))] gap-4'>
-            { courses.map(( course ) => (
+            { courses.map(( curso ) => (
                 <Card
-                    key = {course.id}
-                    id = {course.id}
-                    title = {course.title}
-                    imageSrc = {course.imageSrc}
+                    key = {curso.id}
+                    id = {curso.id}
+                    titulo = {curso.titulo}
+                    enlace_imagen = {curso.enlace_imagen}
                     onClick = {onClick}
                     disabled = {pending}
-                    active = {course.id === activeCourseId}
-                    activo = {course.activo}
+                    active = {curso.id === activeCourseId}
+                    activo = {curso.activo}
                 />
             )) }
         </div>

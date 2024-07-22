@@ -3,9 +3,9 @@ import { Check } from "lucide-react";
 import Image from "next/image";
 
 type Props = {
-    title: string;
+    titulo: string;
     id: number;
-    imageSrc: string;
+    enlace_imagen: string;
     onClick: (id: number) => void;
     disabled?: boolean;
     active?: boolean;
@@ -14,9 +14,9 @@ type Props = {
 
 
 export const Card = ( {
-    title,
+    titulo,
     id,
-    imageSrc,
+    enlace_imagen,
     disabled,
     onClick,
     active,
@@ -41,15 +41,15 @@ export const Card = ( {
                         )}
                     </div>
                     <Image
-                        src={imageSrc}
-                        alt={title}
+                        src={enlace_imagen}
+                        alt={titulo}
                         height={70}
                         width={92}
                         // className=" rounded-lg drop-shadow-md border object-cover"
                         className=" rounded-lg drop-shadow-md object-cover"
                     />
                     <p className="text-neutral-700 text-center font-bold mt-3"> 
-                        {title}
+                        {titulo}
                     </p>
                 </div>
             : null

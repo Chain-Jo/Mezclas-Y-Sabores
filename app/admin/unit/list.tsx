@@ -5,11 +5,11 @@ export const UnitList = () => {
         <List>
             <Datagrid rowClick="edit">
                 <TextField source="id"/>
-                <TextField source="title"/>
-                <TextField source="description"/>
+                <TextField source="titulo"/>
+                <TextField source="descripcion"/>
                 <BooleanField source="activo"/>
                 <ReferenceField source="courseId" reference="courses"/>
-                <TextField source="order"/>
+                <TextField source="orden"/>
             </Datagrid>
         </List>
     );

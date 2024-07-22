@@ -5,12 +5,12 @@ export const LessonList = () => {
         <List>
             <Datagrid rowClick="edit">
                 <TextField source="id"/>
-                <TextField source="title"/>
+                <TextField source="titulo"/>
                 <BooleanField source="activo"/>
                 <BooleanField source="prueba"/>
-                {/* <TextField source="description"/> */}
+                {/* <TextField source="descripcion"/> */}
                 <ReferenceField source="unitId" reference="units"/>
-                <NumberField source="order"/>
+                <NumberField source="orden"/>
             </Datagrid>
         </List>
     );

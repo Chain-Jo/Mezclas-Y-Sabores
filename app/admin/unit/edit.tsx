@@ -10,12 +10,12 @@ export const UnitEdit = () => {
                     label="Id" 
                 />
                 <TextInput 
-                    source="title" 
+                    source="titulo" 
                     validate={[required()]} 
                     label="Título" 
                 />
                 <TextInput 
-                    source="description" 
+                    source="descripcion" 
                     validate={[required()]} 
                     label="Descripción" 
                 />
@@ -28,7 +28,7 @@ export const UnitEdit = () => {
                     reference="courses"
                 />
                 <NumberInput 
-                    source="order"
+                    source="orden"
                     validate={[required()]}
                     label="Orden"
                     min='1'

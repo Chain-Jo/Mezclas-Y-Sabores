@@ -56,7 +56,7 @@ const QuestPage = async () => {
                             return (
                                 <div
                                     className="flex items-center w-full p-4 gap-x-4 border-t-2"
-                                    key={quest.title}
+                                    key={quest.titulo}
                                 >
                                     <Image
                                         src="/img/estrella.png"
@@ -66,7 +66,7 @@ const QuestPage = async () => {
                                     />
                                     <div className="flex flex-col gap-y-2 w-full">
                                         <p className="text-neutral-700 text-xl font-bold">
-                                            {quest.title}
+                                            {quest.titulo}
                                         </p>
                                         <Progress
                                             value={progress}

@@ -5,12 +5,12 @@ export const CourseEdit = () => {
         <Edit>
             <SimpleForm>
                 <TextInput source="id" validate={[required()]} label="Id" />
-                <TextInput source="title" validate={[required()]} label="Título" />
+                <TextInput source="titulo" validate={[required()]} label="Título" />
                 <BooleanInput 
                     source="activo"
                     label="Activo"
                 />
-                <TextInput source="imageSrc" validate={[required()]} label="Imagen" />
+                <TextInput source="enlace_imagen" validate={[required()]} label="Imagen" />
             </SimpleForm>
         </Edit>
     );

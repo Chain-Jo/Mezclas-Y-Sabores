@@ -15,7 +15,7 @@ import { upsertChallengeProgress } from "@/actions/challenge-progress";
 
 import { Header } from "./header";
 import { Footer } from "./footer";
-import { Challenge } from "./challenge";
+import { Reto } from "./challenge";
 import { ResultCard } from "./result-card";
 import { QuestionBubble } from "./cuestion-bubble";
 import { useTestModal } from "@/store/use-test-modal";
@@ -81,7 +81,7 @@ export const Test = ({
     });
     const [challenges] = useState(initialLessonChallenges);
     const [activeIndex, setActiveIndex] = useState(() => {
-        const uncompletedIndex = challenges.findIndex((challenge) => !challenge.completed);
+        const uncompletedIndex = challenges.findIndex((reto) => !reto.completed);
         return uncompletedIndex === -1 ? 0 : uncompletedIndex;
     });
 
@@ -117,7 +117,7 @@ export const Test = ({
             return;
         }
 
-        const correctOption = options.find((option) => option.correct);
+        const correctOption = options.find((option) => option.correcto);
 
         if (!correctOption) {
             return;
@@ -215,7 +215,7 @@ export const Test = ({
         );
     }
 
-    const title = currentChallenge.type === "ASSIST" 
+    const titulo = currentChallenge.type === "ASSIST" 
     ? "Selecciona el correcto" 
     : currentChallenge.question
 
@@ -233,7 +233,7 @@ export const Test = ({
                     {/* cambié el lg:w-[] de 600 a 1000px */}
                     <div className="lg:min-h-[350px] lg:w-[1000px] w-full px-6 lg:px-0 flex flex-col gap-y-12">
                         <h1 className="text-lg lg:text-3xl text-center lg:text-start font-bold text-neutral-700">
-                            {title}
+                            {titulo}
                         </h1>
                         <div>
 
@@ -242,7 +242,7 @@ export const Test = ({
                             )}
                             {currentChallenge.activo === true
                                 ?
-                                <Challenge
+                                <Reto
                                     options={options}
                                     onSelect={onSelect}
                                     status={status}

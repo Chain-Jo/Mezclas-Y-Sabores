@@ -21,7 +21,7 @@ export const ChallengeOptionEdit = () => {
                     label="Activo"
                 />
                 <BooleanInput 
-                    source="correct"
+                    source="correcto"
                     label="Opción Correcta"
                 />
                 <ReferenceInput 
@@ -29,7 +29,7 @@ export const ChallengeOptionEdit = () => {
                     reference="challenges"
                 />
                 <TextInput 
-                    source="imageSrc"
+                    source="enlace_imagen"
                     // validate={[required()]}
                     label="URL de la Imagen"
                 />

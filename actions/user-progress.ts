@@ -21,13 +21,13 @@ export const upsertUserProgress = async (courseId: number) => {
         throw new Error("Sin autorización");
     }
 
-    const course = await getCourseById(courseId);
+    const curso = await getCourseById(courseId);
 
-    if (!course) {
+    if (!curso) {
         throw new Error("Curso no encontrado");
     }
 
-    if (!course.units.length || !course.units[0].lessons.length) {
+    if (!curso.units.length || !curso.units[0].lessons.length) {
         throw new Error("El curso está vacío");
     }
 
@@ -68,15 +68,15 @@ export const reduceHearts = async (challengeId: number) => {
 
     const currentUserProgress = await getUserProgress();
 
-    const challenge = await database.query.challenges.findFirst({
+    const reto = await database.query.challenges.findFirst({
         where: eq(challenges.id, challengeId),
     });
 
-    if (!challenge) {
+    if (!reto) {
         throw new Error("No se encontró la pregunta");
     }
 
-    const lessonId = challenge.lessonId;
+    const lessonId = reto.lessonId;
 
     const existitingChallengeProgress = await database.query.challengeProgress.findFirst({
         where: and(
@@ -119,15 +119,15 @@ export const reduceHeartsTest = async (challengeId: number) => {
 
     const currentUserProgress = await getUserProgress();
 
-    const challenge = await database.query.challenges.findFirst({
+    const reto = await database.query.challenges.findFirst({
         where: eq(challenges.id, challengeId),
     });
 
-    if (!challenge) {
+    if (!reto) {
         throw new Error("No se encontró la pregunta");
     }
 
-    const lessonId = challenge.lessonId;
+    const lessonId = reto.lessonId;
 
     const existitingChallengeProgress = await database.query.challengeProgress.findFirst({
         where: and(

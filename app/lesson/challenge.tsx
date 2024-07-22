@@ -13,7 +13,7 @@ type Props = {
     activo: boolean;
 };
 
-export const Challenge = ({
+export const Reto = ({
     options,
     onSelect,
     status,
@@ -36,7 +36,7 @@ export const Challenge = ({
                             key={option.id}
                             id={option.id}
                             text={option.text}
-                            imageSrc={option.imageSrc}
+                            enlace_imagen={option.enlace_imagen}
                             shortcut={`${i + 1}`}
                             selected={selectedOption === option.id}
                             onClick={() => onSelect(option.id)}

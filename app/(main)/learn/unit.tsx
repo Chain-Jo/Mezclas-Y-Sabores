@@ -6,9 +6,9 @@ import { LessonButton } from "./lesson-button";
 
 type Props = {
     id: number;
-    order: number;
-    title: string;
-    description: string;
+    orden: number;
+    titulo: string;
+    descripcion: string;
     activo: boolean
     lessons: (typeof lessons.$inferSelect & {
         completed: boolean;
@@ -24,9 +24,9 @@ type Props = {
 
 export const Unit = ({
     id,
-    order,
-    title,
-    description,
+    orden,
+    titulo,
+    descripcion,
     activo,
     lessons,
     activeLesson,
@@ -35,7 +35,7 @@ export const Unit = ({
 }: Props) => {
     return (
         <>
-            <UnitBanner title={title} description={description}/>
+            <UnitBanner titulo={titulo} descripcion={descripcion}/>
             {/* <div className="flex items-center flex-col relative"> */}
             <div className="flex items-center flex-col relative">
                 {lessons.map((lesson, index) => {

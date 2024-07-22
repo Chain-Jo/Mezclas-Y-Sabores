@@ -4,22 +4,22 @@ import { NotebookText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type Props = {
-    title: string;
-    description: string;
+    titulo: string;
+    descripcion: string;
 };
 
 export const UnitBanner = ({
-    title,
-    description,
+    titulo,
+    descripcion,
 }: Props) => {
     return (
         <div className="w-full rounded-xl bg-green-500 p-5 text-white flex items-center justify-between">
             <div className="space-y-2.5">
                 <h3 className="text-2xl font-bold">
-                    {title}
+                    {titulo}
                 </h3>
                 <p className="text-lg">
-                    {description}
+                    {descripcion}
                 </p>
             </div>
             <Link href="/recipes">

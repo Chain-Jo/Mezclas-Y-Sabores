@@ -26,7 +26,7 @@ export const Dashboard = ({
             <ul className="w-full">
                 <div className="flex items-center w-full p-4 gap-x-4 border-t-2">
                     <Image
-                        src="/img/ajustes.png"
+                        src="/img/herramientas.png"
                         alt="Gestionar"
                         height={60}
                         width={60}
@@ -81,6 +81,28 @@ export const Dashboard = ({
                                 
                             >
                                 <Link href="/reports">
+                                        Ir
+                                </Link>
+                            </Button>
+                    </div>
+                </li>
+                <li>
+                    <div className="flex items-center w-full p-4 gap-x-4 border-t-2">
+                        <Image
+                            src="/img/ajustes.png"
+                            alt="Reportes"
+                            height={60}
+                            width={60}
+                        />
+                        <div className="flex-1">
+                            <p className="text-neutral-700 text-base lg:text-xl font-bold">
+                                Usuarios.
+                            </p>
+                        </div>
+                            <Button
+                                
+                            >
+                                <Link href="https://dashboard.clerk.com/" target="_blank">
                                         Ir
                                 </Link>
                             </Button>

@@ -4,8 +4,8 @@ import { boolean, integer, pgEnum, pgTable, serial, text, timestamp } from "driz
 
 export const courses = pgTable("courses", {
     id: serial("id").primaryKey(),
-    title: text("title").notNull(),
-    imageSrc: text("image_src").notNull(),
+    titulo: text("titulo").notNull(),
+    enlace_imagen: text("imagen").notNull(),
     activo: boolean("activo").notNull(),
 });
 
@@ -16,15 +16,15 @@ export const coursesRelations = relations(courses, ({ many }) => ({
 
 export const units = pgTable("units", {
     id: serial("id").primaryKey(),
-    title: text("title").notNull(), // Unidad 1
-    description: text("description").notNull(), // Aprende lo básico
-    courseId: integer("course_id").references(() => courses.id, { onDelete: "cascade" }).notNull(),
-    order: integer("order").notNull(),
+    titulo: text("titulo").notNull(), // Unidad 1
+    descripcion: text("descripcion").notNull(), // Aprende lo básico
+    courseId: integer("id_curso").references(() => courses.id, { onDelete: "cascade" }).notNull(),
+    orden: integer("orden").notNull(),
     activo: boolean("activo").notNull(),
 });
 
 export const unitsRelations = relations (units, ({ many, one }) => ({
-    course: one(courses, {
+    curso: one(courses, {
         fields: [units.courseId],
         references: [courses.id],
     }),
@@ -34,9 +34,9 @@ export const unitsRelations = relations (units, ({ many, one }) => ({
 
 export const lessons = pgTable("lessons", {
     id: serial("id").primaryKey(),
-    title: text("title").notNull(), // lección 1
-    unitId: integer("unit_id").references(() => units.id, { onDelete: "cascade" }).notNull(),
-    order: integer("order").notNull(),
+    titulo: text("titulo").notNull(), // lección 1
+    unitId: integer("id_unidad").references(() => units.id, { onDelete: "cascade" }).notNull(),
+    orden: integer("orden").notNull(),
     activo: boolean("activo").notNull(),
     prueba: boolean("prueba").notNull(),
 });
@@ -54,11 +54,11 @@ export const lessonsRelations = relations (lessons, ({ many, one }) => ({
 
 // export const recipes = pgTable("recipes", {
 //     id: serial("id").primaryKey(),
-//     title: text("title").notNull(),
-//     description: text("description").notNull(),
-//     imageSrc: text("imgae_src").notNull(),
+//     titulo: text("titulo").notNull(),
+//     descripcion: text("descripcion").notNull(),
+//     enlace_imagen: text("imgae_src").notNull(),
 //     unitId: integer("unit_id").references(() => units.id, { onDelete: "cascade" }).notNull(),
-//     order: integer("order").notNull(),
+//     orden: integer("orden").notNull(),
 // });
 
 // export const recipesRelations = relations (recipes, ({ many, one }) => ({
@@ -71,11 +71,11 @@ export const lessonsRelations = relations (lessons, ({ many, one }) => ({
 
 export const recipesX = pgTable("recipesX", {
     id: serial("id").primaryKey(),
-    title: text("title").notNull(),
-    link: text("link").notNull(),
-    unitId: integer("unit_id").references(() => units.id, { onDelete: "cascade" }).notNull(),
+    titulo: text("titulo").notNull(),
+    link: text("enlace").notNull(),
+    unitId: integer("id_unidad").references(() => units.id, { onDelete: "cascade" }).notNull(),
     unidad_referenciada: integer("unidad_referenciada").notNull(),
-    order: integer("order").notNull(),
+    orden: integer("orden").notNull(),
     activo: boolean("activo").notNull(),
 });
 
@@ -90,10 +90,10 @@ export const challengesEnum = pgEnum("type", ["SELECT", "ASSIST"]);
 
 export const challenges = pgTable("challenges", {
     id: serial("id").primaryKey(),
-    lessonId: integer("lesson_id").references(() => lessons.id, { onDelete: "cascade" }).notNull(),
-    type: challengesEnum("type").notNull(),
-    question: text("question").notNull(),
-    order: integer("order").notNull(),
+    lessonId: integer("id_leccion").references(() => lessons.id, { onDelete: "cascade" }).notNull(),
+    type: challengesEnum("tipo").notNull(),
+    question: text("pregunta").notNull(),
+    orden: integer("orden").notNull(),
     activo: boolean("activo").notNull(),
 });
 
@@ -108,16 +108,16 @@ export const challengesRelations = relations (challenges, ({ many, one }) => ({
 
 export const challengeOptions = pgTable("challenge_options", {
     id: serial("id").primaryKey(),
-    challengeId: integer("challenge_id").references(() => challenges.id, { onDelete: "cascade" }).notNull(),
-    text: text("text").notNull(),
-    correct: boolean("correct").notNull(),
-    imageSrc: text("imgae_src"),
+    challengeId: integer("id_reto").references(() => challenges.id, { onDelete: "cascade" }).notNull(),
+    text: text("texto").notNull(),
+    correcto: boolean("correcto").notNull(),
+    enlace_imagen: text("imagen"),
     activo: boolean("activo").notNull(),
     // audioSrc: text("audio_src"),
 });
 
 export const challengeOptionsRelations = relations (challengeOptions, ({ one }) => ({
-    challenge: one(challenges, {
+    reto: one(challenges, {
         fields: [challengeOptions.challengeId],
         references: [challenges.id],
     }),
@@ -125,27 +125,27 @@ export const challengeOptionsRelations = relations (challengeOptions, ({ one }) 
 
 export const challengeProgress = pgTable("challenge_progress", {
     id: serial("id").primaryKey(),
-    userId: text("user_id").notNull(), // TODO: confirmar que no explota
-    challengeId: integer("challenge_id").references(() => challenges.id, { onDelete: "cascade" }).notNull(),
-    completed: boolean("completed").notNull().default(false)
+    userId: text("id_usuario").notNull(), // TODO: confirmar que no explota
+    challengeId: integer("id_reto").references(() => challenges.id, { onDelete: "cascade" }).notNull(),
+    completed: boolean("completado").notNull().default(false)
 });
 
 export const challengeProgressRelations = relations (challengeProgress, ({ one }) => ({
-    challenge: one(challenges, {
+    reto: one(challenges, {
         fields: [challengeProgress.challengeId],
         references: [challenges.id],
     }),
 }));
 
 export const userProgress = pgTable("user_progress", {
-    userId: text("user_id").primaryKey(),
-    userName: text("user_name").notNull().default("User"),
-    email: text("email_adress").notNull(),
-    userImageSrc: text("user_image_src").notNull().default("/img/sombrero-cocinero.png"),
-    activeCourseId: integer("active_course_id").references(() => courses.id, {onDelete: "cascade"}),
-    hearts: integer("hearts").notNull().default(5),
-    points: integer("points").notNull().default(0),
-    createdAt: text('created_at').notNull(),
+    userId: text("id_usuario").primaryKey(),
+    userName: text("nombre_usuario").notNull().default("User"),
+    email: text("correo_usuario").notNull(),
+    userImageSrc: text("imagen_usuario").notNull().default("/img/sombrero-cocinero.png"),
+    activeCourseId: integer("id_curso_activo").references(() => courses.id, {onDelete: "cascade"}),
+    hearts: integer("corazones").notNull().default(5),
+    points: integer("puntos").notNull().default(0),
+    createdAt: text('fecha_creado').notNull(),
 });
 
 export const userPorgressRelations = relations(userProgress, ({ one }) => ({
@@ -156,8 +156,8 @@ export const userPorgressRelations = relations(userProgress, ({ one }) => ({
 }));
 
 export const userActions = pgTable("user_actions", {
-    actionId: text("action_id").primaryKey(),
-    userName: text("user_name").notNull(),
-    actionName: text("action_name").notNull(),
-    createdAt: text('created_at').notNull(),
+    actionId: text("id_accion").primaryKey(),
+    userName: text("nombre_usuario").notNull(),
+    actionName: text("nombre_accion").notNull(),
+    createdAt: text('fecha_creado').notNull(),
 });

@@ -5,7 +5,7 @@ export const RecipeCreate = () => {
         <Create>
             <SimpleForm>
                 <TextInput 
-                    source="title" 
+                    source="titulo" 
                     validate={[required()]} 
                     label="Título" 
                 />
@@ -23,7 +23,7 @@ export const RecipeCreate = () => {
                     reference="units"
                 />
                 <NumberInput 
-                    source="order"
+                    source="orden"
                     validate={[required()]}
                     label="Orden"
                     min='1'

@@ -84,7 +84,7 @@ const RecipePage = async () => {
 
                         <RecipeX
                             id={recipeX.id}
-                            title={recipeX.title}
+                            titulo={recipeX.titulo}
                             link={recipeX.link}
                             unitId={recipeX.unitId}
                             activo= {recipeX.activo}

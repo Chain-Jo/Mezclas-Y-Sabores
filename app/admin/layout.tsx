@@ -3,12 +3,11 @@
 import Navbar from "@/components/admin/navbar";
 import Footer from "@/components/admin/footer";
 import Menu from "@/components/admin/menu";
-import { Admin, Resource, defaultTheme } from "react-admin";
+import { Admin, Resource, defaultTheme, resolveBrowserLocale } from "react-admin";
 import { createTheme } from "@mui/material/styles";
 import indigo from "@mui/material/colors/indigo";
 import pink from "@mui/material/colors/pink";
 import red from "@mui/material/colors/red";
-// import { useMyI18nProvider } from './src/i18nProvider';
 import simpleRestProvider from "ra-data-simple-rest";
 
 import { CourseList } from "./course/list";
@@ -35,9 +34,17 @@ import { RecipeList } from "./recipe/list";
 import { RecipeCreate } from "./recipe/create";
 import { RecipeEdit } from "./recipe/edit";
 
-import TableLog from "@/components/admin/tablelog";
+import polyglotI18nProvider from 'ra-i18n-polyglot';
+import englishMessages from 'ra-language-english';
+import frenchMessages from 'ra-language-french';
 
 const dataProvider = simpleRestProvider("/api");
+// const dataProvider = jsonServerProvider(
+//   "https://jsonplaceholder.typicode.com"
+// );
+
+
+import jsonServerProvider from "ra-data-json-server";
 
 const theme = createTheme({
   palette: {
@@ -48,15 +55,25 @@ const theme = createTheme({
   },
 });
 
+// const messages = {
+//   fr: frenchMessages,
+//   en: englishMessages,
+// };
+// const i18nProvider = polyglotI18nProvider(locale => messages[locale], resolveBrowserLocale()) // or 'fr'
+
 export default function AdminLayout({
   children, // will be a page or nested layout
 }: {
   children: React.ReactNode;
 }) {
+
+    
   return (
     <section className="admin">
       <div className="main">
+        
         <Admin
+          // locale="es"
           theme={theme}
           dataProvider={dataProvider}
           // i18nProvider={i18nProvider}
@@ -66,7 +83,7 @@ export default function AdminLayout({
             list={CourseList}
             create={CourseCreate}
             edit={CourseEdit}
-            recordRepresentation="title"
+            recordRepresentation="titulo"
             options={{ label: "Cursos" }}
           />
           <Resource
@@ -74,7 +91,7 @@ export default function AdminLayout({
             list={UnitList}
             create={UnitCreate}
             edit={UnitEdit}
-            recordRepresentation="title"
+            recordRepresentation="titulo"
             options={{ label: "Unidades" }}
           />
           <Resource
@@ -82,7 +99,7 @@ export default function AdminLayout({
             list={LessonList}
             create={LessonCreate}
             edit={LessonEdit}
-            recordRepresentation="title"
+            recordRepresentation="titulo"
             options={{ label: "Lecciones" }}
           />
           <Resource
@@ -90,7 +107,7 @@ export default function AdminLayout({
             list={RecipeList}
             create={RecipeCreate}
             edit={RecipeEdit}
-            recordRepresentation="title"
+            recordRepresentation="titulo"
             options={{ label: "Recetas" }}
           />
           <Resource

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { LineChart, Line, Tooltip, ResponsiveContainer } from "recharts";
 
 interface DataObject {
-  title: string;
+  titulo: string;
   value: number;
 }
 
@@ -43,13 +43,13 @@ const CoursesBox = () => {
 
   const newData: DataObject[] = [];
   for (let i = 0; i < data.length; i++) {
-    newData.push({ value: data[i].id, title: data[i].title });
+    newData.push({ value: data[i].id, titulo: data[i].titulo });
   }
 
   return (
     <div className="chartBox">
       <div className="boxInfo">
-        <div className="title">
+        <div className="titulo">
           <Image
             src="img/admin/userIcon.svg"
             alt="user"

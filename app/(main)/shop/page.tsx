@@ -44,10 +44,10 @@ const ShopPage = async () => {
                         width={100}
                     />
                     <h1 className="text-center font-bold text-neutral-800 text-2xl my-6">
-                        Tienda
+                        Recarga
                     </h1>
                     <p className="text-muted-foreground text-center text-lg mb-6">
-                        Canjea tus puntos por cosas.
+                        Canjea tus puntos por intentos.
                     </p>
                     <Items
                         hearts={userProgress.hearts}

@@ -23,15 +23,15 @@ export const upsertChallengeProgress = async (challengeId: number) => {
         throw new Error("No se encontró el progreso del usuario");
     }
 
-    const challenge = await database.query.challenges.findFirst({
+    const reto = await database.query.challenges.findFirst({
         where: eq(challenges.id, challengeId)
     });
 
-    if (!challenge) {
+    if (!reto) {
         throw new Error("No se encontró la pregunta");
     }
 
-    const lessonId = challenge.lessonId;
+    const lessonId = reto.lessonId;
 
     const existingChallengeProgress = await database.query.challengeProgress.findFirst({
         where: and(
@@ -125,7 +125,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
                 body: JSON.stringify({
                     "actionId": data.length + 2,
                     "userName": `${dataUser[0].userName}`,
-                    "actionName": `Completo la leccion ${beforeLessonData.title} correctamente`,
+                    "actionName": `Completo la leccion ${beforeLessonData.titulo} correctamente`,
                     "createdAt": (new Date).toLocaleString()
                 })
             })
@@ -155,7 +155,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
                         body: JSON.stringify({
                             "actionId": data.length + 3,
                             "userName": `${dataUser[0].userName}`,
-                            "actionName": `Completo la unidad ${dataUnit.title} correctamente`,
+                            "actionName": `Completo la unidad ${dataUnit.titulo} correctamente`,
                             "createdAt": (new Date).toLocaleString()
                         })
                     })

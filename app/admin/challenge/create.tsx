@@ -42,7 +42,7 @@ export const ChallengeCreate = () => {
                     reference="lessons"
                 />
                 <NumberInput 
-                    source="order"
+                    source="orden"
                     validate={[required()]}
                     label="Orden"
                     min='1'

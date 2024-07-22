@@ -7,7 +7,7 @@ import { challenges } from "@/database/schema";
 
 type Props = {
     id: number;
-    imageSrc: string | null;
+    enlace_imagen: string | null;
     // audioSrc: string | null;
     text: string;
     shortcut: string;
@@ -21,7 +21,7 @@ type Props = {
 
 export const Card = ({
     id,
-    imageSrc,
+    enlace_imagen,
     // audioSrc,
     text,
     shortcut,
@@ -63,7 +63,7 @@ export const Card = ({
                     )}
                 >
                     {/* {audio} */}
-                    {imageSrc && (
+                    {enlace_imagen && (
                     // TODO: no se centran las imagenes o se ven mal 6:08:20 hay que ponerlos como svg
                     // también cambié max h el de lg era de 160 y el normal 100
                         <div
@@ -72,7 +72,7 @@ export const Card = ({
                         >
                             <Image
                                 className="rounded-2xl items-center justify-center flex"
-                                src={imageSrc}
+                                src={enlace_imagen}
                                 fill
                                 alt={text}
                                 // width={80}

@@ -9,7 +9,7 @@ type Props = {
 
 export const ResultCard = ({ value, variant }: Props) => {
     
-    const imageSrc = variant === "hearts" ? "/img/corazon.png" : "/img/estrella.png";
+    const enlace_imagen = variant === "hearts" ? "/img/corazon.png" : "/img/estrella.png";
 
     return (
         <div className={cn(
@@ -31,7 +31,7 @@ export const ResultCard = ({ value, variant }: Props) => {
             )}>
                 <Image
                     alt="Icon"
-                    src={imageSrc}
+                    src={enlace_imagen}
                     height={25}
                     width={25}
                     className="mr-1.5"

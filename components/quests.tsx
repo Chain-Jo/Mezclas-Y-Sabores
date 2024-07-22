@@ -33,7 +33,7 @@ export const Quests = ({ points }: Props) => {
                     return (
                         <div
                             className="flex items-center w-full pb-4 gap-x-3"
-                            key={quest.title}
+                            key={quest.titulo}
                         >
                             <Image
                                 src="/img/estrella.png"
@@ -43,7 +43,7 @@ export const Quests = ({ points }: Props) => {
                             />
                             <div className="flex flex-col gap-y-2 w-full">
                                 <p className="text-neutral-700 text-sm font-bold">
-                                    {quest.title}
+                                    {quest.titulo}
                                 </p>
                                 <Progress
                                     value={progress}

@@ -6,11 +6,21 @@ import TopBox from "@/components/admin/topbox";
 import ChartBox from "@/components/admin/chartbox";
 import CoursesBox from "@/components/admin/coursesBox";
 
+// import jsonServerProvider from "ra-data-json-server";
+
 function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
+
+    // const dataProvider = jsonServerProvider(
+    //   "https://jsonplaceholder.typicode.com"
+    // );
+  
+
+
+
     const fetchData = async () => {
       try {
         const response = await fetch("http://localhost:3000/api/users");

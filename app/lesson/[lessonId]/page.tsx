@@ -32,7 +32,7 @@ const LessonIdPage = async({
     }
 
     const initialPercentage = lesson.challenges
-        .filter((challenge) => challenge.completed)
+        .filter((reto) => reto.completed)
         .length / lesson.challenges.length * 100;
 
     return ( 

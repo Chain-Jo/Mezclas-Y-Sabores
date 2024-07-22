@@ -123,7 +123,7 @@ export const SideBar = async({
                         iconSrc="/img/diana.png"
                     />
                     <SidebarItem 
-                        label="Tienda"
+                        label="Recarga"
                         href="/shop"
                         iconSrc="/img/tienda.png"
                     />

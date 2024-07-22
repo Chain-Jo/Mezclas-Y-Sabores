@@ -5,11 +5,11 @@ export const RecipeList = () => {
         <List>
             <Datagrid rowClick="edit">
                 <TextField source="id"/>
-                <TextField source="title"/>
+                <TextField source="titulo"/>
                 <TextField source="link"/>
                 <BooleanField source="activo"/>
                 <ReferenceField source="unitId" reference="units"/>
-                <NumberField source="order"/>
+                <NumberField source="orden"/>
                {/**
                 
                 <NumberField source="unidad_referenciada"/>
