@@ -9,7 +9,7 @@ import { getUserProgress } from "@/database/queries";
 import { challengeProgress, challenges, userProgress } from "@/database/schema";
 // import { UserProgress } from '../components/user-progress';
 
-
+const nextLink = process.env.NEXT_PUBLIC_URL!;
 export const upsertChallengeProgress = async (challengeId: number) => {
     const { userId } = await auth();
 
@@ -75,19 +75,19 @@ export const upsertChallengeProgress = async (challengeId: number) => {
         completed: true,
     });
 
-    const response = await fetch("http://localhost:3000/api/actions", {
+    const response = await fetch(`${nextLink}/api/actions`, {
         method: "GET",
     })
 
     const data = await response.json()
 
-    const responseUser = await fetch(`http://localhost:3000/api/users/?userId=${userId}`, {
+    const responseUser = await fetch(`${nextLink}/api/users/?userId=${userId}`, {
         method: "GET",
     })
 
     const dataUser = await responseUser.json()
 
-    const responseChallenge = await fetch(`http://localhost:3000/api/challenges/${challengeId}`, {
+    const responseChallenge = await fetch(`${nextLink}/api/challenges/${challengeId}`, {
         method: "GET",
     })
 
@@ -95,7 +95,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
 
     // Verifica si el usuario ya termino su leccion
     if (lessonId > 1) {
-        const beforeResponseChallenge = await fetch(`http://localhost:3000/api/challenges/${challengeId - 1}`, {
+        const beforeResponseChallenge = await fetch(`${nextLink}/api/challenges/${challengeId - 1}`, {
             method: "GET",
         })
 
@@ -103,13 +103,13 @@ export const upsertChallengeProgress = async (challengeId: number) => {
 
         if (lessonId > beforeDataChallenge.lessonId) {
 
-            const beforeLesson = await fetch(`http://localhost:3000/api/lessons/${lessonId - 1}`, {
+            const beforeLesson = await fetch(`${nextLink}/api/lessons/${lessonId - 1}`, {
                 method: "GET",
             })
 
             const beforeLessonData = await beforeLesson.json();
 
-            await fetch("http://localhost:3000/api/actions", {
+            await fetch(`${nextLink}/api/actions`, {
                 method: "POST",
                 body: JSON.stringify({
                     "actionId": data.length + 1,
@@ -120,7 +120,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
             })
 
 
-            await fetch("http://localhost:3000/api/actions", {
+            await fetch(`${nextLink}/api/actions`, {
                 method: "POST",
                 body: JSON.stringify({
                     "actionId": data.length + 2,
@@ -133,7 +133,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
             
 
             // Verifica si el usuario ya termino la unidad
-            const responseLesson = await fetch(`http://localhost:3000/api/lessons/${lessonId}`, {
+            const responseLesson = await fetch(`${nextLink}/api/lessons/${lessonId}`, {
                 method: "GET",
             })
 
@@ -143,14 +143,14 @@ export const upsertChallengeProgress = async (challengeId: number) => {
 
                 if (dataLesson.unitId > beforeLessonData.unitId) {
 
-                    const responseUnit = await fetch(`http://localhost:3000/api/units/${beforeLessonData.unitId}`, {
+                    const responseUnit = await fetch(`${nextLink}/api/units/${beforeLessonData.unitId}`, {
                         method: "GET",
                     })
         
                     const dataUnit = await responseUnit.json()
 
 
-                    await fetch("http://localhost:3000/api/actions", {
+                    await fetch(`${nextLink}/api/actions`, {
                         method: "POST",
                         body: JSON.stringify({
                             "actionId": data.length + 3,
@@ -163,7 +163,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
             }
 
         } else {
-            await fetch("http://localhost:3000/api/actions", {
+            await fetch(`${nextLink}/api/actions`, {
                 method: "POST",
                 body: JSON.stringify({
                     "actionId": data.length + 1,
@@ -174,7 +174,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
             })
         }
     } else {
-        await fetch("http://localhost:3000/api/actions", {
+        await fetch(`${nextLink}/api/actions`, {
             method: "POST",
             body: JSON.stringify({
                 "actionId": data.length + 1,

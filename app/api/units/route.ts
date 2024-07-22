@@ -4,6 +4,7 @@ import { units } from "@/database/schema";
 import { isAdmin } from "@/lib/admin";
 import { currentUser } from "@clerk/nextjs/server";
 
+const nextLink = process.env.NEXT_PUBLIC_URL!;
 
 export const GET = async () => {
     
@@ -42,12 +43,12 @@ export const POST = async (req: Request) => {
     }).returning();
 
     if (user != null) {
-        const response = await fetch("http://localhost:3000/api/actions", {
+        const response = await fetch(`${nextLink}/api/actions`, {
             method: "GET",
         })
 
         const data = await response.json()
-        await fetch("http://localhost:3000/api/actions", {
+        await fetch(`${nextLink}/api/actions`, {
             method: "POST",
             body: JSON.stringify({
                 "actionId": data.length + 1,

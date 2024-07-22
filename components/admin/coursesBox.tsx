@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { LineChart, Line, Tooltip, ResponsiveContainer } from "recharts";
 
+const nextLink = process.env.NEXT_PUBLIC_URL!;
+
 interface DataObject {
   titulo: string;
   value: number;
@@ -25,7 +27,7 @@ const CoursesBox = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/courses");
+        const response = await fetch(`${nextLink}/api/courses`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

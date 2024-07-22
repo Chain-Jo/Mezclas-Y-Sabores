@@ -1,6 +1,8 @@
 "use client"
 import React, { useEffect, useState } from "react";
 
+const nextLink = process.env.NEXT_PUBLIC_URL!;
+
 const TableLog = () => {
 
     const [data, setData] = useState([]);
@@ -12,7 +14,7 @@ const TableLog = () => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch("http://localhost:3000/api/actions", {
+            const response = await fetch(`${nextLink}/api/actions`, {
                 method: "GET",
             })
             if (!response.ok) {

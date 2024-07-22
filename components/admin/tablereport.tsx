@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from "react";
 import { usePDF } from 'react-to-pdf';
+const nextLink = process.env.NEXT_PUBLIC_URL!;
 
 const TableReport = () => {
 
@@ -15,7 +16,7 @@ const TableReport = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/actions", {
+        const response = await fetch(`${nextLink}/api/actions`, {
           method: "GET",
         })
         if (!response.ok) {

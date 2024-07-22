@@ -7,7 +7,7 @@ import ChartBox from "@/components/admin/chartbox";
 import CoursesBox from "@/components/admin/coursesBox";
 
 // import jsonServerProvider from "ra-data-json-server";
-
+const nextLink = process.env.NEXT_PUBLIC_URL!;
 function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -23,7 +23,7 @@ function App() {
 
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/users");
+        const response = await fetch(`${nextLink}/api/users`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

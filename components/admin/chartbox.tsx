@@ -17,6 +17,7 @@ interface DataObject {
   value: number;
   group?: string;
 }
+const nextLink = process.env.NEXT_PUBLIC_URL!;
 
 function organizeByMonthAndDay(data: DataObject[]): DataObject[] {
   return data.map((item) => {
@@ -44,7 +45,7 @@ const ChartBox = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/users");
+        const response = await fetch(`${nextLink}/api/users`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
