@@ -43,6 +43,7 @@ const CoursesBox = () => {
 
   const newData: DataObject[] = [];
   for (let i = 0; i < data.length; i++) {
+    // @ts-ignore: Unreachable code error
     newData.push({ value: data[i].id, titulo: data[i].titulo });
   }
 

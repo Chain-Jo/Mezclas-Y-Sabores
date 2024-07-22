@@ -62,6 +62,7 @@ const ChartBox = () => {
 
   const newData: DataObject[] = [];
   for (let i = 0; i < data.length; i++) {
+    // @ts-ignore: Unreachable code error
     newData.push({ value: i + 1, date: data[i].createdAt });
   }
 

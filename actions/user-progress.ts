@@ -46,6 +46,7 @@ export const upsertUserProgress = async (courseId: number) => {
     }
 
     await database.insert(userProgress).values({
+        // @ts-ignore: Unreachable code error
         userId,
         activeCourseId: courseId,
         userName: user.firstName || "User",

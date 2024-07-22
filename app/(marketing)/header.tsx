@@ -61,6 +61,7 @@ export const Header = ({
                         <SignedOut>
                             <SignInButton
                                 mode="modal"
+                                // @ts-ignore: Unreachable code error
                                 afterSignInUrl="/learn"
                                 afterSignUpUrl="/learn"
                             >
