@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Nunito } from "next/font/google";
 import { ClerkProvider } from '@clerk/nextjs'
 import {esES} from '@clerk/localizations'
@@ -6,6 +6,9 @@ import { Toaster } from "@/components/ui/sonner";
 import { ExitModal } from "@/components/modals/exit-modal";
 import { HeartsModal } from "@/components/modals/hearts-modal";
 import { PracticeModal } from "@/components/modals/practice-modal";
+// export const viewport: Viewport = {
+//   themeColor: '#colorHere',
+// }
 
 // import { Inter } from "next/font/google";
 import "./globals.css";

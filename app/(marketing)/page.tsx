@@ -34,6 +34,7 @@ return (
 						<SignedOut>
 							<SignUpButton
 								mode="modal"
+								// @ts-ignore: Unreachable code error
 								afterSignInUrl="/learn"
 								afterSignUpUrl="/learn"
 							>
@@ -43,6 +44,7 @@ return (
 							</SignUpButton>
 							<SignInButton
 								mode="modal"
+								// @ts-ignore: Unreachable code error
 								afterSignInUrl="/learn"
 								afterSignUpUrl="/learn"
 							>
