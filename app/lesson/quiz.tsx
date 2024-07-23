@@ -176,7 +176,7 @@ export const Quiz = ({
                     tweenDuration={10000}
                 />
                 {/* añadido algunos estilos como el gap y el w-[] */}
-                <div className="flex flex-col gap-y-4 lg:gap-y-8 mx-auto text-center items-center justify-center h-full w-[500px]">
+                <div className="flex flex-col gap-y-4 lg:gap-y-6 mx-auto text-center items-center justify-center h-full w-full">
                     <Image
                         src="/img/finish.png"
                         alt="Finish"
@@ -188,18 +188,21 @@ export const Quiz = ({
                         src="/img/finish.png"
                         alt="Finish"
                         className="block lg:hidden"
-                        height={100}
-                        width={100}
+                        height={50}
+                        width={50}
                     />
-                    <h1 className="text-xl lg:text-3xl font-bold text-neutral-700">
+                    <h1 className="text-sm lg:text-2xl font-bold text-neutral-700 justify-center">
                         ¡Buen trabajo! <br />
                         Completaste la lección.
                     </h1>
-                    <div className="flex items-center w-full gap-x-12 ">
+                    <div className="flex items-center w-32 ">
                         <ResultCard
                             variant="points"
                             value={challenges.length * 10}
                         />
+
+                    </div>
+                    <div className="flex items-center w-32">
                         <ResultCard
                             variant="hearts"
                             value={hearts}
