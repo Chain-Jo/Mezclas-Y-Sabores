@@ -37,6 +37,7 @@ import { RecipeEdit } from "./recipe/edit";
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 import englishMessages from 'ra-language-english';
 import frenchMessages from 'ra-language-french';
+import { i18nProvider } from './i18nProvider';
 
 const dataProvider = simpleRestProvider("/api");
 // const dataProvider = jsonServerProvider(
@@ -67,16 +68,15 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
 
-    
+
   return (
     <section className="admin">
       <div className="main">
-        
+
         <Admin
-          // locale="es"
+          i18nProvider={i18nProvider}
           theme={theme}
           dataProvider={dataProvider}
-          // i18nProvider={i18nProvider}
         >
           <Resource
             name="courses"
