@@ -11,20 +11,22 @@ const database = drizzle(sql, {schema});
 
 const main = async () => {
     try {
-        console.log("Resetting the database");
+        console.log("Borrando base de datos");
 
         await database.delete(schema.courses);
+        await database.delete(schema.courses);
         await database.delete(schema.userProgress);
+        await database.delete(schema.userActions);
         await database.delete(schema.units);
         await database.delete(schema.lessons);
         await database.delete(schema.challenges);
         await database.delete(schema.challengeOptions);
         await database.delete(schema.challengeProgress);
 
-        console.log("Reset finished");
+        console.log("Borrado completado");
     } catch (error) {
         console.error(error);
-        throw new Error("Failed to reset the database");
+        throw new Error("Fallo en el borrado");
         
     }
 };

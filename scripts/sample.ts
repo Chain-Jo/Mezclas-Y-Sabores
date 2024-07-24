@@ -49,28 +49,28 @@ const main = async () => {
         */
            // Pregunta 1 - Actividad 4
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
                 activo: true
             },
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
                 activo: true
             },
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
                 activo: true
             },
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
@@ -82,28 +82,28 @@ const main = async () => {
 
            // Pregunta 2 - Actividad 4
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
                 activo: true
             },
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
                 activo: true
             },
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
                 activo: true
             },
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
@@ -115,28 +115,28 @@ const main = async () => {
 
            // Pregunta 3 - Actividad 4
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
                 activo: true
             },
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
                 activo: true
             },
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
                 activo: true
             },
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
@@ -149,28 +149,28 @@ const main = async () => {
 
             // Pregunta 4 - Actividad 4
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
                 activo: true
             },
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
                 activo: true
             },
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
                 activo: true
             },
             {
-                id: aumentoCorrelativoChallengeO(),
+                id: 4040,
                 challengeId: 2020, // OwO
                 correcto: false,
                 text: "UwU",
@@ -192,28 +192,28 @@ const main = async () => {
         */
         // Pregunta 1 - Actividad 5
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false, 
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -225,28 +225,28 @@ const main = async () => {
 
        // Pregunta 2 - Actividad 5
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -258,28 +258,28 @@ const main = async () => {
 
        // Pregunta 3 - Actividad 5
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false, 
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -292,28 +292,28 @@ const main = async () => {
 
         // Pregunta 4 - Actividad 5
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -336,28 +336,28 @@ const main = async () => {
         */
         // Pregunta 1 - Actividad 6
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -369,28 +369,28 @@ const main = async () => {
 
        // Pregunta 2 - Actividad 6
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false, 
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -402,28 +402,28 @@ const main = async () => {
 
        // Pregunta 3 - Actividad 6
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false, 
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -436,28 +436,28 @@ const main = async () => {
 
         // Pregunta 4 - Actividad 6
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false, 
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -480,28 +480,28 @@ const main = async () => {
         */
         // Pregunta 1 - Prueba 2
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false, 
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -513,28 +513,28 @@ const main = async () => {
 
        // Pregunta 2 - Prueba 2
        {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false, 
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -546,28 +546,28 @@ const main = async () => {
 
        // Pregunta 3 - Prueba 2
        {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -581,28 +581,28 @@ const main = async () => {
 
         // Pregunta 4 - Prueba 2
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -614,28 +614,28 @@ const main = async () => {
 
         // Pregunta 5 - Prueba 2
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false, 
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
@@ -646,28 +646,28 @@ const main = async () => {
 
         // Pregunta 6 - Prueba 2
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false, 
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
             activo: true
         },
         {
-            id: aumentoCorrelativoChallengeO(),
+            id: 4040,
             challengeId: 2020, // OwO
             correcto: false,
             text: "UwU",
