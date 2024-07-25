@@ -186,4 +186,8 @@ export const refillHearts = async () => {
     revalidatePath("/learn");
     revalidatePath("/quest");
     revalidatePath("/leaderboard");
+    revalidatePath("/dashboard");
+    revalidatePath("/reports");
+    revalidatePath("/logs");
+    revalidatePath("/supervision");
 }

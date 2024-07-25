@@ -50,8 +50,8 @@ const SupervisionPage = async () => {
     }
 
     
-    const adminIds = isAdmin();
-    const supervisorIds = isSupervisor();
+    // const adminIds = isAdmin();
+    // const supervisorIds = isSupervisor();
     const user = await currentUser();
     if (user != null) {
 
@@ -77,10 +77,10 @@ const SupervisionPage = async () => {
                                     width={100}
                                 />
                                 <h1 className="text-center font-bold text-neutral-800 text-2xl my-6">
-                                    Administrar
+                                    Supervisar
                                 </h1>
                                 <p className="text-muted-foreground text-center text-lg mb-6">
-                                    Accede a las funcionalidades del administrador, ve y modifica los datos de la aplicación.
+                                    Accede a las funcionalidades del supervisor, ve los datos de la aplicación.
                                 </p>
         
         
@@ -100,7 +100,7 @@ const SupervisionPage = async () => {
                                     className="flex items-center w-full p-2 px-4 rounded-xl"
                                 >
         
-                                    <DashboardSup
+                                    <Dashboard
                                         
                                     />
                                 </div>

@@ -4,6 +4,10 @@ const adminIds = [
     "user_2h3YKHqp8iPFX4SJL94HJJCFSMH"
 ]
 
+const supervisorIds = [
+    "user_2jhlnwOwHRViEkxnSJLjam2lh1T",
+    "user_2gWwHCqGRKOYewJ65K5NgZssUJD"
+]
 export const isAdmin = () => {
     return adminIds;
 }
