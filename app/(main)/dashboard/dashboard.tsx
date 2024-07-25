@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { NotebookText } from "lucide-react";
 import { isAdmin } from "@/lib/admin";
+import { isSupervisor } from "@/lib/supervisor";
 // import { units } from "@/database/schema";
 
 
@@ -21,7 +22,7 @@ export const Dashboard = ({
 }: Props) => {
     return (
         <>
-        {isAdmin()
+        {isAdmin() && !isSupervisor()
             ?
             <ul className="w-full">
                 <div className="flex items-center w-full p-4 gap-x-4 border-t-2">
