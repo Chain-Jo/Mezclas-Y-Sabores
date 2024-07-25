@@ -33,7 +33,7 @@ export const SideBar = async({
 
     const user = await currentUser();
     if (user != null) {
-        if (!adminIds.includes(user.id) || !supervisorIds.includes(user.id)) {
+        if (!adminIds.includes(user.id) && !supervisorIds.includes(user.id)) {
         return (
 
             <div className={cn(
@@ -67,7 +67,7 @@ export const SideBar = async({
                         iconSrc="/img/diana.png"
                     />
                     <SidebarItem 
-                        label="Tienda"
+                        label="Recarga"
                         href="/shop"
                         iconSrc="/img/tienda.png"
                     />
