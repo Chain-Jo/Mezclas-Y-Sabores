@@ -22,8 +22,6 @@ export const DashboardSup = ({
 }: Props) => {
     return(
         <>
-        {isSupervisor()
-            ?
             <ul className="w-full">
 
                     <li>
@@ -50,8 +48,6 @@ export const DashboardSup = ({
                     </li>
 
             </ul>
-            : null
-        }
             
         </>
     
