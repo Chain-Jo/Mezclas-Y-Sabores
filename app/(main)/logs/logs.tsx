@@ -21,8 +21,6 @@ export const Logs = ({
 }: Props) => {
     return (
         <>
-        {isAdmin()
-            ?
             <ul className="w-full">
                 <div className="flex items-center w-full p-4 gap-x-4 border-t-2">
                     <Image
@@ -88,12 +86,6 @@ export const Logs = ({
                 </li>
 
         </ul>
-            : 
-            <div>
-                Usted no es administrador.
-            </div>
-        }
-        
         </>
     );
 
