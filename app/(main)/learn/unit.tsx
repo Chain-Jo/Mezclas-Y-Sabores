@@ -53,6 +53,7 @@ export const Unit = ({
                                 locked={isLocked}
                                 percentage={activeLessonPercentage}
                                 activo = {lesson.activo}
+                                prueba = {lesson.prueba}
                             />
                             
                         </div>

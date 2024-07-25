@@ -51,11 +51,11 @@ export const Test = ({
         }
     });
 
-    useMount(() => {
-        if (isTest === true) {
-            openTestModal();
-        }
-    });
+    // useMount(() => {
+    //     if (isTest === true) {
+    //         openTestModal();
+    //     }
+    // });
     
     const { width, height } = useWindowSize();
 
