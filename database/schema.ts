@@ -86,13 +86,13 @@ export const recipesRelationsX = relations (recipesX, ({ many, one }) => ({
     }),
 }));
 
-export const challengesEnum = pgEnum("type", ["SELECCION", "COMPLETAR"]);
+export const challengesEnum = pgEnum("tipo", ["SELECCION", "COMPLETAR"]);
 
 export const challenges = pgTable("challenges", {
     id: serial("id").primaryKey(),
     lessonId: integer("id_leccion").references(() => lessons.id, { onDelete: "cascade" }).notNull(),
-    type: challengesEnum("tipo").notNull(),
-    question: text("pregunta").notNull(),
+    tipo: challengesEnum("tipo").notNull(),
+    pregunta: text("pregunta").notNull(),
     orden: integer("orden").notNull(),
     activo: boolean("activo").notNull(),
 });

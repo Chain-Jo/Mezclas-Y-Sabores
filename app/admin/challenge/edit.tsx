@@ -14,7 +14,7 @@ export const ChallengeEdit = () => {
         <Edit>
             <SimpleForm>
                 <TextInput 
-                    source="question" 
+                    source="pregunta" 
                     validate={[required()]} 
                     label="Pregunta" 
                 />
@@ -23,7 +23,7 @@ export const ChallengeEdit = () => {
                     label="Activo"
                 />
                 <SelectInput 
-                    source="type"
+                    source="tipo"
                     choices={[
                         {
                             id: "SELECCION",

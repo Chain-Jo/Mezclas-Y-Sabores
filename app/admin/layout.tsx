@@ -116,7 +116,7 @@ export default function AdminLayout({
             list={ChallengeList}
             create={ChallengeCreate}
             edit={ChallengeEdit}
-            recordRepresentation="question"
+            recordRepresentation="pregunta"
             options={{ label: "Preguntas" }}
           />
           <Resource

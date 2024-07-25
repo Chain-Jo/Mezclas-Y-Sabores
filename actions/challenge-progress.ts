@@ -114,7 +114,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
                 body: JSON.stringify({
                     "actionId": data.length + 1,
                     "userName": `${dataUser[0].userName}`,
-                    "actionName": `Respondio la pregunta ${dataChallenge.question} correctamente`,
+                    "actionName": `Respondio la pregunta ${dataChallenge.pregunta} correctamente`,
                     "createdAt": (new Date).toLocaleString()
                 })
             })
@@ -168,7 +168,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
                 body: JSON.stringify({
                     "actionId": data.length + 1,
                     "userName": `${dataUser[0].userName}`,
-                    "actionName": `Respondio la pregunta ${dataChallenge.question} correctamente`,
+                    "actionName": `Respondio la pregunta ${dataChallenge.pregunta} correctamente`,
                     "createdAt": (new Date).toLocaleString()
                 })
             })
@@ -179,7 +179,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
             body: JSON.stringify({
                 "actionId": data.length + 1,
                 "userName": `${dataUser[0].userName}`,
-                "actionName": `Respondio la pregunta ${dataChallenge.question} correctamente`,
+                "actionName": `Respondio la pregunta ${dataChallenge.pregunta} correctamente`,
                 "createdAt": (new Date).toLocaleString()
             })
         })

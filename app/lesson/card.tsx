@@ -15,7 +15,7 @@ type Props = {
     onClick: () => void;
     disabled?: boolean;
     status?: "correct" | "wrong" | "none";
-    type: typeof challenges.$inferSelect["type"];
+    tipo: typeof challenges.$inferSelect["tipo"];
     activo: boolean;
 }
 
@@ -29,7 +29,7 @@ export const Card = ({
     onClick,
     disabled,
     status,
-    type,
+    tipo,
     activo,
 }: Props) => {
 
@@ -59,7 +59,7 @@ export const Card = ({
                         selected && status === "wrong" 
                             && "border-rose-300 bg-rose-100 hover:bg-rose-100",
                         disabled && "pointer-events-none hover:bg-white",
-                        type === "COMPLETAR" && "lg:p-3 w-full"
+                        tipo === "COMPLETAR" && "lg:p-3 w-full"
                     )}
                 >
                     {/* {audio} */}
@@ -82,9 +82,9 @@ export const Card = ({
                     )}
                     <div className={cn(
                         "flex items-center justify-between text-center",
-                        type === "COMPLETAR" && "flex-row-reverse",
+                        tipo === "COMPLETAR" && "flex-row-reverse",
                     )}>
-                        {type === "COMPLETAR" && <div/>}
+                        {tipo === "COMPLETAR" && <div/>}
                         <p className={cn(
                             "text-neutral-600 text-sm lg:text-base text-center",
                             selected && "text-sky-500",

@@ -215,9 +215,9 @@ export const Test = ({
         );
     }
 
-    const titulo = currentChallenge.type === "COMPLETAR" 
+    const titulo = currentChallenge.tipo === "COMPLETAR" 
     ? "Selecciona el correcto" 
-    : currentChallenge.question
+    : currentChallenge.pregunta
 
     return (
         <>
@@ -237,8 +237,8 @@ export const Test = ({
                         </h1>
                         <div>
 
-                            {currentChallenge.type === "COMPLETAR" && (
-                                <QuestionBubble question={currentChallenge.question}/>
+                            {currentChallenge.tipo === "COMPLETAR" && (
+                                <QuestionBubble pregunta={currentChallenge.pregunta}/>
                             )}
                             {currentChallenge.activo === true
                                 ?
@@ -248,7 +248,7 @@ export const Test = ({
                                     status={status}
                                     selectedOption={selectedOption}
                                     disabled={pending}
-                                    type={currentChallenge.type}
+                                    tipo={currentChallenge.tipo}
                                     activo={currentChallenge.activo}
                                 />
                                 

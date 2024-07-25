@@ -5,10 +5,10 @@ export const ChallengeList = () => {
         <List>
             <Datagrid rowClick="edit">
                 <TextField source="id"/>
-                <TextField source="question"/>
+                <TextField source="pregunta"/>
                 <BooleanField source="activo"/>
                 <SelectField 
-                    source="type"
+                    source="tipo"
                     choices={[
                         {
                             id: "SELECCION",

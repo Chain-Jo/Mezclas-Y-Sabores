@@ -9,7 +9,7 @@ type Props = {
     status: "correct" | "wrong" | "none";
     selectedOption?: number;
     disabled?: boolean;
-    type: typeof challenges.$inferInsert["type"];
+    tipo: typeof challenges.$inferInsert["tipo"];
     activo: boolean;
 };
 
@@ -19,7 +19,7 @@ export const Reto = ({
     status,
     selectedOption,
     disabled,
-    type,
+    tipo,
     activo
 }: Props) => {
     return (
@@ -28,8 +28,8 @@ export const Reto = ({
             ?
                 <div className={cn(
                     "grid gap-2",
-                    type === "COMPLETAR" && "grid-cols-1",
-                    type === "SELECCION" && "grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(0,1fr))]"
+                    tipo === "COMPLETAR" && "grid-cols-1",
+                    tipo === "SELECCION" && "grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(0,1fr))]"
                 )}>
                     {options.map((option, i) => (
                         <Card
@@ -43,7 +43,7 @@ export const Reto = ({
                             status={status}
                             // audioSrc={option.audioSrc}
                             disabled={disabled}
-                            type={type}
+                            tipo={tipo}
                             activo={option.activo}
                         />
                     ))}
