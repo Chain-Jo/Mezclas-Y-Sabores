@@ -18,7 +18,7 @@ import { isSupervisor } from "@/lib/supervisor";
 import { currentUser } from "@clerk/nextjs/server";
 
 
-const DashboardPage = async () => {
+const SupervisionPage = async () => {
 
 
 
@@ -100,7 +100,7 @@ const DashboardPage = async () => {
                                     className="flex items-center w-full p-2 px-4 rounded-xl"
                                 >
         
-                                    <Dashboard
+                                    <DashboardSup
                                         
                                     />
                                 </div>
@@ -113,9 +113,9 @@ const DashboardPage = async () => {
                     
                 </>
             );
-        
+
     }
 
 };
 
-export default DashboardPage;
+export default SupervisionPage;
