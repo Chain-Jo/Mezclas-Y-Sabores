@@ -7,7 +7,7 @@ type Props = {
 
 const MarketingLayout = ( { children }: Props ) => {
     return (
-        <div className="min-h-screen flex flex-col bg-black">
+        <div className="min-h-screen flex flex-col bg-green-700">
         {/* <div className="min-h-screen flex flex-col"> */}
             <Header>
 

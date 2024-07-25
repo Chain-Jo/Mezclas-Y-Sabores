@@ -155,7 +155,7 @@ const main = async () => {
             {
                 id: 1,
                 lessonId: 1, // Teoría I
-                type: "SELECT",
+                type: "SELECCION",
                 orden: 1,
                 question: '¿Cuál de éstos es un "Pan de molde"?',
                 activo: true
@@ -163,7 +163,7 @@ const main = async () => {
             {
                 id: 2,
                 lessonId: 1, // Teoría I
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 2,
                 question: '¿Para preparar una arepa se necesita harina de maíz, agua, sal y ____?',
                 activo: true
@@ -171,7 +171,7 @@ const main = async () => {
             {
                 id: 3,
                 lessonId: 1, // Teoría I
-                type: "SELECT",
+                type: "SELECCION",
                 orden: 3,
                 question: '¿Cuál de los siguientes cortes de frutas y verduras se conoce como "Brunoise"',
                 activo: true
@@ -179,7 +179,7 @@ const main = async () => {
             {
                 id: 4,
                 lessonId: 1, // Teoría I
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 4,
                 question: '¿Por cuanto tiempo se debe hervir un huevo para que quede completamente cocido?',
                 activo: true
@@ -327,7 +327,7 @@ const main = async () => {
             {
                 id: 5,
                 lessonId: 2, // Teoría I
-                type: "SELECT",
+                type: "SELECCION",
                 orden: 5,
                 question: '¿Cuál de éstos es un "Pan de molde"?',
                 activo: true
@@ -335,7 +335,7 @@ const main = async () => {
             {
                 id: 6,
                 lessonId: 2, // Teoría I
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 6,
                 question: '¿Cúal de las siguientes opciones no es un fruto seco?',
                 activo: true
@@ -343,14 +343,14 @@ const main = async () => {
             // {
             //     id: 7,
             //     lessonId: 2, // Teoría I
-            //     type: "SELECT",
+            //     type: "SELECCION",
             //     orden: 3,
             //     question: '¿Cuál de los siguientes cortes de frutas y verduras se conoce como "Brunoise"',
             // },
             // {
             //     id: 8,
             //     lessonId: 2, // Teoría I
-            //     type: "ASSIST",
+            //     type: "COMPLETAR",
             //     orden: 4,
             //     question: '¿Por cuanto tiempo se debe hervir un huevo para que quede completamente cocido?',
             // },
@@ -429,7 +429,7 @@ const main = async () => {
              {
                  id: 7,
                  lessonId: 5, // Teoría I
-                 type: "SELECT",
+                 type: "SELECCION",
                  orden: 7,
                  question: '¿Cuál de los siguientes cortes de frutas y verduras se conoce como "Brunoise"',
                  activo: true,
@@ -437,7 +437,7 @@ const main = async () => {
              {
                  id: 8,
                  lessonId: 5, // Teoría I
-                 type: "ASSIST",
+                 type: "COMPLETAR",
                  orden: 8,
                  question: '¿Por cuanto tiempo se debe hervir un huevo para que quede completamente cocido?',
                  activo: true

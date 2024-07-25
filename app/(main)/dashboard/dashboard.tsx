@@ -111,9 +111,51 @@ export const Dashboard = ({
 
         </ul>
             : 
-            <div>
-                Usted no es administrador.
-            </div>
+            <ul className="w-full">
+                {/* <div className="flex items-center w-full p-4 gap-x-4 border-t-2">
+                    <Image
+                        src="/img/log.png"
+                        alt="Logs"
+                        height={60}
+                        width={60}
+                    />
+                    <div className="flex-1">
+                        <p className="text-neutral-700 text-base lg:text-xl font-bold">
+                            Logs.
+                        </p>
+                    </div>
+                        <Button
+                            
+                        >
+                            <Link href="/logs">
+									Ir
+							</Link>
+                        </Button>
+                </div> */}
+                <li>
+                    <div className="flex items-center w-full p-4 gap-x-4 border-t-2">
+                        <Image
+                            src="/img/examen.png"
+                            alt="Reportes"
+                            height={60}
+                            width={60}
+                        />
+                        <div className="flex-1">
+                            <p className="text-neutral-700 text-base lg:text-xl font-bold">
+                                Reportes.
+                            </p>
+                        </div>
+                            <Button
+                                
+                            >
+                                <Link href="/reports">
+                                        Ir
+                                </Link>
+                            </Button>
+                    </div>
+                </li>
+
+        </ul>
         }
         
         </>

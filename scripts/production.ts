@@ -702,7 +702,7 @@ const main = async () => {
             {
                 id: 1,
                 lessonId: 1, // 1. Francia - Actividad 1 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 1,
                 question: '¿Cuantas recetas contenia la guia culinaria de Escoffier?',
                 activo: true
@@ -710,7 +710,7 @@ const main = async () => {
             {
                 id: 2,
                 lessonId: 1, // 1. Francia - Actividad 1 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 2,
                 question: '¿Por quien fueron influenciados los primeros grades chef de Francia?',
                 activo: true
@@ -718,7 +718,7 @@ const main = async () => {
             {
                 id: 3,
                 lessonId: 1, // 1. Francia - Actividad 1 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 3,
                 question: '¿De donde deriva la palabra restaurant?',
                 activo: true
@@ -726,7 +726,7 @@ const main = async () => {
             {
                 id: 4,
                 lessonId: 1, // 1. Francia - Actividad 1 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 4,
                 question: '¿Quien fue considerado como el primer gourmet?',
                 activo: true
@@ -736,7 +736,7 @@ const main = async () => {
             {
                 id: 5,
                 lessonId: 2, // 1. Francia - Actividad 2 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 5,
                 question: 'En el ratatoullie se usan hierbas de provenza, ¿cuáles son?',
                 activo: true
@@ -744,7 +744,7 @@ const main = async () => {
             {
                 id: 6,
                 lessonId: 2, // 1. Francia - Actividad 2 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 6,
                 question: '¿Cómo se prepara un Alioli?',
                 activo: true
@@ -752,7 +752,7 @@ const main = async () => {
             {
                 id: 7,
                 lessonId: 2, // 1. Francia - Actividad 2 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 7,
                 question: '¿Cuáles son los ingredientes del Bouquet Garní?',
                 activo: true
@@ -760,7 +760,7 @@ const main = async () => {
             {
                 id: 8,
                 lessonId: 2, // 1. Francia - Actividad 2 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 8,
                 question: '¿Cual es la proteina que se usa en el Cassoulet?',
                 activo: true
@@ -770,7 +770,7 @@ const main = async () => {
             {
                 id: 9,
                 lessonId: 3, // 1. Francia - Actividad 3 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 9,
                 question: '¿Cuál es el estilo característico del chef Ducasse?',
                 activo: true
@@ -778,7 +778,7 @@ const main = async () => {
             {
                 id: 10,
                 lessonId: 3, // 1. Francia - Actividad 3 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 10,
                 question: '¿Quien fue el primer chef en obtener 6 estrellas Michelin?',
                 activo: true
@@ -786,7 +786,7 @@ const main = async () => {
             {
                 id: 11,
                 lessonId: 3, // 1. Francia - Actividad 3 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 11,
                 question: 'Para el pollo Bigarade Clásico ¿que piezas de pollo se utilizan?',
                 activo: true
@@ -794,7 +794,7 @@ const main = async () => {
             {
                 id: 12,
                 lessonId: 3, // 1. Francia - Actividad 3 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 12,
                 question: '¿Cuales son los ingredientes de la Sopa de Cebolla Clásica?',
                 activo: true
@@ -804,7 +804,7 @@ const main = async () => {
             {
                 id: 13,
                 lessonId: 4, // 1. Francia - Prueba 1 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 13,
                 question: 'En el ratatoullie se usan hierbas de provenza, ¿cuáles son?',
                 activo: true
@@ -812,7 +812,7 @@ const main = async () => {
             {
                 id: 14,
                 lessonId: 4, // 1. Francia - Prueba 1 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 14,
                 question: '¿Cuales son los ingredientes de la Sopa de Cebolla Clásica?',
                 activo: true
@@ -820,7 +820,7 @@ const main = async () => {
             {
                 id: 15,
                 lessonId: 4, // 1. Francia - Prueba 1 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 15,
                 question: '¿Cual es la proteína que se usa en el Cassoulet?',
                 activo: true
@@ -828,7 +828,7 @@ const main = async () => {
             {
                 id: 16,
                 lessonId: 4, // 1. Francia - Prueba 1 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 16,
                 question: '¿Por quien fueron influenciados los primeros grades chef de Francia?',
                 activo: true
@@ -836,7 +836,7 @@ const main = async () => {
             {
                 id: 17,
                 lessonId: 4, // 1. Francia - Prueba 1 - Pregunta 5
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 17,
                 question: '¿Como se prepara un Alioli?',
                 activo: true
@@ -844,7 +844,7 @@ const main = async () => {
             {
                 id: 18,
                 lessonId: 4, // 1. Francia - Prueba 1 - Pregunta 6
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 18,
                 question: 'Para el pollo Bigarade Clásico ¿que piezas de pollo se utilizan?',
                 activo: true
@@ -863,7 +863,7 @@ const main = async () => {
             {
                 id: 19,
                 lessonId: 5, // 2. Italia - Actividad 4 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 19,
                 question: '¿Por que se caracteriza la cocina italiana?',
                 activo: true
@@ -871,7 +871,7 @@ const main = async () => {
             {
                 id: 20,
                 lessonId: 5, // 2. Italia - Actividad 4 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 20,
                 question: '¿La cocina italiana es rica por sus exquisitos platos únicos elaborados con?',
                 activo: true
@@ -879,7 +879,7 @@ const main = async () => {
             {
                 id: 21,
                 lessonId: 5, // 2. Italia - Actividad 4 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 21,
                 question: '¿Que es un Stracotto al Barolo?',
                 activo: true
@@ -887,7 +887,7 @@ const main = async () => {
             {
                 id: 22,
                 lessonId: 5, // 2. Italia - Actividad 4 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 22,
                 question: '¿Cuales son los ingredientes del pesto?',
                 activo: true
@@ -897,7 +897,7 @@ const main = async () => {
             {
                 id: 23,
                 lessonId: 6, // 2. Italia - Actividad 5 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 23,
                 question: '¿Cuales son los ingredientes básicos de la Focaccia al Rosmarino?',
                 activo: true
@@ -905,7 +905,7 @@ const main = async () => {
             {
                 id: 24,
                 lessonId: 6, // 2. Italia - Actividad 5 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 24,
                 question: '¿Cuales quesos son de origen italiano?',
                 activo: true
@@ -913,7 +913,7 @@ const main = async () => {
             {
                 id: 25,
                 lessonId: 6, // 2. Italia - Actividad 5 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 25,
                 question: '¿Que es un Calzone?',
                 activo: true
@@ -921,7 +921,7 @@ const main = async () => {
             {
                 id: 26,
                 lessonId: 6, // 2. Italia - Actividad 5 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 26,
                 question: '¿Que se considera como primer plato en italia?',
                 activo: true
@@ -931,7 +931,7 @@ const main = async () => {
             {
                 id: 27,
                 lessonId: 7, // 2. Italia - Actividad 6 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 27,
                 question: 'El Affogato se compone de Helado de vainilla y?',
                 activo: true
@@ -939,7 +939,7 @@ const main = async () => {
             {
                 id: 28,
                 lessonId: 7, // 2. Italia - Actividad 6 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 28,
                 question: 'La caponata es un preparado espeso y picante hecho a base de?',
                 activo: true
@@ -947,7 +947,7 @@ const main = async () => {
             {
                 id: 29,
                 lessonId: 7, // 2. Italia - Actividad 6 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 29,
                 question: 'Completa la insalata caprese, Queso mozzarella, tomare cherry y?',
                 activo: true
@@ -955,7 +955,7 @@ const main = async () => {
             {
                 id: 30,
                 lessonId: 7, // 2. Italia - Actividad 6 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 30,
                 question: '¿Cuales son los ingredientes de la Sopa de Cebolla Clásica?',
                 activo: true
@@ -965,7 +965,7 @@ const main = async () => {
             {
                 id: 31,
                 lessonId: 8, // 2. Italia - Prueba 2 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 31,
                 question: '¿Por que se caracteriza la cocina italiana?',
                 activo: true
@@ -973,7 +973,7 @@ const main = async () => {
             {
                 id: 32,
                 lessonId: 8, // 2. Italia - Prueba 2 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 32,
                 question: '¿Que es un Stracotto al Barolo?',
                 activo: true
@@ -981,7 +981,7 @@ const main = async () => {
             {
                 id: 33,
                 lessonId: 8, // 2. Italia - Prueba 2 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 33,
                 question: '¿Que se considera como primer plato en italia?',
                 activo: true
@@ -989,7 +989,7 @@ const main = async () => {
             {
                 id: 34,
                 lessonId: 8, // 2. Italia - Prueba 2 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 34,
                 question: '¿Cuales son los ingredientes básicos de la Focaccia al Rosmarino?',
                 activo: true
@@ -997,7 +997,7 @@ const main = async () => {
             {
                 id: 35,
                 lessonId: 8, // 2. Italia - Prueba 2 - Pregunta 5
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 35,
                 question: 'El Affogato se compone de Helado de vainilla y?',
                 activo: true
@@ -1005,7 +1005,7 @@ const main = async () => {
             {
                 id: 36,
                 lessonId: 8, // 2. Italia - Prueba 2 - Pregunta 6
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 36,
                 question: 'En la Lengua de res a la Toscana, ¿Cual es el ingrediente característico?',
                 activo: true
@@ -1024,7 +1024,7 @@ const main = async () => {
             {
                 id: 37,
                 lessonId: 9, // 3. España - Actividad 7 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 37,
                 question: '¿De donde desprendían los coderos la grasa denominada ayla?',
                 activo: true
@@ -1032,7 +1032,7 @@ const main = async () => {
             {
                 id: 38,
                 lessonId: 9, // 3. España - Actividad 7 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 38,
                 question: '¿Que generó el "Efecto Adriá"?',
                 activo: true
@@ -1040,7 +1040,7 @@ const main = async () => {
             {
                 id: 39,
                 lessonId: 9, // 3. España - Actividad 7 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 39,
                 question: '¿Cual es uno de los ingredientes vistos en el "Nuevo mundo"?',
                 activo: true
@@ -1048,7 +1048,7 @@ const main = async () => {
             {
                 id: 40,
                 lessonId: 9, // 3. España - Actividad 7 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 40,
                 question: '¿Cual es uno de los ingredientes vistos en el "Nuevo mundo"?',
                 activo: true
@@ -1058,7 +1058,7 @@ const main = async () => {
             {
                 id: 41,
                 lessonId: 10, // 3. España - Actividad 8 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 41,
                 question: '¿Que embutido es típicos de Cataluña?',
                 activo: true
@@ -1066,7 +1066,7 @@ const main = async () => {
             {
                 id: 42,
                 lessonId: 10, // 3. España - Actividad 8 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 42,
                 question: '¿Cual es el secreto de la mayoría de guisos catalanes?',
                 activo: true
@@ -1074,7 +1074,7 @@ const main = async () => {
             {
                 id: 43,
                 lessonId: 10, // 3. España - Actividad 8 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 43,
                 question: '¿Porqué no se usan los morteros de maderas?',
                 activo: true
@@ -1082,7 +1082,7 @@ const main = async () => {
             {
                 id: 44,
                 lessonId: 10, // 3. España - Actividad 8 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 44,
                 question: '¿Que ingrediente tuvo más importancia segunda mitad del siglo XVII, y durante todo el siglo XVIII?',
                 activo: true
@@ -1092,7 +1092,7 @@ const main = async () => {
             {
                 id: 45,
                 lessonId: 11, // 3. España - Actividad 9 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 45,
                 question: '¿Que concepto se quiso llevar para el siglo XXI?',
                 activo: true
@@ -1100,7 +1100,7 @@ const main = async () => {
             {
                 id: 46,
                 lessonId: 11, // 3. España - Actividad 9 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 46,
                 question: '¿Que concepto surgen en la nueva cocina luego del "Efecto Adriá"?',
                 activo: true
@@ -1108,7 +1108,7 @@ const main = async () => {
             {
                 id: 47,
                 lessonId: 11, // 3. España - Actividad 9 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 47,
                 question: 'La INTXAURSALSA es una crema a base de?',
                 activo: true
@@ -1116,7 +1116,7 @@ const main = async () => {
             {
                 id: 48,
                 lessonId: 11, // 3. España - Actividad 9 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 48,
                 question: '¿Que marisco se usa en el ROMESCO DE MARISCOS?',
                 activo: true
@@ -1126,7 +1126,7 @@ const main = async () => {
             {
                 id: 49,
                 lessonId: 12, // 3. España - Prueba 3 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 49,
                 question: '¿De donde desprendían los coderos la grasa denominada ayla?',
                 activo: true
@@ -1134,7 +1134,7 @@ const main = async () => {
             {
                 id: 50,
                 lessonId: 12, // 3. España - Prueba 3 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 50,
                 question: '¿Cual es uno de los ingredientes vistos en el "Nuevo mundo"?',
                 activo: true
@@ -1142,7 +1142,7 @@ const main = async () => {
             {
                 id: 51,
                 lessonId: 12, // 3. España - Prueba 3 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 51,
                 question: '¿Cual es el secreto de la mayoría de guisos catalanes?',
                 activo: true
@@ -1150,7 +1150,7 @@ const main = async () => {
             {
                 id: 52,
                 lessonId: 12, // 3. España - Prueba 3 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 52,
                 question: '¿Que embutido es típicos de Cataluña?',
                 activo: true
@@ -1158,7 +1158,7 @@ const main = async () => {
             {
                 id: 53,
                 lessonId: 12, // 3. España - Prueba 3 - Pregunta 5
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 53,
                 question: '¿Que marisco se usa en el ROMESCO DE MARISCOS?',
                 activo: true
@@ -1166,7 +1166,7 @@ const main = async () => {
             {
                 id: 54,
                 lessonId: 12, // 3. España - Prueba 3 - Pregunta 6
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 54,
                 question: 'La INTXAURSALSA es una crema a base de?',
                 activo: true
@@ -1185,7 +1185,7 @@ const main = async () => {
             {
                 id: 55,
                 lessonId: 13, // 4. Alemania - Actividad 10 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 55,
                 question: '¿Por qué se caracteriza la comida Alemana?',
                 activo: true
@@ -1193,7 +1193,7 @@ const main = async () => {
             {
                 id: 56,
                 lessonId: 13, // 4. Alemania - Actividad 10 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 56,
                 question: '¿Como se le llaman a las Salchicas en Alemania?',
                 activo: true
@@ -1201,7 +1201,7 @@ const main = async () => {
             {
                 id: 57,
                 lessonId: 13, // 4. Alemania - Actividad 10 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 57,
                 question: 'El Flammkuchen es un plato que se asemeja a:',
                 activo: true
@@ -1209,7 +1209,7 @@ const main = async () => {
             {
                 id: 58,
                 lessonId: 13, // 4. Alemania - Actividad 10 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 58,
                 question: 'La Torta de la Selva Negra es de la region de:',
                 activo: true
@@ -1219,7 +1219,7 @@ const main = async () => {
             {
                 id: 59,
                 lessonId: 14, // 4. Alemania - Actividad 11 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 59,
                 question: 'Cual es la proteina principal del Lübecker National:',
                 activo: true
@@ -1227,7 +1227,7 @@ const main = async () => {
             {
                 id: 60,
                 lessonId: 14, // 4. Alemania - Actividad 11 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 60,
                 question: 'El Hamburger Aalsuppe es una sopa de:',
                 activo: true
@@ -1235,7 +1235,7 @@ const main = async () => {
             {
                 id: 61,
                 lessonId: 14, // 4. Alemania - Actividad 11 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 61,
                 question: 'El Panhas es un derivado de la matanza del cerdo que se parece a:',
                 activo: true
@@ -1243,7 +1243,7 @@ const main = async () => {
             {
                 id: 62,
                 lessonId: 14, // 4. Alemania - Actividad 11 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 62,
                 question: 'Al Baumkuchen se le considera como el rey de:',
                 activo: true
@@ -1253,7 +1253,7 @@ const main = async () => {
             {
                 id: 63,
                 lessonId: 15, // 4. Alemania - Actividad 12 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 63,
                 question: 'Thüringer Rostbratwurst es la salchicha tipica de Turingia',
                 activo: true
@@ -1261,7 +1261,7 @@ const main = async () => {
             {
                 id: 64,
                 lessonId: 15, // 4. Alemania - Actividad 12 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 64,
                 question: 'El Knödel son bollos de:',
                 activo: true
@@ -1269,7 +1269,7 @@ const main = async () => {
             {
                 id: 65,
                 lessonId: 15, // 4. Alemania - Actividad 12 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 65,
                 question: 'El Rheinischer Sauerbraten es asado a base de:',
                 activo: true
@@ -1277,7 +1277,7 @@ const main = async () => {
             {
                 id: 66,
                 lessonId: 15, // 4. Alemania - Actividad 12 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 66,
                 question: 'El Rote Grütze se compone principalmente de:',
                 activo: true
@@ -1287,7 +1287,7 @@ const main = async () => {
             {
                 id: 67,
                 lessonId: 16, // 4. Alemania - Prueba 4 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 67,
                 question: 'El Flammkuchen es un plato que se asemeja a:',
                 activo: true
@@ -1295,7 +1295,7 @@ const main = async () => {
             {
                 id: 68,
                 lessonId: 16, // 4. Alemania - Prueba 4 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 68,
                 question: 'La Torta de la Selva Negra es de la region de:',
                 activo: true
@@ -1303,7 +1303,7 @@ const main = async () => {
             {
                 id: 69,
                 lessonId: 16, // 4. Alemania - Prueba 4 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 69,
                 question: 'El Hamburger Aalsuppe es una sopa de:',
                 activo: true
@@ -1311,7 +1311,7 @@ const main = async () => {
             {
                 id: 70,
                 lessonId: 16, // 4. Alemania - Prueba 4 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 70,
                 question: 'Al Baumkuchen se le considera como el rey de:',
                 activo: true
@@ -1319,7 +1319,7 @@ const main = async () => {
             {
                 id: 71,
                 lessonId: 16, // 4. Alemania - Prueba 4 - Pregunta 5
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 71,
                 question: 'Thüringer Rostbratwurst es la salchicha tipica de Turingia:',
                 activo: true
@@ -1327,7 +1327,7 @@ const main = async () => {
             {
                 id: 72,
                 lessonId: 16, // 4. Alemania - Prueba 4 - Pregunta 6
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 72,
                 question: 'El Rheinischer Sauerbraten es asado a base de:',
                 activo: true
@@ -1347,7 +1347,7 @@ const main = async () => {
             {
                 id: 73,
                 lessonId: 17, // 5. Austria - Actividad 13 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 73,
                 question: 'La comida austriaca tiene gran influencia del país:',
                 activo: true
@@ -1355,7 +1355,7 @@ const main = async () => {
             {
                 id: 74,
                 lessonId: 17, // 5. Austria - Actividad 13 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 74,
                 question: 'El wienerschitzel es ____ que se sirve con ensalada de patatas frias',
                 activo: true
@@ -1363,7 +1363,7 @@ const main = async () => {
             {
                 id: 75,
                 lessonId: 17, // 5. Austria - Actividad 13 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 75,
                 question: 'La schittlauchsauce es una salsa a base de:',
                 activo: true
@@ -1371,7 +1371,7 @@ const main = async () => {
             {
                 id: 76,
                 lessonId: 17, // 5. Austria - Actividad 13 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 76,
                 question: 'Los palatshinken son:',
                 activo: true
@@ -1381,7 +1381,7 @@ const main = async () => {
             {
                 id: 77,
                 lessonId: 18, // 5. Austria - Actividad 14 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 77,
                 question: 'El punto citrico del Wiener Schnitzel se lo da el:',
                 activo: true
@@ -1389,7 +1389,7 @@ const main = async () => {
             {
                 id: 78,
                 lessonId: 18, // 5. Austria - Actividad 14 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 78,
                 question: 'El Kärntner Kassnudeln son:',
                 activo: true
@@ -1397,7 +1397,7 @@ const main = async () => {
             {
                 id: 79,
                 lessonId: 18, // 5. Austria - Actividad 14 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 79,
                 question: 'El ingrediente principal del Tiroler Knödel (Albondigas tirolesa) es:',
                 activo: true
@@ -1405,7 +1405,7 @@ const main = async () => {
             {
                 id: 80,
                 lessonId: 18, // 5. Austria - Actividad 14 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 80,
                 question: 'El Griesnockersuppe es:',
                 activo: true
@@ -1415,7 +1415,7 @@ const main = async () => {
             {
                 id: 81,
                 lessonId: 19, // 5. Austria - Actividad 15 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 81,
                 question: 'Schnittlauchsauce es una salsa de:',
                 activo: true
@@ -1423,7 +1423,7 @@ const main = async () => {
             {
                 id: 82,
                 lessonId: 19, // 5. Austria - Actividad 15 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 82,
                 question: 'El relleno del Kärnter Reindling es:',
                 activo: true
@@ -1431,7 +1431,7 @@ const main = async () => {
             {
                 id: 83,
                 lessonId: 19, // 5. Austria - Actividad 15 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 83,
                 question: 'El Strudel es una tarta rellena con:',
                 activo: true
@@ -1439,7 +1439,7 @@ const main = async () => {
             {
                 id: 84,
                 lessonId: 19, // 5. Austria - Actividad 15 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 84,
                 question: 'El Marillenködel son Bolitas dulces de:',
                 activo: true
@@ -1449,7 +1449,7 @@ const main = async () => {
             {
                 id: 85,
                 lessonId: 20, // 5. Austria - Prueba 5 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 85,
                 question: 'La comida austriaca tiene gran influencia del país:',
                 activo: true
@@ -1457,7 +1457,7 @@ const main = async () => {
             {
                 id: 86,
                 lessonId: 20, // 5. Austria - Prueba 5 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 86,
                 question: 'El wienerschitzel es ____ que se sirve con ensalada de patatas frías',
                 activo: true
@@ -1465,7 +1465,7 @@ const main = async () => {
             {
                 id: 87,
                 lessonId: 20, // 5. Austria - Prueba 5 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 87,
                 question: 'El punto citrico del Wiener Schnitzel se lo da el:',
                 activo: true
@@ -1473,7 +1473,7 @@ const main = async () => {
             {
                 id: 88,
                 lessonId: 20, // 5. Austria - Prueba 5 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 88,
                 question: 'El Griesnockersuppe es:',
                 activo: true
@@ -1481,7 +1481,7 @@ const main = async () => {
             {
                 id: 89,
                 lessonId: 20, // 5. Austria - Prueba 5 - Pregunta 5
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 89,
                 question: 'La schittlauchsauce es una salsa a base de:',
                 activo: true
@@ -1489,7 +1489,7 @@ const main = async () => {
             {
                 id: 90,
                 lessonId: 20, // 5. Austria - Prueba 5 - Pregunta 6
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 90,
                 question: 'El Strudel es una tarta rellena con:',
                 activo: true
@@ -1509,7 +1509,7 @@ const main = async () => {
             {
                 id: 91,
                 lessonId: 21, // 6. Grecia - Actividad 16 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 91,
                 question: 'La cocina griega constituye la esencia de la gastronomia ________ al fusionar tradiciones culinarias,',
                 activo: true
@@ -1517,7 +1517,7 @@ const main = async () => {
             {
                 id: 92,
                 lessonId: 21, // 6. Grecia - Actividad 16 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 92,
                 question: 'En la comida griega abundan las cremas a base de:',
                 activo: true
@@ -1525,7 +1525,7 @@ const main = async () => {
             {
                 id: 93,
                 lessonId: 21, // 6. Grecia - Actividad 16 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 93,
                 question: 'Los griegos prefieren los platos de:',
                 activo: true
@@ -1533,7 +1533,7 @@ const main = async () => {
             {
                 id: 94,
                 lessonId: 21, // 6. Grecia - Actividad 16 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 94,
                 question: 'La Moussaka es un pastel de forma rectangular que combina:',
                 activo: true
@@ -1543,7 +1543,7 @@ const main = async () => {
             {
                 id: 95,
                 lessonId: 22, // 6. Grecia - Actividad 17 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 95,
                 question: 'La ensalada griega por antonomasia es:',
                 activo: true
@@ -1551,7 +1551,7 @@ const main = async () => {
             {
                 id: 96,
                 lessonId: 22, // 6. Grecia - Actividad 17 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 96,
                 question: '¿Que ingrediente tiene Omnipresencia en las preparaciones griegas?',
                 activo: true
@@ -1559,7 +1559,7 @@ const main = async () => {
             {
                 id: 97,
                 lessonId: 22, // 6. Grecia - Actividad 17 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 97,
                 question: '¿Cual es el queso tradicional de Grecia?',
                 activo: true
@@ -1567,7 +1567,7 @@ const main = async () => {
             {
                 id: 98,
                 lessonId: 22, // 6. Grecia - Actividad 17 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 98,
                 question: '¿Que especia es muy usada en postres y salados?',
                 activo: true
@@ -1577,7 +1577,7 @@ const main = async () => {
             {
                 id: 99,
                 lessonId: 23, // 6. Grecia - Actividad 18 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 99,
                 question: 'Para el Tzatziki los ingredientes principales son:',
                 activo: true
@@ -1585,7 +1585,7 @@ const main = async () => {
             {
                 id: 100,
                 lessonId: 23, // 6. Grecia - Actividad 18 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 100,
                 question: 'El MELITZANES PAPOUTSAKIA son:',
                 activo: true
@@ -1593,7 +1593,7 @@ const main = async () => {
             {
                 id: 101,
                 lessonId: 23, // 6. Grecia - Actividad 18 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 101,
                 question: 'Las SPANAKÓPITA son:',
                 activo: true
@@ -1601,7 +1601,7 @@ const main = async () => {
             {
                 id: 102,
                 lessonId: 23, // 6. Grecia - Actividad 18 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 102,
                 question: 'El Galaktoboureko es:',
                 activo: true
@@ -1611,7 +1611,7 @@ const main = async () => {
             {
                 id: 103,
                 lessonId: 24, // 6. Grecia - Prueba 6 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 103,
                 question: 'La cocina griega constituye la esencia de la gastronomia ________ al fusionar tradiciones culinarias',
                 activo: true
@@ -1619,7 +1619,7 @@ const main = async () => {
             {
                 id: 104,
                 lessonId: 24, // 6. Grecia - Prueba 6 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 104,
                 question: 'La Moussaka es un pastel de forma rectangular que combina:',
                 activo: true
@@ -1627,7 +1627,7 @@ const main = async () => {
             {
                 id: 105,
                 lessonId: 24, // 6. Grecia - Prueba 6 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 105,
                 question: '¿Que ingrediente tiene Omnipresencia en las preparaciones griegas?',
                 activo: true
@@ -1635,7 +1635,7 @@ const main = async () => {
             {
                 id: 106,
                 lessonId: 24, // 6. Grecia - Prueba 6 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 106,
                 question: '¿Que especia es muy usada en postres y salados?',
                 activo: true
@@ -1643,7 +1643,7 @@ const main = async () => {
             {
                 id: 107,
                 lessonId: 24, // 6. Grecia - Prueba 6 - Pregunta 5
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 107,
                 question: 'Para el Tzatziki los ingredientes principales son:',
                 activo: true
@@ -1651,7 +1651,7 @@ const main = async () => {
             {
                 id: 108,
                 lessonId: 24, // 6. Grecia - Prueba 6 - Pregunta 6
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 108,
                 question: 'El MELITZANES PAPOUTSAKIA son:',
                 activo: true
@@ -1673,7 +1673,7 @@ const main = async () => {
             {
                 id: 109,
                 lessonId: 25, // 7. Suiza - Actividad 19 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 109,
                 question: '¿Que platos estan presentes en todas las cocinas de suiza?',
                 activo: true
@@ -1681,7 +1681,7 @@ const main = async () => {
             {
                 id: 110,
                 lessonId: 25, // 7. Suiza - Actividad 19 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 110,
                 question: '¿Cual queso es producido en suiza?',
                 activo: true
@@ -1689,7 +1689,7 @@ const main = async () => {
             {
                 id: 111,
                 lessonId: 25, // 7. Suiza - Actividad 19 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 111,
                 question: '¿Que vino es el de mayor consumo en Suiza?',
                 activo: true
@@ -1697,7 +1697,7 @@ const main = async () => {
             {
                 id: 112,
                 lessonId: 25, // 7. Suiza - Actividad 19 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 112,
                 question: '¿Por que es reconocida Suiza gastronómicamente?',
                 activo: true
@@ -1707,7 +1707,7 @@ const main = async () => {
             {
                 id: 113,
                 lessonId: 26, // 7. Suiza - Actividad 20 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 113,
                 question: '¿Que caldo usa el kalbsgeschnetzeltes?',
                 activo: true
@@ -1715,7 +1715,7 @@ const main = async () => {
             {
                 id: 114,
                 lessonId: 26, // 7. Suiza - Actividad 20 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 114,
                 question: 'El Kaese salad es una ensalda que se elabora con un embutido ¿Cual es?',
                 activo: true
@@ -1723,7 +1723,7 @@ const main = async () => {
             {
                 id: 115,
                 lessonId: 26, // 7. Suiza - Actividad 20 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 115,
                 question: 'Le Papet Vaudois se compone por:',
                 activo: true
@@ -1731,7 +1731,7 @@ const main = async () => {
             {
                 id: 116,
                 lessonId: 26, // 7. Suiza - Actividad 20 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 116,
                 question: '¿Que aceite se usa en el Kaese salad?',
                 activo: true
@@ -1741,7 +1741,7 @@ const main = async () => {
             {
                 id: 117,
                 lessonId: 27, // 7. Suiza - Actividad 21 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 117,
                 question: 'Para el Le Papet Vaudois se usa caldo de:',
                 activo: true
@@ -1749,7 +1749,7 @@ const main = async () => {
             {
                 id: 118,
                 lessonId: 27, // 7. Suiza - Actividad 21 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 118,
                 question: '¿El Basler Läckerli utiliza un licor cual es?',
                 activo: true
@@ -1757,7 +1757,7 @@ const main = async () => {
             {
                 id: 119,
                 lessonId: 27, // 7. Suiza - Actividad 21 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 119,
                 question: '¿Que tipo de queso usa el Älplermagronen?',
                 activo: true
@@ -1767,7 +1767,7 @@ const main = async () => {
             {
                 id: 120,
                 lessonId: 28, // 7. Suiza - Actividad 21 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 120,
                 question: '¿Cual queso es producido en suiza?',
                 activo: true
@@ -1776,7 +1776,7 @@ const main = async () => {
             {
                 id: 121,
                 lessonId: 28, // 7. Suiza - Prueba 7 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 121,
                 question: '¿Por que es reconocida Suiza gastronómicamente?',
                 activo: true
@@ -1784,7 +1784,7 @@ const main = async () => {
             {
                 id: 122,
                 lessonId: 28, // 7. Suiza - Prueba 7 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 122,
                 question: 'El Kaese salad es una ensalda que se elabora con un embutido ¿Cual es?',
                 activo: true
@@ -1792,7 +1792,7 @@ const main = async () => {
             {
                 id: 123,
                 lessonId: 28, // 7. Suiza - Prueba 7 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 123,
                 question: '¿Que caldo usa el kalbsgeschnetzeltes?',
                 activo: true
@@ -1800,7 +1800,7 @@ const main = async () => {
             {
                 id: 124,
                 lessonId: 28, // 7. Suiza - Prueba 7 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 124,
                 question: '¿Que tipo de queso usa el Älplermagronen?',
                 activo: true
@@ -1808,7 +1808,7 @@ const main = async () => {
             {
                 id: 125,
                 lessonId: 28, // 7. Suiza - Prueba 7 - Pregunta 5
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 125,
                 question: 'El Basler Läckerli utiliza un licor ¿Cual es?',
                 activo: true
@@ -1827,7 +1827,7 @@ const main = async () => {
             {
                 id: 126,
                 lessonId: 29, // 8. Bélgica - Actividad 22 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 126,
                 question: '¿Que plato destaca en la cocina belga?',
                 activo: true
@@ -1836,7 +1836,7 @@ const main = async () => {
             {
                 id: 127,
                 lessonId: 29, // 8. Bélgica - Actividad 22 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 127,
                 question: 'El Waterzooi es una sopa cremosa de:',
                 activo: true
@@ -1844,7 +1844,7 @@ const main = async () => {
             {
                 id: 128,
                 lessonId: 29, // 8. Bélgica - Actividad 22 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 128,
                 question: 'Las Carbonadas se elabora con:',
                 activo: true
@@ -1852,7 +1852,7 @@ const main = async () => {
             {
                 id: 129,
                 lessonId: 29, // 8. Bélgica - Actividad 22 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 129,
                 question: 'EL Carbonades a la flamenca es:',
                 activo: true
@@ -1862,7 +1862,7 @@ const main = async () => {
             {
                 id: 130,
                 lessonId: 30, // 8. Bélgica - Actividad 22 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 130,
                 question: '¿Cuantas variades de bombones existen en Bélgica?',
                 activo: true
@@ -1871,7 +1871,7 @@ const main = async () => {
             {
                 id: 131,
                 lessonId: 30, // 8. Bélgica - Actividad 23 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 131,
                 question: '¿Como es el Chocolate Belga?',
                 activo: true
@@ -1879,7 +1879,7 @@ const main = async () => {
             {
                 id: 132,
                 lessonId: 30, // 8. Bélgica - Actividad 23 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 132,
                 question: '¿Cuantas variedades de Queso existen en Bélgica?',
                 activo: true
@@ -1887,7 +1887,7 @@ const main = async () => {
             {
                 id: 133,
                 lessonId: 30, // 8. Bélgica - Actividad 23 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 133,
                 question: '¿Que sabor de cerveza puede ser único de Bélgica?',
                 activo: true
@@ -1895,7 +1895,7 @@ const main = async () => {
             // {
             //     id: 133,
             //     lessonId: 30, // 8. Bélgica - Actividad 23 - Pregunta 4
-            //     type: "ASSIST",
+            //     type: "COMPLETAR",
             //     orden: 133,
             //     question: '¿Que especia es muy usada en postres y salados?',
             //     activo: true
@@ -1905,7 +1905,7 @@ const main = async () => {
             {
                 id: 134,
                 lessonId: 31, // 8. Bélgica - Actividad 24 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 134,
                 question: 'El Vol au vent usa caldo de:',
                 activo: true
@@ -1913,7 +1913,7 @@ const main = async () => {
             {
                 id: 135,
                 lessonId: 31, // 8. Bélgica - Actividad 24 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 135,
                 question: 'Para la Crema a la flamenca se usa:',
                 activo: true
@@ -1921,7 +1921,7 @@ const main = async () => {
             {
                 id: 136,
                 lessonId: 31, // 8. Bélgica - Actividad 24 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 136,
                 question: 'Para la elaboracion de la Pasta Choux primero:',
                 activo: true
@@ -1930,7 +1930,7 @@ const main = async () => {
             {
                 id: 137,
                 lessonId: 32, // 8. Bélgica - Actividad 24 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 138,
                 question: '¿Que plato destaca en la cocina belga?',
                 activo: true
@@ -1939,7 +1939,7 @@ const main = async () => {
             {
                 id: 138,
                 lessonId: 32, // 8. Bélgica - Prueba 8 - Pregunta 1
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 139,
                 question: 'EL Carbonades a la flamenca es:',
                 activo: true
@@ -1947,7 +1947,7 @@ const main = async () => {
             {
                 id: 139,
                 lessonId: 32, // 8. Bélgica - Prueba 8 - Pregunta 2
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 140,
                 question: '¿Como es el Chocolate Belga?',
                 activo: true
@@ -1955,7 +1955,7 @@ const main = async () => {
             {
                 id: 140,
                 lessonId: 32, // 8. Bélgica - Prueba 8 - Pregunta 3
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 141,
                 question: '¿Cuantas variedades de Queso existen en Bélgica?',
                 activo: true
@@ -1963,7 +1963,7 @@ const main = async () => {
             {
                 id: 141,
                 lessonId: 32, // 8. Bélgica - Prueba 8 - Pregunta 4
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 142,
                 question: 'Para la Crema a la flamenca se usa:',
                 activo: true
@@ -1971,7 +1971,7 @@ const main = async () => {
             {
                 id: 142,
                 lessonId: 32, // 8. Bélgica - Prueba 8 - Pregunta 5
-                type: "ASSIST",
+                type: "COMPLETAR",
                 orden: 143,
                 question: 'Para la elaboracion de la Pasta Choux primero:',
                 activo: true
@@ -1979,7 +1979,7 @@ const main = async () => {
             // {
             //     id: 126,
             //     lessonId: 32, // 8. Bélgica - Prueba 8 - Pregunta 6
-            //     type: "ASSIST",
+            //     type: "COMPLETAR",
             //     orden: 126,
             //     question: 'El MELITZANES PAPOUTSAKIA son:',
             //     activo: true

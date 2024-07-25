@@ -215,7 +215,7 @@ export const Test = ({
         );
     }
 
-    const titulo = currentChallenge.type === "ASSIST" 
+    const titulo = currentChallenge.type === "COMPLETAR" 
     ? "Selecciona el correcto" 
     : currentChallenge.question
 
@@ -237,7 +237,7 @@ export const Test = ({
                         </h1>
                         <div>
 
-                            {currentChallenge.type === "ASSIST" && (
+                            {currentChallenge.type === "COMPLETAR" && (
                                 <QuestionBubble question={currentChallenge.question}/>
                             )}
                             {currentChallenge.activo === true

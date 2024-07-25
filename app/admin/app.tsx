@@ -41,7 +41,7 @@ function App() {
   const users = data;
   return (
     <div className="home">
-      <div className="box box1">
+      <div className="box box1 items-center">
         <TopBox props={users} />
       </div>
       <div className="box box2">

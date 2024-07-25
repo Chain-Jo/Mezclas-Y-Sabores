@@ -26,12 +26,12 @@ export const ChallengeCreate = () => {
                     source="type"
                     choices={[
                         {
-                            id: "SELECT",
-                            name: "SELECT",
+                            id: "SELECCION",
+                            name: "SELECCION",
                         },
                         {
-                            id: "ASSIST",
-                            name: "ASSIST",
+                            id: "COMPLETAR",
+                            name: "COMPLETAR",
                         },
                     ]}
                     validate={[required()]} 

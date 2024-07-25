@@ -59,7 +59,7 @@ export const Card = ({
                         selected && status === "wrong" 
                             && "border-rose-300 bg-rose-100 hover:bg-rose-100",
                         disabled && "pointer-events-none hover:bg-white",
-                        type === "ASSIST" && "lg:p-3 w-full"
+                        type === "COMPLETAR" && "lg:p-3 w-full"
                     )}
                 >
                     {/* {audio} */}
@@ -82,9 +82,9 @@ export const Card = ({
                     )}
                     <div className={cn(
                         "flex items-center justify-between text-center",
-                        type === "ASSIST" && "flex-row-reverse",
+                        type === "COMPLETAR" && "flex-row-reverse",
                     )}>
-                        {type === "ASSIST" && <div/>}
+                        {type === "COMPLETAR" && <div/>}
                         <p className={cn(
                             "text-neutral-600 text-sm lg:text-base text-center",
                             selected && "text-sky-500",

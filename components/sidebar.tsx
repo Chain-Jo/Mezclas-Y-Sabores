@@ -16,6 +16,7 @@ import { isAdmin } from "@/lib/admin";
 import { Button } from "./ui/button";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import { isSupervisor } from "@/lib/supervisor";
 
 type Props = {
     className?: string;
@@ -27,10 +28,12 @@ export const SideBar = async({
 }: Props) => {
 
     const adminIds = isAdmin();
+    const supervisorIds = isSupervisor();
+
 
     const user = await currentUser();
     if (user != null) {
-        if (!adminIds.includes(user.id)) {
+        if (!adminIds.includes(user.id) || !supervisorIds.includes(user.id)) {
         return (
 
             <div className={cn(

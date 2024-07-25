@@ -6,6 +6,7 @@ import Menu from "@/components/admin/menu";
 import { Admin, Resource, defaultTheme, resolveBrowserLocale } from "react-admin";
 import { createTheme } from "@mui/material/styles";
 import indigo from "@mui/material/colors/indigo";
+import { green, grey } from '@mui/material/colors';
 import pink from "@mui/material/colors/pink";
 import red from "@mui/material/colors/red";
 import simpleRestProvider from "ra-data-simple-rest";
@@ -49,9 +50,9 @@ import jsonServerProvider from "ra-data-json-server";
 
 const theme = createTheme({
   palette: {
-    mode: "dark",
-    primary: indigo,
-    secondary: pink,
+    mode: "light",
+    primary: grey,
+    secondary: green,
     error: red,
   },
 });
