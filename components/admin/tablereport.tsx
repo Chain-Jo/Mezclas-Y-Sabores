@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { usePDF } from 'react-to-pdf';
 const nextLink = process.env.NEXT_PUBLIC_URL!;
@@ -45,9 +46,19 @@ const TableReport = () => {
       </button>
      </div>
 
-      <div className="flex flex-col items-center justify-between pt-4" ref={targetRef}>
-
+      <div className="flex flex-col items-center justify-between" ref={targetRef}>
         <div className="table">
+      <div className="bg-green-950 text-white flex items-center p-6">
+          <Image
+            src="/img/MYS-logo-512.png"
+            alt="logo-MyS"
+            height={40}
+            width={40}
+          />
+        <h1 className="text-amber-500 tracking-wide text-2xl font-extrabold pl-6">
+          MEZCLAS & SABORES
+        </h1>
+      </div>
           <table className="tableLog">
             <thead>
               <tr>
