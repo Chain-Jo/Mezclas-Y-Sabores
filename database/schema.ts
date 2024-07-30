@@ -161,3 +161,10 @@ export const userActions = pgTable("user_actions", {
     actionName: text("nombre_accion").notNull(),
     createdAt: text('fecha_creado').notNull(),
 });
+
+export const userAproved = pgTable("user_aproved", {
+    actionId: text("id_accion").primaryKey(),
+    userName: text("nombre_usuario").notNull(),
+    actionName: text("nombre_accion").notNull(),
+    createdAt: text('fecha_creado').notNull(),
+});
