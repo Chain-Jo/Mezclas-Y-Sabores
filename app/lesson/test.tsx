@@ -20,6 +20,9 @@ import { ResultCard } from "./result-card";
 import { QuestionBubble } from "./cuestion-bubble";
 import { useTestModal } from "@/store/use-test-modal";
 
+const nextLink = process.env.NEXT_PUBLIC_URL!;
+let val = false
+
 type Props = {
     initialPercentage: number;
     isTest: boolean;
@@ -27,8 +30,9 @@ type Props = {
     initialLessonId: number;
     initialLessonChallenges: (typeof challenges.$inferSelect & {
         completed: boolean;
-        challengeOptions: typeof challengeOptions.$inferSelect[];
+        challengeOptions: (typeof challengeOptions.$inferSelect)[];
     })[];
+    userName: string;
 };
 
 export const Test = ({
@@ -37,6 +41,7 @@ export const Test = ({
     initialHearts,
     initialLessonId,
     initialLessonChallenges,
+    userName,
 }: Props) => {
 
     const { open: openHeartsModal } = useHeartsModal();
@@ -62,16 +67,12 @@ export const Test = ({
     const router = useRouter();
 
     const [finishAudio] = useAudio({ src: "/audio/finish.mp3", autoPlay: true });
-    const [
-        correctAudio,
-        _c,
-        correctControls,
-    ] = useAudio({ src: "/audio/correct.mp3" });
-    const [
-        incorrectAudio,
-        _i,
-        incorrectControls,
-    ] = useAudio({ src: "/audio/incorrect.mp3" });
+    const [correctAudio, _c, correctControls] = useAudio({
+        src: "/audio/correct.mp3",
+    });
+    const [incorrectAudio, _i, incorrectControls] = useAudio({
+        src: "/audio/incorrect.mp3",
+    });
     const [pending, startTransition] = useTransition();
 
     const [lessonId, setLessonId] = useState(initialLessonId);
@@ -137,17 +138,46 @@ export const Test = ({
 
                         // This is a practice
                         if (initialPercentage === 0) {
-                            setHearts((prev) => Math.min(prev + 1, 5))
+                            setHearts((prev) => Math.min(prev + 1, 5));
                         }
                     })
                     .catch(() => toast.error("Algo salió mal, inténtelo de nuevo"))
             });
             console.log("Incorrect Option!");
         } else {
-            startTransition(() => {
+            startTransition(async() => {
                 reduceHeartsTest(currentChallenge.id)
-                    .then((response) => {
+                    .then(async (response) => {
                         if (response?.error === "corazones") {
+                            if (val == false) {
+                                const responseChallenge = await fetch(
+                                    `${nextLink}/api/challenges/${currentChallenge.id}`,
+                                    {
+                                        method: "GET",
+                                    }
+                                );
+
+
+                                const dataChallenge = await responseChallenge.json();
+                                console.log(dataChallenge);
+
+                                const responseAproved = await fetch(`${nextLink}/api/aproved`, {
+                                    method: "GET",
+                                });
+
+                                const dataAproved = await responseAproved.json();
+                                await fetch(`${nextLink}/api/aproved`, {
+                                    method: "POST",
+                                    body: JSON.stringify({
+                                        actionId: dataAproved.length + 1,
+                                        userName: `${userName}`,
+                                        actionName: `Se ha quedado sin intentos en la leccion ${dataChallenge.titulo}`,
+                                        createdAt: new Date().toLocaleString(),
+                                    }),
+                                });
+                            }
+
+                            val = true
                             openHeartsModal();
                             return;
                         }
@@ -215,19 +245,17 @@ export const Test = ({
         );
     }
 
-    const titulo = currentChallenge.tipo === "COMPLETAR" 
-    ? "Selecciona el correcto" 
-    : currentChallenge.pregunta
+    const titulo =
+        currentChallenge.tipo === "COMPLETAR"
+            ? "Selecciona el correcto"
+            : currentChallenge.pregunta;
 
     return (
         <>
             {incorrectAudio}
             {correctAudio}
-            <Header
-                hearts={hearts}
-                percentage={percentage}
-                test={isTest}
-            />
+            <Header hearts={hearts} percentage={percentage} test={isTest} />
+
             <div className="flex-1">
                 <div className="h-full flex items-center justify-center">
                     {/* cambié el lg:w-[] de 600 a 1000px */}
@@ -240,9 +268,8 @@ export const Test = ({
                             {currentChallenge.tipo === "COMPLETAR" && (
                                 <QuestionBubble pregunta={currentChallenge.pregunta}/>
                             )}
-                            {currentChallenge.activo === true
-                                ?
-                                <Reto
+                            {currentChallenge.activo === true ?
+                                (<Reto
                                     options={options}
                                     onSelect={onSelect}
                                     status={status}
@@ -250,9 +277,7 @@ export const Test = ({
                                     disabled={pending}
                                     tipo={currentChallenge.tipo}
                                     activo={currentChallenge.activo}
-                                />
-                                
-                                : null
+                                />) : null
                             }
                         </div>
                     </div>

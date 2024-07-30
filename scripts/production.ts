@@ -23,6 +23,7 @@ const main = async () => {
         await database.delete(schema.courses);
         await database.delete(schema.userProgress);
         await database.delete(schema.userActions);
+        await database.delete(schema.userAproved);
         await database.delete(schema.units);
         await database.delete(schema.lessons);
         await database.delete(schema.challenges);

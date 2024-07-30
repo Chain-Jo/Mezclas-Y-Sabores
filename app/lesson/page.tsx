@@ -59,6 +59,7 @@ const LessonPage = async () => {
                         initialLessonChallenges={lesson.challenges}
                         initialHearts={1}
                         initialPercentage={initialPercentage}
+                        userName={userProgress.userName}
                     />
 
                     : null
