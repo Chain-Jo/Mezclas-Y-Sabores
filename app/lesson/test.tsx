@@ -150,16 +150,16 @@ export const Test = ({
                     .then(async (response) => {
                         if (response?.error === "corazones") {
                             if (val == false) {
-                                const responseChallenge = await fetch(
-                                    `${nextLink}/api/challenges/${currentChallenge.id}`,
+                                const responseLesson = await fetch(
+                                    `${nextLink}/api/lessons/${lessonId}`,
                                     {
                                         method: "GET",
                                     }
                                 );
 
 
-                                const dataChallenge = await responseChallenge.json();
-                                console.log(dataChallenge);
+                                const dataLesson = await responseLesson.json();
+                                console.log(dataLesson);
 
                                 const responseAproved = await fetch(`${nextLink}/api/aproved`, {
                                     method: "GET",
@@ -171,7 +171,7 @@ export const Test = ({
                                     body: JSON.stringify({
                                         actionId: dataAproved.length + 1,
                                         userName: `${userName}`,
-                                        actionName: `Se ha quedado sin intentos en la leccion ${dataChallenge.titulo}`,
+                                        actionName: `Se ha quedado sin intentos en la leccion ${dataLesson.titulo}`,
                                         createdAt: new Date().toLocaleString(),
                                     }),
                                 });
