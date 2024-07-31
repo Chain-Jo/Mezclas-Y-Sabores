@@ -86,7 +86,7 @@ export const Dashboard = ({}: Props) => {
         <li>
           <div className="flex items-center w-full p-4 gap-x-4 border-t-2">
             <Image
-              src="/img/ajustes.png"
+              src="/img/calificacion.png"
               alt="Reportes"
               height={60}
               width={60}
