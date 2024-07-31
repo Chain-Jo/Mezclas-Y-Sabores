@@ -5841,7 +5841,1222 @@ const main = async () => {
     
                 // Final UwU
             ]);
+
+        // 7. Suiza
+        await database.insert(schema.challengeOptions).values([
+
+
+
+        /**
+        * ----------------------------------------------------------------------------------------------------------
+        * 2. País - Actividad 19
+        * ----------------------------------------------------------------------------------------------------------
+        */
+           // Pregunta 1 - Actividad 19
+            {
+                id: 431,
+                challengeId: 109, // Que platos estan presentes en todas las cocinas de suiza?
+                correcto: false,
+                text: "Fondue",
+                activo: true
+            },
+            {
+                id: 432,
+                challengeId: 109, // Que platos estan presentes en todas las cocinas de suiza?
+                correcto: false,
+                text: "Raclette",
+                activo: true
+            },
+            {
+                id: 433,
+                challengeId: 109, // Que platos estan presentes en todas las cocinas de suiza?
+                correcto: false,
+                text: "Rosti",
+                activo: true
+            },
+            {
+                id: 434,
+                challengeId: 109, // Que platos estan presentes en todas las cocinas de suiza?
+                correcto: true, // X
+                text: "Todas las anteriores",
+                activo: true
+            },
+
+
+
+
+           // Pregunta 2 - Actividad 19
+            {
+                id: 435,
+                challengeId: 110, // Cual queso es producido en suiza?
+                correcto: false,
+                text: "Manchego",
+                activo: true
+            },
+            {
+                id: 436,
+                challengeId: 110, // Cual queso es producido en suiza?
+                correcto: false,
+                text: "Mascarpone",
+                activo: true
+            },
+            {
+                id: 437,
+                challengeId: 110, // Cual queso es producido en suiza?
+                correcto: false,
+                text: "Parmesano",
+                activo: true
+            },
+            {
+                id: 438,
+                challengeId: 110, // Cual queso es producido en suiza?
+                correcto: true,
+                text: "Emmental",
+                activo: true
+            },
+
+
+
+
+           // Pregunta 3 - Actividad 19
+            {
+                id: 439,
+                challengeId: 111, // Que vino es el de mayor consumo en Suiza?
+                correcto: false,
+                text: "Vino tinto",
+                activo: true
+            },
+            {
+                id: 440,
+                challengeId: 111, // Que vino es el de mayor consumo en Suiza?
+                correcto: false,
+                text: "Vino Rosado",
+                activo: true
+            },
+            {
+                id: 441,
+                challengeId: 111, // Que vino es el de mayor consumo en Suiza?
+                correcto: true,
+                text: "Vino Blanco",
+                activo: true
+            },
+            {
+                id: 442,
+                challengeId: 111, // Que vino es el de mayor consumo en Suiza?
+                correcto: false,
+                text: "Ninguna de las anteriores",
+                activo: true
+            },
+
+
+
+
+
+            // Pregunta 4 - Actividad 19
+            {
+                id: 443,
+                challengeId: 112, // Porque es reconocida Suiza gastronómicamente?
+                correcto: false,
+                text: "Carnes y Quesos",
+                activo: true
+            },
+            {
+                id: 444,
+                challengeId: 112, // Porque es reconocida Suiza gastronómicamente?
+                correcto: true,
+                text: "Quesos y Chocolate",
+                activo: true
+            },
+            {
+                id: 445,
+                challengeId: 112, // Porque es reconocida Suiza gastronómicamente?
+                correcto: false,
+                text: "Embutidos y Chocolate",
+                activo: true
+            },
+            {
+                id: 446,
+                challengeId: 112, // Porque es reconocida Suiza gastronómicamente?
+                correcto: false,
+                text: "Jamones y Quesos",
+                activo: true
+            },
+
+
+
+
+
+
+
+
+
+        /**
+        *----------------------------------------------------------------------------------------------------------
+        * 7. Suiza - Actividad 20
+        *----------------------------------------------------------------------------------------------------------
+        */
+        // Pregunta 1 - Actividad 20
+        {
+            id: 447,
+            challengeId: 113, // Que caldo usa el kalbsgeschnetzeltes?
+            correcto: false,
+            text: "Caldo de Pollo",
+            activo: true
+        },
+        {
+            id: 448,
+            challengeId: 113, // Que caldo usa el kalbsgeschnetzeltes?
+            correcto: false, 
+            text: "Foumet de Pescado",
+            activo: true
+        },
+        {
+            id: 449,
+            challengeId: 113, // Que caldo usa el kalbsgeschnetzeltes?
+            correcto: false,
+            text: "Caldo de Res",
+            activo: true
+        },
+        {
+            id: 450,
+            challengeId: 113, // Que caldo usa el kalbsgeschnetzeltes?
+            correcto: false,
+            text: "Nunguna de las anteriores",
+            activo: true
+        },
+
+
+
+
+       // Pregunta 2 - Actividad 20
+        {
+            id: 451,
+            challengeId: 114, // El Kaese salad es una ensalda que se elabora con un embutido
+            correcto: false,
+            text: "Salchichon",
+            activo: true
+        },
+        {
+            id: 452,
+            challengeId: 114, // El Kaese salad es una ensalda que se elabora con un embutido
+            correcto: false,
+            text: "Salchichon",
+            activo: true
+        },
+        {
+            id: 453,
+            challengeId: 114, // El Kaese salad es una ensalda que se elabora con un embutido
+            correcto: false,
+            text: "SalamiSalami",
+            activo: true
+        },
+        {
+            id: 454,
+            challengeId: 114, // El Kaese salad es una ensalda que se elabora con un embutido
+            correcto: true, // X
+            text: "Chorizo",
+            activo: true
+        },
+
+
+
+
+       // Pregunta 3 - Actividad 20
+        {
+            id: 455,
+            challengeId: 115, // Le Papet Vaudois se compone por
+            correcto: true, // X 
+            text: "Verduras varidas",
+            activo: true
+        },
+        {
+            id: 456,
+            challengeId: 115, // Le Papet Vaudois se compone por
+            correcto: false,
+            text: "Carnes de Res",
+            activo: true
+        },
+        {
+            id: 457,
+            challengeId: 115, // Le Papet Vaudois se compone por
+            correcto: false,
+            text: "Chorizo",
+            activo: true
+        },
+        {
+            id: 458,
+            challengeId: 115, // Le Papet Vaudois se compone por
+            correcto: false,
+            text: "Pescados",
+            activo: true
+        },
+
+
+
+
+
+        // Pregunta 4 - Actividad 20
+        {
+            id: 459,
+            challengeId: 116, // Que aceite se usa en el Kaese salad?
+            correcto: true, // X
+            text: "Aceite de colza",
+            activo: true
+        },
+        {
+            id: 460,
+            challengeId: 116, // Que aceite se usa en el Kaese salad?
+            correcto: false,
+            text: "Aceite de oliva",
+            activo: true
+        },
+        {
+            id: 461,
+            challengeId: 116, // Que aceite se usa en el Kaese salad?
+            correcto: false,
+            text: "Aceite de Girasol",
+            activo: true
+        },
+        {
+            id: 462,
+            challengeId: 116, // Que aceite se usa en el Kaese salad?
+            correcto: false,
+            text: "Aceite de Soya",
+            activo: true
+        },
+
+
+
+
+
+
+
+
+
+
+        /**
+        * ----------------------------------------------------------------------------------------------------------
+        * 7. Suiza - Actividad 21
+        * ----------------------------------------------------------------------------------------------------------
+        */
+        // Pregunta 1 - Actividad 21
+        {
+            id: 463,
+            challengeId: 117, // Para el Le Papet Vaudois se usa caldo de ?
+            correcto: false,
+            text: "Caldo de Res",
+            activo: true
+        },
+        {
+            id: 464,
+            challengeId: 117, // Para el Le Papet Vaudois se usa caldo de ?
+            correcto: true, // X
+            text: "Caldo de Verduras",
+            activo: true
+        },
+        {
+            id: 465,
+            challengeId: 117, // Para el Le Papet Vaudois se usa caldo de ?
+            correcto: false,
+            text: "Caldo de pollo",
+            activo: true
+        },
+        {
+            id: 466,
+            challengeId: 117, // Para el Le Papet Vaudois se usa caldo de ?
+            correcto: false,
+            text: "Foumet de Pescado",
+            activo: true
+        },
+
+
+
+
+       // Pregunta 2 - Actividad 21
+        {
+            id: 467,
+            challengeId: 118, // El Basler Läckerli utiliza un licor cual es?
+            correcto: false,
+            text: "Brandy",
+            activo: true
+        },
+        {
+            id: 468,
+            challengeId: 118, // El Basler Läckerli utiliza un licor cual es?
+            correcto: false,
+            text: "Ron",
+            activo: true
+        },
+        {
+            id: 469,
+            challengeId: 118, // El Basler Läckerli utiliza un licor cual es?
+            correcto: false, 
+            text: "Whisky",
+            activo: true
+        },
+        {
+            id: 470,
+            challengeId: 118, // El Basler Läckerli utiliza un licor cual es?
+            correcto: true, // X
+            text: "Kirsch",
+            activo: true
+        },
+
+
+
+
+       // Pregunta 3 - Actividad 21
+        {
+            id: 471,
+            challengeId: 119, // Que tipo de queso usa el Älplermagronen
+            correcto: false, 
+            text: "Emmental",
+            activo: true
+        },
+        {
+            id: 472,
+            challengeId: 119, // Que tipo de queso usa el Älplermagronen
+            correcto: false, 
+            text: "Gruyére",
+            activo: true
+        },
+        {
+            id: 473,
+            challengeId: 119, // Que tipo de queso usa el Älplermagronen
+            correcto: true, // X
+            text: "Suizo",
+            activo: true
+        },
+        {
+            id: 474,
+            challengeId: 119, // Que tipo de queso usa el Älplermagronen
+            correcto: false,
+            text: "Mascarpone",
+            activo: true
+        },
+
+
+
+
+
+       
+        /**
+        * ----------------------------------------------------------------------------------------------------------
+        * 7. Suiza - Prueba 7
+        * ----------------------------------------------------------------------------------------------------------
+        */
+        // Pregunta 1 - Prueba 7
+        {
+            id: 475,
+            challengeId: 120, // Cual queso es producido en suiza?
+            correcto: false,
+            text: "Manchego",
+            activo: true
+        },
+        {
+            id: 476,
+            challengeId: 120, // Cual queso es producido en suiza?
+            correcto: false, 
+            text: "Mascarpone",
+            activo: true
+        },
+        {
+            id: 477,
+            challengeId: 120, // Cual queso es producido en suiza?
+            correcto: false,
+            text: "Parmesano",
+            activo: true
+        },
+        {
+            id: 478,
+            challengeId: 120, // Cual queso es producido en suiza?
+            correcto: true, // X
+            text: "Emmental",
+            activo: true
+        },
+
+
+
+
+       // Pregunta 2 - Prueba 7
+       {
+            id: 479,
+            challengeId: 121, // Porque es reconocida Suiza gastronómicamente?
+            correcto: false, 
+            text: "Carnes y Quesos",
+            activo: true
+        },
+        {
+            id: 480,
+            challengeId: 121, // Porque es reconocida Suiza gastronómicamente?
+            correcto: true, // X 
+            text: "Quesos y Chocolate",
+            activo: true
+        },
+        {
+            id: 481,
+            challengeId: 121, // Porque es reconocida Suiza gastronómicamente?
+            correcto: false,
+            text: "Embutidos y Chocolate",
+            activo: true
+        },
+        {
+            id: 482,
+            challengeId: 121, // Porque es reconocida Suiza gastronómicamente?
+            correcto: false,
+            text: "Jamones y Quesos",
+            activo: true
+        },
+
+
+
+
+       // Pregunta 3 - Prueba 7
+       {
+            id: 483,
+            challengeId: 122, // El Kaese salad es una ensalda que se elabora con un embutido
+            correcto: false,
+            text: "Salchichon",
+            activo: true
+        },
+        {
+            id: 484,
+            challengeId: 122, // El Kaese salad es una ensalda que se elabora con un embutido
+            correcto: false,
+            text: "Salchicha",
+            activo: true
+        },
+        {
+            id: 485,
+            challengeId: 122, // El Kaese salad es una ensalda que se elabora con un embutido
+            correcto: false,
+            text: "Salami",
+            activo: true
+        },
+        {
+            id: 486,
+            challengeId: 122, // El Kaese salad es una ensalda que se elabora con un embutido
+            correcto: true, // X
+            text: "Chorizo",
+            activo: true
+        },
+
+
+
+
+
+
+        // Pregunta 4 - Prueba 7
+        {
+            id: 487,
+            challengeId: 123, // Que caldo usa el kalbsgeschnetzeltes? 
+            correcto: false,
+            text: "Caldo de Pollo",
+            activo: true
+        },
+        {
+            id: 488,
+            challengeId: 123, // Que caldo usa el kalbsgeschnetzeltes? 
+            correcto: false,
+            text: "Foumet de Pescado",
+            activo: true
+        },
+        {
+            id: 489,
+            challengeId: 123, // Que caldo usa el kalbsgeschnetzeltes? 
+            correcto: true, // X
+            text: "Caldo de Res",
+            activo: true
+        },
+        {
+            id: 490,
+            challengeId: 123, // Que caldo usa el kalbsgeschnetzeltes? 
+            correcto: false,
+            text: "Ninguna de las anteriores",
+            activo: true
+        },
+
+
+
+
+        // Pregunta 5 - Prueba 7
+        {
+            id: 491,
+            challengeId: 124, // Que tipo de queso usa el Älplermagronen 
+            correcto: false, 
+            text: "Emmental",
+            activo: true
+        },
+        {
+            id: 492,
+            challengeId: 124, // Que tipo de queso usa el Älplermagronen 
+            correcto: false,
+            text: "Gruyére",
+            activo: true
+        },
+        {
+            id: 493,
+            challengeId: 124, // Que tipo de queso usa el Älplermagronen 
+            correcto: true, // X
+            text: "Suizo",
+            activo: true
+        },
+        {
+            id: 494,
+            challengeId: 124, // Que tipo de queso usa el Älplermagronen 
+            correcto: false,
+            text: "MascarponeMascarpone",
+            activo: true
+        },
+
+
+
+        // Pregunta 6 - Prueba 7
+        {
+            id: 495,
+            challengeId: 125, // El Basler Läckerli utiliza un licor cual es? 
+            correcto: false,
+            text: "Brandy",
+            activo: true
+        },
+        {
+            id: 496,
+            challengeId: 125, // El Basler Läckerli utiliza un licor cual es? 
+            correcto: false, 
+            text: "Ron",
+            activo: true
+        },
+        {
+            id: 497,
+            challengeId: 125, // El Basler Läckerli utiliza un licor cual es? 
+            correcto: false,
+            text: "Whisky",
+            activo: true
+        },
+        {
+            id: 498,
+            challengeId: 125, // El Basler Läckerli utiliza un licor cual es? 
+            correcto: true, // X
+            text: "Kirsch",
+            activo: true
+        },
+
+
+
+
+
+            // Final UwU
+        ]);
+        
+        // 8. Bélgica
+        await database.insert(schema.challengeOptions).values([
+
+
+
+            /**
+            * ----------------------------------------------------------------------------------------------------------
+            * 8. Bélgica - Actividad 22
+            * ----------------------------------------------------------------------------------------------------------
+            */
+               // Pregunta 1 - Actividad 22
+                {
+                    id: 499,
+                    challengeId: 126, // ¿ Que plato destaca en la cocina belga?
+                    correcto: true, // X
+                    text: "Waterzooi",
+                    activo: true
+                },
+                {
+                    id: 500,
+                    challengeId: 126, // ¿ Que plato destaca en la cocina belga?
+                    correcto: false,
+                    text: "Carbonade",
+                    activo: true
+                },
+                {
+                    id: 501,
+                    challengeId: 126, // ¿ Que plato destaca en la cocina belga?
+                    correcto: false,
+                    text: "Cuco de Malina",
+                    activo: true
+                },
+                {
+                    id: 502,
+                    challengeId: 126, // ¿ Que plato destaca en la cocina belga?
+                    correcto: false,
+                    text: "Vol au vent",
+                    activo: true
+                },
     
+    
+    
+    
+               // Pregunta 2 - Actividad 22
+                {
+                    id: 503,
+                    challengeId: 127, // El Waterzooi es una sopa cremosa de 
+                    correcto: true, // X
+                    text: "Pescado",
+                    activo: true
+                },
+                {
+                    id: 504,
+                    challengeId: 127, // El Waterzooi es una sopa cremosa de 
+                    correcto: false,
+                    text: "Res",
+                    activo: true
+                },
+                {
+                    id: 505,
+                    challengeId: 127, // El Waterzooi es una sopa cremosa de 
+                    correcto: false,
+                    text: "Verduras",
+                    activo: true
+                },
+                {
+                    id: 506,
+                    challengeId: 127, // El Waterzooi es una sopa cremosa de 
+                    correcto: false,
+                    text: "Ninguna de las anteriores",
+                    activo: true
+                },
+    
+    
+    
+    
+               // Pregunta 3 - Actividad 22
+                {
+                    id: 507,
+                    challengeId: 128, // Las Carbonadas se elabora con 
+                    correcto: false,
+                    text: "Salsa belga",
+                    activo: true
+                },
+                {
+                    id: 508,
+                    challengeId: 128, // Las Carbonadas se elabora con 
+                    correcto: true, // X
+                    text: "Salsa de cerveza",
+                    activo: true
+                },
+                {
+                    id: 509,
+                    challengeId: 128, // Las Carbonadas se elabora con 
+                    correcto: false,
+                    text: "Salsa Bechamel",
+                    activo: true
+                },
+                {
+                    id: 510,
+                    challengeId: 128, // Las Carbonadas se elabora con 
+                    correcto: false,
+                    text: "Salsa Cremosa",
+                    activo: true
+                },
+    
+    
+    
+    
+    
+                // Pregunta 4 - Actividad 22
+                {
+                    id: 511,
+                    challengeId: 129, // EL Carbonades a la flamenca es 
+                    correcto: false,
+                    text: "Guiso de Pollo a base de vino",
+                    activo: true
+                },
+                {
+                    id: 512,
+                    challengeId: 129, // EL Carbonades a la flamenca es 
+                    correcto: false,
+                    text: "Guiso de Res a base de vino",
+                    activo: true
+                },
+                {
+                    id: 513,
+                    challengeId: 129, // EL Carbonades a la flamenca es 
+                    correcto: true, // X
+                    text: "Guiso de Buey a base de Cerveza",
+                    activo: true
+                },
+                {
+                    id: 514,
+                    challengeId: 129, // EL Carbonades a la flamenca es 
+                    correcto: false,
+                    text: "Guiso de Cordero a base de Cerveza",
+                    activo: true
+                },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            /**
+            *----------------------------------------------------------------------------------------------------------
+            * 8. Bélgica - Actividad 23
+            *----------------------------------------------------------------------------------------------------------
+            */
+            // Pregunta 1 - Actividad 23
+            {
+                id: 515,
+                challengeId: 130, // Cuantas variades de bombones existen en Belgica?
+                correcto: false,
+                text: "100",
+                activo: true
+            },
+            {
+                id: 516,
+                challengeId: 130, // Cuantas variades de bombones existen en Belgica?
+                correcto: false, 
+                text: "200",
+                activo: true
+            },
+            {
+                id: 517,
+                challengeId: 130, // Cuantas variades de bombones existen en Belgica?
+                correcto: false,
+                text: "300",
+                activo: true
+            },
+            {
+                id: 518,
+                challengeId: 130, // Cuantas variades de bombones existen en Belgica?
+                correcto: true, // X
+                text: "500",
+                activo: true
+            },
+    
+    
+    
+    
+           // Pregunta 2 - Actividad 23
+            {
+                id: 519,
+                challengeId: 131, // Como es el Chocolate Belga?
+                correcto: false,
+                text: "Blanco",
+                activo: true
+            },
+            {
+                id: 520,
+                challengeId: 131, // Como es el Chocolate Belga?
+                correcto: true, // X
+                text: "Negro",
+                activo: true
+            },
+            {
+                id: 521,
+                challengeId: 131, // Como es el Chocolate Belga?
+                correcto: false,
+                text: "Con leche",
+                activo: true
+            },
+            {
+                id: 522,
+                challengeId: 131, // Como es el Chocolate Belga?
+                correcto: false,
+                text: "Ninguna de las anteriores",
+                activo: true
+            },
+    
+    
+    
+    
+           // Pregunta 3 - Actividad 23
+            {
+                id: 523,
+                challengeId: 132, // Cuantas variedades de Queso existen en Belgica?
+                correcto: false, 
+                text: "20",
+                activo: true
+            },
+            {
+                id: 524,
+                challengeId: 132, // Cuantas variedades de Queso existen en Belgica?
+                correcto: false,
+                text: "50",
+                activo: true
+            },
+            {
+                id: 525,
+                challengeId: 132, // Cuantas variedades de Queso existen en Belgica?
+                correcto: false,
+                text: "40",
+                activo: true
+            },
+            {
+                id: 526,
+                challengeId: 132, // Cuantas variedades de Queso existen en Belgica?
+                correcto: true, // X
+                text: "80",
+                activo: true
+            },
+    
+    
+    
+    
+    
+            // Pregunta 4 - Actividad 23
+            {
+                id: 527,
+                challengeId: 133, // Que sabor de cerveza puede ser unico de belgica?
+                correcto: false,
+                text: "Colita",
+                activo: true
+            },
+            {
+                id: 528,
+                challengeId: 133, // Que sabor de cerveza puede ser unico de belgica?
+                correcto: false,
+                text: "Manzana",
+                activo: true
+            },
+            {
+                id: 529,
+                challengeId: 133, // Que sabor de cerveza puede ser unico de belgica?
+                correcto: true, // X
+                text: "Frambuesa",
+                activo: true
+            },
+            {
+                id: 530,
+                challengeId: 133, // Que sabor de cerveza puede ser unico de belgica?
+                correcto: false,
+                text: "Peras",
+                activo: true
+            },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            /**
+            * ----------------------------------------------------------------------------------------------------------
+            * 8. Bélgica - Actividad 24
+            * ----------------------------------------------------------------------------------------------------------
+            */
+            // Pregunta 1 - Actividad 24
+            {
+                id: 531,
+                challengeId: 134, // El Vol au vent usa caldo de ?
+                correcto: true, // X
+                text: "Caldo de pollo",
+                activo: true
+            },
+            {
+                id: 532,
+                challengeId: 134, // El Vol au vent usa caldo de ?
+                correcto: false,
+                text: "Caldo de Res",
+                activo: true
+            },
+            {
+                id: 533,
+                challengeId: 134, // El Vol au vent usa caldo de ?
+                correcto: false,
+                text: "Foumet de Pescado",
+                activo: true
+            },
+            {
+                id: 534,
+                challengeId: 134, // El Vol au vent usa caldo de ?
+                correcto: false,
+                text: "Ninguna de las anteriores",
+                activo: true
+            },
+    
+    
+    
+    
+           // Pregunta 2 - Actividad 24
+            {
+                id: 535,
+                challengeId: 135, // Para la Crema a la flamenca se usa
+                correcto: false,
+                text: "Repollo",
+                activo: true
+            },
+            {
+                id: 536,
+                challengeId: 135, // Para la Crema a la flamenca se usa
+                correcto: false,
+                text: "Zanahoria",
+                activo: true
+            },
+            {
+                id: 537,
+                challengeId: 135, // Para la Crema a la flamenca se usa
+                correcto: true, // X 
+                text: "Coles de Bruselas",
+                activo: true
+            },
+            {
+                id: 538,
+                challengeId: 135, // Para la Crema a la flamenca se usa
+                correcto: false,
+                text: "Puerros",
+                activo: true
+            },
+    
+    
+    
+    
+           // Pregunta 3 - Actividad 24
+            {
+                id: 539,
+                challengeId: 136, // Para la elaboracion de la Pasta Choux primero
+                correcto: true, // X
+                text: "Se mezclan los secos y luego se agregan los liquidos",
+                activo: true
+            },
+            {
+                id: 540,
+                challengeId: 136, // Para la elaboracion de la Pasta Choux primero
+                correcto: false, 
+                text: "Se mezcla todo junto",
+                activo: true
+            },
+            {
+                id: 541,
+                challengeId: 136, // Para la elaboracion de la Pasta Choux primero
+                correcto: false,
+                text: "Se Mezcla todo por separado",
+                activo: true
+            },
+            {
+                id: 542,
+                challengeId: 136, // Para la elaboracion de la Pasta Choux primero
+                correcto: false,
+                text: "Se mezclan los liquidos y luego se agregan los secos",
+                activo: true
+            },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            /**
+            * ----------------------------------------------------------------------------------------------------------
+            * 8. Bélgica - Prueba 8
+            * ----------------------------------------------------------------------------------------------------------
+            */
+            // Pregunta 1 - Prueba 8
+            {
+                id: 543,
+                challengeId: 137, // Que plato destaca en la cocina belga?
+                correcto: true, // X
+                text: "Waterzooi",
+                activo: true
+            },
+            {
+                id: 544,
+                challengeId: 137, // Que plato destaca en la cocina belga?
+                correcto: false, 
+                text: "Carbonade",
+                activo: true
+            },
+            {
+                id: 545,
+                challengeId: 137, // Que plato destaca en la cocina belga?
+                correcto: false,
+                text: "Cuco de Malina",
+                activo: true
+            },
+            {
+                id: 546,
+                challengeId: 137, // Que plato destaca en la cocina belga?
+                correcto: false,
+                text: "Vol au ventVol au vent",
+                activo: true
+            },
+    
+    
+    
+    
+           // Pregunta 2 - Prueba 8
+           {
+                id: 547,
+                challengeId: 138, // EL Carbonades a la flamenca es 
+                correcto: false, 
+                text: "Guiso de Pollo a base de vino",
+                activo: true
+            },
+            {
+                id: 548,
+                challengeId: 138, // EL Carbonades a la flamenca es 
+                correcto: false,
+                text: "Guiso de Res a base de vino",
+                activo: true
+            },
+            {
+                id: 549,
+                challengeId: 138, // EL Carbonades a la flamenca es 
+                correcto: true, // X
+                text: "Guiso de Buey a base de Cerveza",
+                activo: true
+            },
+            {
+                id: 550,
+                challengeId: 138, // EL Carbonades a la flamenca es 
+                correcto: false,
+                text: "Guiso de Cordero a base de Cerveza",
+                activo: true
+            },
+    
+    
+    
+    
+           // Pregunta 3 - Prueba 8
+           {
+                id: 551,
+                challengeId: 139, // Como es el Chocolate Belga? 
+                correcto: false,
+                text: "Blanco",
+                activo: true
+            },
+            {
+                id: 552,
+                challengeId: 139, // Como es el Chocolate Belga? 
+                correcto: true, // X
+                text: "Negro",
+                activo: true
+            },
+            {
+                id: 553,
+                challengeId: 139, // Como es el Chocolate Belga? 
+                correcto: false,
+                text: "Con leche",
+                activo: true
+            },
+            {
+                id: 554,
+                challengeId: 139, // Como es el Chocolate Belga? 
+                correcto: false,
+                text: "Ninguna de las anteriores",
+                activo: true
+            },
+    
+    
+    
+    
+    
+    
+            // Pregunta 4 - Prueba 8
+            {
+                id: 555,
+                challengeId: 140, // Cuantas variedades de Queso existen en Belgica?
+                correcto: false,
+                text: "20",
+                activo: true
+            },
+            {
+                id: 556,
+                challengeId: 140, // Cuantas variedades de Queso existen en Belgica?
+                correcto: false,
+                text: "50",
+                activo: true
+            },
+            {
+                id: 557,
+                challengeId: 140, // Cuantas variedades de Queso existen en Belgica?
+                correcto: false,
+                text: "40",
+                activo: true
+            },
+            {
+                id: 558,
+                challengeId: 140, // Cuantas variedades de Queso existen en Belgica?
+                correcto: true, // X
+                text: "80",
+                activo: true
+            },
+    
+    
+    
+    
+            // Pregunta 5 - Prueba 8
+            {
+                id: 559,
+                challengeId: 141, // Para la Crema a la flamenca se usa 
+                correcto: false, 
+                text: "Repollo",
+                activo: true
+            },
+            {
+                id: 560,
+                challengeId: 141, // Para la Crema a la flamenca se usa 
+                correcto: false,
+                text: "Zanahoria",
+                activo: true
+            },
+            {
+                id: 561,
+                challengeId: 141, // Para la Crema a la flamenca se usa 
+                correcto: true, // X
+                text: "Coles de Bruselas",
+                activo: true
+            },
+            {
+                id: 562,
+                challengeId: 141, // Para la Crema a la flamenca se usa 
+                correcto: false,
+                text: "Puerros",
+                activo: true
+            },
+    
+    
+    
+            // Pregunta 6 - Prueba 8
+            {
+                id: 563,
+                challengeId: 142, // Para la elaboracion de la Pasta Choux primero 
+                correcto: true, // X
+                text: "Se mezclan los secos y luego se agregan los liquidos",
+                activo: true
+            },
+            {
+                id: 564,
+                challengeId: 142, // Para la elaboracion de la Pasta Choux primero 
+                correcto: false, 
+                text: "Se mezcla todo junto",
+                activo: true
+            },
+            {
+                id: 565,
+                challengeId: 142, // Para la elaboracion de la Pasta Choux primero 
+                correcto: false,
+                text: " Se Mezcla todo por separado",
+                activo: true
+            },
+            {
+                id: 566,
+                challengeId: 142, // Para la elaboracion de la Pasta Choux primero 
+                correcto: false,
+                text: "Se mezclan los liquidos y luego se agregan los secos",
+                activo: true
+            },
+    
+    
+    
+    
+    
+                // Final UwU
+            ]);
         
 
         console.log("Rellenado Completado con datos de producción");
