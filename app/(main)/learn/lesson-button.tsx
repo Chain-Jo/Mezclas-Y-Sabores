@@ -191,7 +191,7 @@ export const LessonButton = ({
                                                 variant={locked ? "locked" : "secondary"}
                                                 // Le cambié los px de 70 a 100
                                                 className="h-[70px] w-[70px] border-b-8"
-                                                onClick = {openTestModal}
+                                                // onClick = {openTestModal}
                                             >
                                                 <Icon
                                                     className={cn(
