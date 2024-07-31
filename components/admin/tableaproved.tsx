@@ -59,7 +59,7 @@ const TableAproved = () => {
               MEZCLAS & SABORES
             </h1>
           </div>
-          <table className="tableAproved">
+          <table className="tableLog">
             <thead>
               <tr>
                 <th>

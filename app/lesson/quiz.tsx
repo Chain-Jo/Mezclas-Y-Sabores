@@ -170,7 +170,7 @@ export const Quiz = ({
                                     body: JSON.stringify({
                                         actionId: dataAproved.length + 1,
                                         userName: `${userName}`,
-                                        actionName: `Se ha quedado sin intentos en la leccion ${dataLesson.titulo}`,
+                                        actionName: `Se ha quedado sin intentos en la leccion ${dataLesson.titulo}, necesita reforzar el conocimiento`,
                                         createdAt: new Date().toLocaleString(),
                                     }),
                                 });

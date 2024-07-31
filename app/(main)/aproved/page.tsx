@@ -24,10 +24,10 @@ const aprovedPage = () => {
                         width={100}
                     />
                     <h1 className="text-center font-bold text-neutral-800 text-2xl my-6">
-                        Reportes del sistema
+                        Listado de aprobados
                     </h1>
                     <p className="text-muted-foreground text-center text-lg mb-6">
-                        Como van los usuarios del curso.
+                        Ve como que estudiantes han aprobado las lecciones y que estudiantes necesitan refuerzo.
                     </p>
 
                     <Separator className="mb-4 h-0.5 rounded-full"/>

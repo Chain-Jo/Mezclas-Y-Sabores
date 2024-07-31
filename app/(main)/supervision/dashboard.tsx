@@ -46,6 +46,26 @@ export const Dashboard = ({
                                 </Link>
                             </Button>
                     </div>
+                    <li>
+                        <div className="flex items-center w-full p-4 gap-x-4 border-t-2">
+                            <Image
+                            src="/img/calificacion.png"
+                            alt="Reportes"
+                            height={60}
+                            width={60}
+                            />
+                            <div className="flex-1">
+                            <p className="text-neutral-700 text-base lg:text-xl font-bold">
+                                Aprobados/Aplazados
+                            </p>
+                            </div>
+                            <Button>
+                            <Link href="/aproved">
+                                Ir
+                            </Link>
+                            </Button>
+                        </div>
+                    </li>
                 </li>
 
 
