@@ -5,7 +5,7 @@ const TopBox = async (props: any) => {
   return (
     <div className="topBox">
       <h1>Usuarios</h1>
-      <div className="list">
+      <div className="list justify-center">
         {users.map((user: any) => (
           <div className="listItem" key={user.id}>
             <div className="user">
