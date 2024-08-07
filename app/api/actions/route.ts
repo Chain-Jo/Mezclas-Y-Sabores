@@ -27,11 +27,11 @@ export const POST = async (req: Request) => {
 
     const user = await currentUser();
 
-    if (user != null) {
-        if (!adminIds.includes(user.id) && !supervisorIds.includes(user.id)) {
-            return new NextResponse("Sin autorización", { status: 401 });
-        }
-    }
+    // if (user != null) {
+    //     if (!adminIds.includes(user.id) && !supervisorIds.includes(user.id)) {
+    //         return new NextResponse("Sin autorización", { status: 401 });
+    //     }
+    // }
 
     const body = await req.json();
     const data = await database
