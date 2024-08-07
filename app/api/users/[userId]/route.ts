@@ -14,11 +14,11 @@ export const GET = async (
 
     const user = await currentUser();
 
-    if (user != null) {
-        if (!adminIds.includes(user.id)) {
-            return new NextResponse("Sin autorización", { status: 401 });
-        }
-    }
+    // if (user != null) {
+    //     if (!adminIds.includes(user.id)) {
+    //         return new NextResponse("Sin autorización", { status: 401 });
+    //     }
+    // }
 
     const data = await database.query.units.findFirst({
         where: eq(userProgress.userId, params.userId),
@@ -33,9 +33,9 @@ export const PUT = async (
     { params }: { params: { userId: string } },
 ) => {
 
-    if (!isAdmin()) {
-        return new NextResponse("Sin autorización", { status: 401 });
-    }
+    // if (!isAdmin()) {
+    //     return new NextResponse("Sin autorización", { status: 401 });
+    // }
 
     const body = await req.json();
 

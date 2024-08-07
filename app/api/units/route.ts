@@ -12,11 +12,11 @@ export const GET = async () => {
 
     const user = await currentUser();
 
-    if (user != null) {
-        if (!adminIds.includes(user.id)) {
-            return new NextResponse("Sin autorización", { status: 401 });
-        }
-    }
+    // if (user != null) {
+    //     if (!adminIds.includes(user.id)) {
+    //         return new NextResponse("Sin autorización", { status: 401 });
+    //     }
+    // }
 
     const data = await database.query.units.findMany();
 
@@ -30,11 +30,11 @@ export const POST = async (req: Request) => {
 
     const user = await currentUser();
 
-    if (user != null) {
-        if (!adminIds.includes(user.id)) {
-            return new NextResponse("Sin autorización", { status: 401 });
-        }
-    }
+    // if (user != null) {
+    //     if (!adminIds.includes(user.id)) {
+    //         return new NextResponse("Sin autorización", { status: 401 });
+    //     }
+    // }
     
     const body = await req.json();
 

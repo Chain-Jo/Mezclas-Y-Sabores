@@ -39,11 +39,11 @@ export const PUT = async (
 
     const user = await currentUser();
 
-    if (user != null) {
-        if (!adminIds.includes(user.id)) {
-            return new NextResponse("Sin autorización", { status: 401 });
-        }
-    }
+    // if (user != null) {
+    //     if (!adminIds.includes(user.id)) {
+    //         return new NextResponse("Sin autorización", { status: 401 });
+    //     }
+    // }
 
     const body = await req.json();
 
@@ -87,11 +87,11 @@ export const DELETE = async (
 
     const courseToDelete = await response.json();
 
-    if (user != null) {
-        if (!adminIds.includes(user.id)) {
-            return new NextResponse("Sin autorización", { status: 401 });
-        }
-    }
+    // if (user != null) {
+    //     if (!adminIds.includes(user.id)) {
+    //         return new NextResponse("Sin autorización", { status: 401 });
+    //     }
+    // }
 
     const data = await database.delete(courses)
         .where(eq(courses.id, params.courseId)).returning();

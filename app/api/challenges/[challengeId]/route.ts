@@ -17,11 +17,11 @@ export const GET = async (
 
     const user = await currentUser();
 
-    if (user != null) {
-        if (!adminIds.includes(user.id)) {
-            return new NextResponse("Sin autorización", { status: 401 });
-        }
-    }
+    // if (user != null) {
+    //     if (!adminIds.includes(user.id)) {
+    //         return new NextResponse("Sin autorización", { status: 401 });
+    //     }
+    // }
 
     const data = await database.query.challenges.findFirst({
         where: eq(challenges.id, params.challengeId),
@@ -40,11 +40,11 @@ export const PUT = async (
 
     const user = await currentUser();
 
-    if (user != null) {
-        if (!adminIds.includes(user.id)) {
-            return new NextResponse("Sin autorización", { status: 401 });
-        }
-    }
+    // if (user != null) {
+    //     if (!adminIds.includes(user.id)) {
+    //         return new NextResponse("Sin autorización", { status: 401 });
+    //     }
+    // }
 
     const body = await req.json();
 
@@ -82,11 +82,11 @@ export const DELETE = async (
 
     const user = await currentUser();
 
-    if (user != null) {
-        if (!adminIds.includes(user.id)) {
-            return new NextResponse("Sin autorización", { status: 401 });
-        }
-    }
+    // if (user != null) {
+    //     if (!adminIds.includes(user.id)) {
+    //         return new NextResponse("Sin autorización", { status: 401 });
+    //     }
+    // }
 
     const response = await fetch(`${nextLink}/api/challenges/${params.challengeId}`, {
         method: "GET",
